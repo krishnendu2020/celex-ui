@@ -1,0 +1,524 @@
+<div class="tab-pane" id="report" role="menu">
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper" style="min-height: 806px;">
+	  <!-- Content Header (Page header) -->
+	  <div class="content-header">
+		<div class="container-fluid">
+		  <div class="row mb-2">
+			<div class="col-sm-6">
+			  <h1 class="m-0 text-dark">Report</h1>
+			</div><!-- /.col -->
+		  </div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+	  </div>
+	  <!-- /.content-header -->
+
+	  <!-- Main content -->
+	  <section class="content">
+		<div class="container-fluid">
+		  <div class="card card-tabs shadow">
+			<div class="card-header p-0 pt-1 border-bottom-0 tab">
+			  <ul class="nav nav-tabs" id="report-six-tab" role="tablist">
+				<li class="nav-item">
+				  <a class="nav-link active" id="report-six-stock-tab" data-toggle="pill" href="#report-six-stock" role="tab" aria-controls="report-six-stock" aria-selected="true">Stock Report</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="report-six-loose-tab" data-toggle="pill" href="#report-six-loose" role="tab" aria-controls="report-six-loose" aria-selected="false">Loose Tool Stock</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="report-six-order-tab" data-toggle="pill" href="#report-six-order" role="tab" aria-controls="report-six-order" aria-selected="false">Order Report</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="report-six-data-tab" data-toggle="pill" href="#report-six-data" role="tab" aria-controls="report-six-data" aria-selected="false">Data History</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="report-six-dealer-tab" data-toggle="pill" href="#report-six-dealer" role="tab" aria-controls="report-six-dealer" aria-selected="false">Dealer Status Report</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="report-six-dispatch-tab" data-toggle="pill" href="#report-six-dispatch" role="tab" aria-controls="report-six-dispatch" aria-selected="false">Dispatch Report</a>
+				</li>
+			  </ul>
+			</div>
+			<div class="card-body pt-4 pb-5 pl-4 pr-4">
+			  <!-- Tab Content -->
+			  <div class="tab-content" id="report-six-tabContent">
+				<div class="tab-pane fade show active" id="report-six-stock" role="tabpanel" aria-labelledby="report-six-stock-tab">
+				  <div class="p-2 pl-sm-3 pr-sm-3">
+					<label class="mb-3">Embossing Stock Report:</label>
+					<div class="row">
+					  <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+						<input type="text" class="form-control datetimepicker-input" data-target="#report-six-stock-from" id="report-six-stock-from">
+						<div class="ml-sm-3">
+						  <h5 for="item-type" class="col-form-label">From</h5>
+						</div>
+					  </div>
+					  <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+						<input type="text" class="form-control datetimepicker-input" data-target="#report-six-stock-to" id="report-six-stock-to">
+						<div class="ml-sm-3">
+						  <h5 for="item-type" class="col-form-label">To</h5>
+						</div>
+					  </div>
+					  <button class="btn btn-success shadow mb-sm-auto mb-5 mt-3 ml-2">Submit</button>
+					</div>
+				  </div>
+				  <div class="master-list mt-0">
+					<div class="row ml-3 mr-3 justify-content-between">
+					  <span class="mt-2 mb-3">FROM DATE: 2020-01-01-TO DATE: 2020-01-08</span>
+					</div>
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered">
+						<thead>
+						  <tr>
+							<th scope="col-lg">SL No</th>
+							<th scope="col-lg">Item Name</th>
+							<th scope="col-lg"></th>
+							<th scope="col-lg">Open Stock</th>
+							<th scope="col-lg">Inward</th>
+							<th scope="col-lg">Outward</th>
+							<th scope="col-lg">Damage</th>
+							<th scope="col-lg">Missing</th>
+							<th scope="col-lg">Suspense</th>
+							<th scope="col-lg">Closing Stock</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<th scope="row">1</th>
+							<td>LASER-W-285 X 45(L11)</td>
+							<td>1410</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td></td>
+							<td>0</td>
+							<td>4</td>
+							<td>1406</td>
+						  </tr>
+						  <tr>
+							<th scope="row">2</th>
+							<td>LASER-Y-285 X 45(L12)</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>4</td>
+							<td></td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						</tbody>
+					  </table>
+					</div>
+				  </div>
+				</div><!-- Stock Report -->
+				<div class="tab-pane fade" id="report-six-loose" role="tabpanel" aria-labelledby="report-six-loose-tab">
+				  <div class="p-2 pl-sm-3 pr-sm-3">
+					<label class="mb-3">Loose Tools Stock Details</label>
+					<div class="row">
+					  <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+						<input type="text" class="form-control datetimepicker-input" data-target="#report-six-loose-from" id="report-six-loose-from">
+						<div class="ml-sm-3">
+						  <h5 for="item-type" class="col-form-label">From</h5>
+						</div>
+					  </div>
+					  <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+						<input type="text" class="form-control datetimepicker-input" data-target="#report-six-loose-to" id="report-six-loose-to">
+						<div class="ml-sm-3">
+						  <h5 for="item-type" class="col-form-label">To</h5>
+						</div>
+					  </div>
+					  <button class="btn btn-success shadow mb-sm-auto mb-5 mt-3 ml-2">Submit</button>
+					</div>
+				  </div>
+				  <div class="master-list mt-0">
+					<div class="row ml-3 mr-3 justify-content-between">
+					  <span class="mt-2 mb-3">FROM DATE: 2020-01-01-TO DATE: 2020-01-08</span>
+					</div>
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered">
+						<thead>
+						  <tr>
+							<th scope="col-lg">SI.No</th>
+							<th scope="col-lg">Item Name</th>
+							<th scope="col-lg">Unit</th>
+							<th scope="col-lg">Opening Stock</th>
+							<th scope="col-lg">Inward</th>
+							<th scope="col-lg">Outward</th>
+							<th scope="col-lg">Reconcile</th>
+							<th scope="col-lg">Closing Stock</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<th scope="row">1</th>
+							<td>SNAP LOCK - 3/4" (4.8X19.1 mm)(002)</td>
+							<td>PCS</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						</tbody>
+					  </table>
+					</div>
+				  </div>
+				</div><!-- Loose Tool Stock -->
+				<div class="tab-pane fade" id="report-six-order" role="tabpanel" aria-labelledby="report-six-order-tab">
+				  <div class="p-2 pl-sm-3 pr-sm-3">
+					<label class="mb-3">DATE RANGE FOR ORDERS</label>
+					<div class="row">
+					  <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+						<input type="text" class="form-control datetimepicker-input" data-target="#report-six-order-from" id="report-six-order-from">
+						<div class="ml-sm-3">
+						  <h5 for="item-type" class="col-form-label">From</h5>
+						</div>
+					  </div>
+					  <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+						<input type="text" class="form-control datetimepicker-input" data-target="#report-six-order-to" id="report-six-order-to">
+						<div class="ml-sm-3">
+						  <h5 for="item-type" class="col-form-label">To</h5>
+						</div>
+					  </div>
+					  <button class="btn btn-success shadow mb-sm-auto mb-5 mt-3 ml-2">Submit</button>
+					</div>
+				  </div>
+				  <div class="master-list mt-0">
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered">
+						<thead>
+						  <tr>
+							<th scope="col-lg">SN</th>
+							<th scope="col-lg">Embossing Stn</th>
+							<th scope="col-lg">No Of Orders</th>
+							<th scope="col-lg">New Orders</th>
+							<th scope="col-lg">Blocked For Jobsheet</th>
+							<th scope="col-lg">Jbsheet Created</th>
+							<th scope="col-lg">Issued for Embossing</th>
+							<th scope="col-lg">Qc Done</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						</tbody>
+					  </table>
+					</div>
+				  </div>
+				</div><!-- Order Report -->
+				<div class="tab-pane fade" id="report-six-data" role="tabpanel" aria-labelledby="report-six-data-tab">
+				  <div class="row form-group p-2 d-flex flex-sm-row flex-column">
+					<span for="item-type" class="col-form-label mr-sm-3 pl-0">Registration Number</span>
+					<input class="form-control col-xl-4 col-sm-4 mr-sm-3 mb-3" type="text" placeholder="Registration Number" aria-label="Registration Number">
+					<div class="col-xl-1 col-sm-2 pl-0 pr-0">
+					  <button class="btn btn-success shadow w-100">Search</button>
+					</div>
+				  </div>
+				  <div class="row pl-0 mt-3">
+					<div class="col-xl-4 col-md-6"><p>OEM Name:</p></div>
+					<div class="col-xl-4 col-md-6"><p>Dealer Name:</p></div>
+					<div class="col-12"><p>Dealer Address:</p></div>
+					<div class="col-xl-4 col-md-6"><p>Dealer Code By OEM:</p></div>
+					<div class="col-xl-4 col-md-6"><p>Vehicle Class:</p></div>
+					<div class="col-xl-4 col-md-6"><p>Vehicle Type:</p></div>
+					<div class="col-xl-4 col-md-6"><p>Engine Number:</p></div>
+					<div class="col-xl-4 col-md-6"><p>Chassis Number:</p></div>
+					<div class="col-xl-4 col-md-6"><p>Order Number By Celex:</p></div>
+					<div class="col-xl-4 col-md-6"><p>Order Number By OEM:</p></div>
+					<div class="col-xl-8 col-md-6"><p>First Registration Date:</p></div>
+					<div class="col-xl-4 col-md-6"><p>RTO Name:</p></div>
+					<div class="col-xl-4 col-md-6"><p>Fuel Type:</p></div>
+					<div class="col-xl-4 col-md-6"><p>Order Date:</p></div>
+					<div class="col-xl-12 col-md-6"><p>Embossing Station Name:</p></div>
+				  </div>
+				</div><!-- Data History -->
+				<div class="tab-pane fade" id="report-six-dealer" role="tabpanel" aria-labelledby="report-six-dealer-tab">
+				  <div id="dealer-report-main" class="show">
+					<div class="p-2 pl-sm-3 pr-sm-3">
+					  <label class="mb-3">Dealer Wise Status Report:</label>
+					</div>
+					<div class="master-list mt-0">
+					  <div class="p-2 pl-sm-3 pr-sm-3">
+						<span class="mb-3">Manufacturer List:</span>
+					  </div>
+					  <div class="master-table table-responsive">
+						<table class="table table-striped table-hover table-bordered">
+						  <thead>
+							<tr>
+							  <th scope="col-lg">SL</th>
+							  <th scope="col-lg">OEM Namen</th>
+							  <th scope="col-lg">View</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <th scope="row" class="pt-3">1</th>
+							  <td class="pt-3">YAMAHA</td>
+							  <td class="text-center"><button class="btn btn-success" id="view">View</button></td>
+							</tr>
+							<tr>
+							  <th scope="row">&nbsp;</th>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							</tr>
+							<tr>
+							  <th scope="row">&nbsp;</th>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							</tr>
+						  </tbody>
+						</table>
+					  </div>
+					</div>
+				  </div>
+				  <div id="dealer-report-detail" class="">
+					<div class="p-2 pl-sm-3 pr-sm-3">
+					  <label class="mb-3">Order Report</label>
+					  <div class="row">
+						<div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+						  <input type="text" class="form-control datetimepicker-input" data-target="#report-six-dealer-from" id="report-six-dealer-from">
+						  <div class="ml-sm-3">
+							<h5 for="item-type" class="col-form-label">From</h5>
+						  </div>
+						</div>
+						<div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+						  <input type="text" class="form-control datetimepicker-input" data-target="#report-six-dealer-to" id="report-six-dealer-to">
+						  <div class="ml-sm-3">
+							<h5 for="item-type" class="col-form-label">To</h5>
+						  </div>
+						</div>
+						<button class="btn btn-success shadow mb-sm-auto mb-5 mt-3 ml-2" id="submit">Submit</button>
+					  </div>
+					</div>
+					<div class="master-list mt-0">
+					  <div class="master-table table-responsive">
+						<table class="table table-striped table-hover table-bordered">
+						  <thead>
+							<tr>
+							  <th scope="col-lg">#</th>
+							  <th scope="col-lg">Dealer Name</th>
+							  <th scope="col-lg">Address</th>
+							  <th scope="col-lg">Total Order</th>
+							  <th scope="col-lg">Jobsheet Created</th>
+							  <th scope="col-lg">Ready for Dispatch</th>
+							  <th scope="col-lg">Dispatched</th>
+							  <th scope="col-lg">Recieved</th>
+							  <th scope="col-lg">Afficed</th>
+							  <th scope="col-lg">Action</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <th scope="row">&nbsp;</th>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							</tr>
+							<tr>
+							  <th scope="row">&nbsp;</th>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							</tr>
+						  </tbody>
+						</table>
+					  </div>
+					</div>
+				  </div>
+				</div><!-- Dealer Status Report -->
+				<div class="tab-pane fade" id="report-six-dispatch" role="tabpanel" aria-labelledby="report-six-dispatch-tab">
+				  <div class="p-2 pl-sm-3">
+					<label for="trans-date" class="pl-0">Deapatch Report</label>
+					<div class="pl-0">
+					  <div class="row">
+						<div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+						  <input type="text" class="form-control datetimepicker-input" data-target="#report-six-dispatch-from" id="report-six-dispatch-from">
+						  <div class="ml-sm-3">
+							<h5 for="item-type" class="col-form-label">From</h5>
+						  </div>
+						</div>
+						<div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+						  <input type="text" class="form-control datetimepicker-input" data-target="#report-six-dispatch-to" id="report-six-dispatch-to">
+						  <div class="ml-sm-3">
+							<h5 for="item-type" class="col-form-label">To</h5>
+						  </div>
+						</div>
+						<button class="btn btn-success shadow mb-sm-auto mb-5 mt-3 ml-2">Submit</button>
+					  </div>
+					  <div class="row mt-3 mb-3">
+						<select class="col-xl-3 col-sm-4 mb-3 form-control" id="select-es">
+						  <option>Select ES</option>
+						  <option>West</option>
+						  <option>North</option>
+						</select>
+					  </div>
+					</div>
+				  </div>
+				  <div class="master-list mt-0">
+					<div class="row p-2 pl-sm-3 mb-2">
+					  <span>Embossing Station: KL Kochi Yamaha(059)</span>
+					</div>
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered mb-0">
+						<thead>
+						  <tr>
+							<th scope="col-lg">CONSIGNM</th>
+							<th scope="col-lg">O</th>
+							<th scope="col-lg">DEA</th>
+							<th scope="col-lg">DEALER</th>
+							<th scope="col-lg">DEALE</th>
+							<th scope="col-lg">DA</th>
+							<th scope="col-lg">RECEI</th>
+							<th scope="col-lg">Q</th>
+							<th scope="col-lg">DISPATCH</th>
+							<th scope="col-lg">AWB/LR</th>
+							<th scope="col-lg">Delivery</th>
+							<th scope="col-lg">Delivery</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						</tbody>
+					  </table>
+					</div>
+				  </div>
+				</div><!-- Dispatch Report -->
+			  </div><!-- /.Tab Content -->
+			</div>
+			<!-- /.card -->
+		  </div>
+		</div><!-- /.container-fluid -->
+	  </section>
+	  <!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+  </div> <!-- Report -->

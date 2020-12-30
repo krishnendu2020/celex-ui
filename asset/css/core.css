@@ -1,0 +1,36 @@
+.nav-sidebar active {
+    background-color: #dc3545;
+}
+
+.dealer {
+	display: none;
+}
+
+.stock-manager {
+	display: none;
+}
+
+.production {
+	display: none;
+}
+
+.ho {
+	display: none;
+}
+
+.oem {
+	display: none;
+}
+
+.help-support {
+	display: none;
+}
+
+.emboss-station {
+	display: none;
+}
+
+.admin-master {
+	display: none;
+}
+

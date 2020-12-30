@@ -1,0 +1,104 @@
+<div class="tab-pane" id="hot-stamping" role="menu">
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper" style="min-height: 806px;">
+	  <!-- Content Header (Page header) -->
+	  <div class="content-header">
+		<div class="container-fluid">
+		  <div class="row mb-2">
+			<div class="col-sm-6">
+			  <h1 class="m-0 text-dark">Hot Stamping Foil Mapping</h1>
+			</div><!-- /.col -->
+		  </div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+	  </div>
+	  <!-- /.content-header -->
+
+	  <!-- Main content -->
+	  <section class="content">
+		<div class="container-fluid">
+		<th:block th:if="${HotStampingHtml}">
+		  <div class="card shadow pt-5 pb-5 pl-4 pr-4">
+		  <form id="hotStampingWithPlatesize" th:object="${hotStampingWithPlatesizeObj}">
+		  <input type="hidden" class="form-control" th:field="*{id}" id="select-hot-stamp-id" aria-describedby="enter zone name">             
+			<div class="add-master d-sm-flex flex-sm-column">
+			  <div class="state form-group row justify-content-xl-start justify-content-between">
+				<div class="col-sm-6 row ml-0 mb-3 mr-md-1">
+				  <span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-9">Plate Type</span>
+				  <select class="col-md-7 p-0 form-control" th:field="*{plateTypeId}" id="select-hot-stamp-plate-type">
+					<option th:value="0">Select Plate Type</option>
+					 <option th:each="PlateTypeMaster : ${PlateTypeMasterList}"
+					  th:value="${PlateTypeMaster.id}"
+					  th:text="${PlateTypeMaster.plateType}">
+					 </option>
+				  </select>
+				  <span style="color:red;"  id="select-hot-stamp-plate-type-note"></span>
+				</div>
+				<div class="col-sm-6 row ml-0 mb-3">
+				  <span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-9">HSF Color</span>
+				  <select class="col-md-7 p-0 form-control" th:field="*{plateColourId}" id="select-hot-stamp-plate-hsf-color">
+					<option th:value="0">Select HSF Color</option>
+					 <option th:each="plateColorMaster : ${plateColorMasterList}"
+					  th:value="${plateColorMaster.id}"
+					  th:text="${plateColorMaster.plateColor}">
+					 </option>
+				  </select>
+				  <span style="color:red;"  id="select-hot-stamp-plate-hsf-color-note"></span>
+				</div>
+				<div class="col-sm-6 row ml-0 mb-3 mr-md-1">
+				  <span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-9">HSF Dimension</span>
+				  <select class="col-md-7 p-0 form-control" th:field="*{plateDiamensionId}" id="select-hot-stamp-plate-hsf-dim">
+					<option th:value="0">Select HSF Dimension</option>
+					 <option th:each="plateDimensionMaster : ${plateDimensionMasterList}"
+					  th:value="${plateDimensionMaster.id}"
+					  th:text="${plateDimensionMaster.plateDimension}">
+					 </option>
+				  </select>
+				  <span style="color:red;"  id="select-hot-stamp-plate-hsf-dim-note"></span>
+				</div>
+				<div class="col-sm-6 row ml-0 mb-3">
+				  <span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-9">HSF Type</span>
+				  <select class="col-md-7 p-0 form-control" th:field="*{hsfType}" id="select-hot-stamp-plate-hsf-type">
+					<option value="0">Select Private/Commercial</option>
+					<option value="P" th:selected="'P' == ${hsfType}">Private</option>
+					<option value="C" th:selected="'C' == ${hsfType}">Commercial</option>
+				  </select>
+				  <span style="color:red;"  id="select-hot-stamp-plate-hsf-type-note"></span>
+				</div>
+			  </div>
+			  <div class="row btns justify-content-center mt-3 ml-0 mr-0">
+				<button type="button" class="col-xl-2 col-lg-3 col-sm-4 mt-sm-0 mt-3 btn btn-success shadow mb-auto" onclick="ajaxPost('hotStampingWithPlatesize','http://localhost:8080/getAdminPage/saveHotStamping','hot-stamping','hot-stamping','http://localhost:8080/getAdminPage/HotStamping');">Add to Master</button>
+			  </div>
+			</div>
+			</form>
+			<div class="master-list mt-4">
+			  <label for="cities">Details</label>
+			  <div class="master-table table-responsive">
+				<table class="table table-striped table-hover table-bordered">
+				  <thead>
+					<tr>
+					  <th scope="col-lg">SL.No.</th>
+					  <th scope="col-lg">Plate Dimension</th>
+					  <th scope="col-lg">Hot Stamping Foil Type</th>
+					  <th scope="col-lg">Edit</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr th:each="hotStampingWithPlatesize, stat  : ${genericList}">
+					  <th th:text="${stat.index}">01</th>
+					  <td th:text="${hotStampingWithPlatesize.plateDiamensionId.plateDimension}">PlateColor</td>
+					  <td th:text="${hotStampingWithPlatesize.hotStampingFoilCode}">PlateColor</td>                                                                         
+					  <td><i class="fa fa-edit" href="#" ></i></td>
+				   </tr>      
+				  </tbody>
+				</table>
+			  </div>
+			</div>
+		  </div>
+		  </th:block>
+		</div><!-- /.container-fluid -->
+	  </section>
+	  <!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+</div> <!-- Hot Stampling Foil Mapping -->
+<script src="admin-master/pages/hot-stamping/hot-stamping.js"></script>

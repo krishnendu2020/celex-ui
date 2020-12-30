@@ -1,0 +1,162 @@
+<div class="tab-pane" id="wallet" role="menu">
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper" style="min-height: 806px;">
+	  <!-- Content Header (Page header) -->
+	  <div class="content-header">
+		<div class="container-fluid">
+		  <div class="row mb-2">
+			<div class="col-sm-6">
+			  <h1 class="m-0 text-dark">Wallet</h1>
+			</div><!-- /.col -->
+		  </div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+	  </div>
+	  <!-- /.content-header -->
+
+	  <!-- Main content -->
+	  <section class="content">
+		<div class="container-fluid">
+		  <div class="card card-tabs shadow">
+			<div class="card-header p-0 pt-1 border-bottom-0 tab">
+			  <ul class="nav nav-tabs" id="wallet-tab" role="tablist">
+				<li class="nav-item">
+				  <a class="nav-link active" id="wallet-bank-tab" data-toggle="pill" href="#wallet-bank" role="tab" aria-controls="wallet-bank" aria-selected="true">Offline Payment</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="wallet-online-tab" data-toggle="pill" href="#wallet-online" role="tab" aria-controls="wallet-online" aria-selected="false">Wallet Payment</a>
+				</li>
+			  </ul>
+			</div>
+			<div class="card-body pt-4 pb-5 pl-4 pr-4">
+			  <!-- Tab Content -->
+			  <div class="tab-content" id="wallet-tabContent">
+				<div class="tab-pane fade show active" id="wallet-bank" role="tabpanel" aria-labelledby="wallet-bank-tab">
+				  <div class="row p-2 pl-sm-5 pr-sm-5 show" id="wallet-main">
+					<div class="form-group d-flex flex-column">
+					  <h5 class="mb-4">Our Payment Details:</h5>
+					  <p class="mb-4">Please pay to below account and inform us by sending us the payment details</p>
+					  <p class="mb-1">Name : CELEX TECHNOLOGIES PRIVATE LIMITED</p>
+					  <p class="mb-1">A/C NO : 127205001482</p>
+					  <p class="mb-1">BANK NAME : ICICI BANK LTD</p>
+					  <p class="mb-1">STATUS : CURRENT ACCOUNT</p>
+					  <p class="mb-1">ADDRESS : 86A TOPSIA ROAD , TOSIA BRANCH KOLKATA -700046</p>
+					  <p class="mb-1">RTGS/NEFT CODE : ICIC0001272</p>
+					</div>
+					<div class="row d-flex flex-sm-nowrap flex-sm-row flex-column btns justify-content-center mt-sm-1 mb-sm-3">
+					  <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mt-3">Submit Payment Details</button>
+					</div>
+				  </div>
+				  <div class="row p-2 pl-sm-5 pr-sm-5" id="wallet-submit">
+					<div class="row form-group">
+					  <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+						<h5 for="item-type" class="col-form-label">Select Topic :</h5>
+						<select class="p-0 form-control" id="select-topic">
+						  <option>Select Topic</option>
+						  <option>Fund Transfer</option>
+						  <option>Transfer</option>
+						</select>
+					  </div>
+					  <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+						<h5 for="item-type" class="col-form-label">Manufacturer :</h5>
+						<select class="p-0 form-control" id="select-manufacturer" disabled>
+						  <!-- <option>Select Manufacturer</option> -->
+						  <option>VOLKSWAGEN</option>
+						  <option>FORD</option>
+						</select>
+					  </div>
+					  <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+						<h5 for="item-type" class="col-form-label">Dealer Name :</h5>
+						<input type="text" class="form-control" id="enter-dealer-name-1" placeholder="Enter Dealer Name" disabled>
+					  </div>
+					  <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+						<h5 for="item-type" class="col-form-label">Phone :</h5>
+						<input type="phone" class="form-control" id="enter-phone-number" placeholder="Enter Phone Number" disabled>
+					  </div>
+					  <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+						<h5 for="item-type" class="col-form-label">Email :</h5>
+						<input type="email" class="form-control" id="enter-email" placeholder="Enter Email" disabled>
+					  </div>
+					  <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+						<h5 for="item-type" class="col-form-label">Name :</h5>
+						<h5 for="item-text" class="form-control" id="enter-name" placeholder="Enter Name" disabled>
+					  </div>
+					  <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+						<h5 for="item-type" class="col-form-label">Dealer Code :</h5>
+						<input type="text" class="form-control" id="enter-dealer-code" placeholder="Enter Dealer Code" disabled>
+					  </div>
+					  <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+						<h5 for="item-type" class="col-form-label">Dealer Address :</h5>
+						<input type="text" class="form-control" id="enter-dealer-address" placeholder="Enter Dealer Address" disabled>
+					  </div>
+					  <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+						<h5 for="item-type" class="col-form-label">State :</h5>
+						<select class="p-0 form-control" id="select-profile-state" disabled>
+						  <option>Select State</option>
+						  <option>KERALA</option>
+						  <option>SANTA</option>
+						</select>
+					  </div>
+					  <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+						<h5 for="item-type" class="col-form-label">Amount Transferred :</h5>
+						<input type="text" class="form-control" id="enter-amount" placeholder="Enter Amount Transferred">
+					  </div>
+					  <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+						<h5 for="item-type" class="col-form-label">Transaction Code :</h5>
+						<input type="text" class="form-control" id="enter-trans-code" placeholder="Enter Transaction Code">
+					  </div>
+					  <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+						<h5 for="item-type" class="col-form-label">Transfer Date :</h5>
+						<input type="text" class="form-control" id="enter-trans-date" placeholder="Enter Transfer Date">
+					  </div>
+					  <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+						<h5 for="item-type" class="col-form-label">Transfer Mode :</h5>
+						<select class="p-0 form-control" id="select-trans-mode">
+						  <option>Select Transfer Mode</option>
+						  <option>Cash</option>
+						  <option>-</option>
+						</select>
+					  </div>
+					  <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+						<h5 for="item-type" class="col-form-label">Bank name :</h5>
+						<input type="text" class="form-control" id="enter-bank-name" placeholder="Enter Bank Name">
+					  </div>
+					  <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+						<h5 for="item-type" class="col-form-label">Bank Account No. :</h5>
+						<input type="text" class="form-control" id="enter-bank-account" placeholder="Enter Bank Accont No.">
+					  </div>
+					</div>
+					<div class="row d-flex flex-sm-nowrap flex-sm-row flex-column justify-content-left mt-sm-1 pl-4 pr-4">
+					  <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13">Submit</button>
+					</div>
+				  </div>
+				</div><!-- /.Tab Pan -->
+				<div class="tab-pane fade" id="wallet-online" role="tabpanel" aria-labelledby="wallet-online-tab">
+				  <div class="p-2 pl-sm-5 pr-sm-5">
+					<h5 class="mb-4">Via payment gateway:</h5>
+					<div class="row form-group">
+					  <div class="col-xl-3 col-sm-6 ml-0 mb-3 mr-sm-5">
+						<h5 for="item-type" class="col-form-label">Add Payment</h5>
+						<input type="phone" class="form-control" id="enter-add-payment" placeholder="Enter Amount">
+					  </div>
+					  <div class="col-xl-3 col-sm-6 ml-0 mb-3 mr-sm-5">
+						<h5 for="item-type" class="col-form-label">Payment Remarks</h5>
+						<input type="phone" class="form-control" id="enter-pay-remarks" placeholder="Enter Remarks">
+					  </div>
+					  <div class="col-xl-3 ml-0 mb-3 mt-auto d-flex justify-content-center">
+						<button class="btn btn-primary shadow mb-auto min-we-10 max-we-sm-13 mr-sm-5 mt-3">Pay Now</button>
+					  </div>
+					  <!-- <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column btns justify-content-center mt-sm-1 mb-sm-3">
+					  </div> -->
+					</div>
+				  </div>
+				</div><!-- /.Tab Pan -->
+			  </div><!-- /.Tab Content -->
+			</div>
+			<!-- /.card -->
+		  </div>
+		</div><!-- /.container-fluid -->
+	  </section>
+	  <!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+  </div> <!-- Wallet -->

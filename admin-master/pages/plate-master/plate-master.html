@@ -1,0 +1,441 @@
+<div class="tab-pane" id="plate-master" role="menu">
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper" style="min-height: 806px;">
+	  <!-- Content Header (Page header) -->
+	  <div class="content-header">
+		<div class="container-fluid">
+		  <div class="row mb-2">
+			<div class="col-sm-6">
+			  <h1 class="m-0 text-dark">Plate Master</h1>
+			</div><!-- /.col -->
+		  </div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+	  </div>
+	  <!-- /.content-header -->
+
+	  <!-- Main content -->
+	  <section class="content">
+		<div class="container-fluid">
+		  <div class="card card-tabs shadow">
+			<div class="card-header p-0 pt-1 border-bottom-0 tab">
+			  <ul class="nav nav-tabs" id="plate-five-tab" role="tablist">
+				<li class="nav-item">
+				  <a class="nav-link active" id="plate-five-plate-type-tab" data-toggle="pill" href="#plate-five-plate-type" role="tab" aria-controls="plate-five-plate-type" aria-selected="true">Plate Type</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="plate-five-plate-dim-tab" data-toggle="pill" href="#plate-five-plate-dim" role="tab" aria-controls="plate-five-plate-dim" aria-selected="false">Plate Dimension</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="plate-five-plate-colors-tab" data-toggle="pill" href="#plate-five-plate-colors" role="tab" aria-controls="plate-five-plate-colors" aria-selected="false">Plate Colors</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="plate-five-plate-code-tab" data-toggle="pill" href="#plate-five-plate-code" role="tab" aria-controls="plate-five-plate-code" aria-selected="false">Plate Code</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="plate-five-lid-series-tab" data-toggle="pill" href="#plate-five-lid-series" role="tab" aria-controls="plate-five-lid-series" aria-selected="false">LID Series</a>
+				</li>
+			  </ul>
+			</div>
+			<div class="card-body pt-4 pb-5 pl-4 pr-4">
+			  <!-- Tab Content -->
+			  <div class="tab-content" id="plate-five-tabContent">
+				<div class="tab-pane fade" id="plate-five-plate-type" role="tabpanel" aria-labelledby="plate-five-plate-type-tab">
+				   <div id="plateTypeDiv">
+				   <!-- <th:block th:if="${plateTypeMasterHtml}"> -->
+				   <form  id="plateTypeMaster" th:object="${plateTypeMasterObj}">
+				  <div class="add-master d-sm-flex flex-sm-column">
+					<div class="state form-group row">
+					  <label for="item-type" class="col-md-2 col-sm-3 col-form-label">Plate Type:</label>
+					  <div class="col-sm-5">
+					  <input type="hidden" class="form-control" th:field="*{id}" id="enter-plate-type-master-id" aria-describedby="enter zone name">                 
+				
+						<input type="text" class="form-control" th:field="*{plateType}" onkeyup="textCase('enter-plate-type');" id="enter-plate-type" placeholder="Enter Plate Type">
+						<span style="color:red;"  id="enter-plate-type-note"></span>
+					  </div>
+					</div>
+					<div class="state form-group row">
+					  <label for="item-type" class="col-md-2 col-sm-3 col-form-label">Plate ID:</label>
+					  <div class="col-sm-5">
+						<input type="text" class="form-control" th:field="*{plateTypeCode}" onkeyup="textCase('enter-plate-id');" id="enter-plate-id" placeholder="Enter Plate ID">
+						<span style="color:red;"  id="enter-plate-id-note"></span>
+					  </div>
+					</div>
+					<button type="button" class="col-sm-3 mt-4 mb-3 ml-auto mr-auto btn btn-success shadow btn-add" onclick="ajaxPost('plateTypeMaster','http://localhost:8080/getAdminPage/savePlateType','plate-master','plate-master','http://localhost:8080/getAdminPage/PlateType');">Add to Master</button>
+				  </div>
+				  </form>
+				  <div class="master-list mt-4">
+					<label for="cities">Plates Added To Master</label>
+					 
+					<div class="float-right">
+						   <label for="name">Search: </label>
+						   <input type="text" id="searchParamPlateTypeMaster" style="text-align:left">
+						   <button type="button" class="btn btn-success" onclick="pageButtonClick('0', 'searchParamPlateTypeMaster','plateTypeMaster','PlateTypeMasterPageNo','plateTypeMastertbl','plateTypeMastertbl');">search</button>
+					   </div>
+					<div id="plateTypeMastertbl">
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered">
+						<thead>
+							<tr>
+							<th scope="col-lg-2">Plate Name</th>
+							<th scope="col-lg-4">Plate ID</th>
+							<th scope="col-lg-2">Edit</th>
+						  </tr> 
+						</thead>
+						<tbody>
+						  <tr th:each="plateTypeMaster : ${genericList}">
+							  <th th:text="${plateTypeMaster.plateType}"></th>
+							  <td th:text="${plateTypeMaster.plateTypeCode}">West Bengal</td>  
+							  <td><i class="fa fa-edit" href="#"></i></td>
+							</tr>                           
+						</tbody>
+					  </table>
+					</div>
+					<!-- <input type="hidden" th:value="${genericList.number}" id="PlateTypeMasterPageNo" /> -->
+					  <!-- <div class="pagination-div"> -->
+							<!-- <span th:if="${genericList.hasPrevious()}"> -->
+								<!-- <a th:value="${genericList.number-1}"  onclick="pageButtonClick(this, 'searchParamPlateTypeMaster', 'plateTypeMaster','PlateTypeMasterPageNo','plateTypeMastertbl','plateTypeMastertbl');">Previous</a> -->
+							<!-- </span> -->
+							<!-- <th:block th:each="i: ${#numbers.sequence(0, genericList.totalPages - 1)}"> -->
+								<!-- <span th:if="${genericList.number == i}" class="selected">[[${i}+1]]</span> -->
+								<!-- <span th:unless="${genericList.number == i}"> -->
+									 <!-- <a th:value="${genericList.number}"  onclick="pageButtonClick(this, 'searchParamPlateTypeMaster', 'plateTypeMaster','PlateTypeMasterPageNo','plateTypeMastertbl','plateTypeMastertbl');">[[${i}+1]]</a> -->
+								<!-- </span> -->
+							<!-- </th:block> -->
+							<!-- <span th:if="${genericList.hasNext()}"> -->
+								<!-- <a th:value="${genericList.number+1}" onclick="pageButtonClick(this, 'searchParamPlateTypeMaster', 'plateTypeMaster','PlateTypeMasterPageNo','plateTypeMastertbl','plateTypeMastertbl');">Next</a> -->
+							<!-- </span> -->
+						<!-- </div> -->
+					</div>
+					
+				  </div>
+				  <!-- </th:block> -->
+				  </div>
+				</div><!-- /.Tab Pan -->
+				<div class="tab-pane fade" id="plate-five-plate-dim" role="tabpanel" aria-labelledby="plate-five-plate-dim-tab">
+				  <div id="PlateDiamentionDiv">
+				  <!-- <th:block th:if="${plateDimensionHtml}"> -->
+				  <div class="add-master d-md-flex flex-md-row mt-md-5">
+				  
+				   <form  id="plateDimensionMaster" th:object="${plateDimensionMasterObj}">
+				   <input type="hidden" class="form-control" th:field="*{id}" id="enter-plate-diamension-master-id" aria-describedby="enter zone name">                 
+				
+					<div class="state form-group row ml-0 w-100">
+					  <label for="plate-dim" class="col-form-label mr-3">Enter Plate Dimension:</label>
+					  <div class="col-xl-3 col-md-5 mr-md-5 mb-3 p-0">
+						<input type="text" class="form-control" size="80" th:field="*{plateDimension}" id="enter-plate-dim" placeholder="Enter Plate Dimension">
+					  <span style="color:red;"  id="enter-plate-dim-note"></span>
+					  </div>
+					  <button type="button" class="col-xl-2 col-md-3 col-sm-4 mt-md-0 mt-2 mb-3 ml-md-0 mr-md-0 ml-auto mr-auto btn btn-success shadow btn-add" onclick="ajaxPost('plateDimensionMaster','http://localhost:8080/getAdminPage/savePlateDimension','plate-five-plate-dim','PlateDiamentionDiv','http://localhost:8080/getAdminPage/PlateDimensionMaster');" >Add to Master</button>
+					</div>
+					</form>
+				  </div>
+				  <div class="master-list mt-4">
+					<label for="cities">Plate Dimensions Added To Master</label>
+					
+					<div class="float-right">
+						   <label for="name">Search: </label>
+						   <input type="text" id="searchParamPlateDimension" style="text-align:left">
+						   <button type="button" class="btn btn-success" onclick="pageButtonClick('0', 'searchParamPlateDimension','plateDimension','plateDimensionPageNo','plateDimensiontbl','plateDimensiontbl');">search</button>
+					   </div>
+					   <div id="plateDimensiontbl">
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered">
+						<thead>
+						  <tr>
+							<th scope="col-lg-2">SI.No</th>
+							<th scope="col-lg-4">Plate Dimentions</th>
+							<th scope="col-lg-2">Edit</th>
+						  </tr>
+						</thead>
+						 <tbody>
+						  <tr th:each="plateDimensionMaster : ${genericList}">
+							<th th:text="${plateDimensionMaster.id}">01</th>
+							<td th:text="${plateDimensionMaster.plateDimension}"></td>
+							<td><i class="fa fa-edit" href="#"></i></td>
+						  </tr>
+						</tbody>
+					  </table>
+					</div>
+					<!-- <input type="hidden" th:value="${genericList.number}" id="plateDimensionPageNo" /> -->
+					  <!-- <div class="pagination-div"> -->
+							<!-- <span th:if="${genericList.hasPrevious()}"> -->
+								<!-- <a th:value="${genericList.number-1}"  onclick="pageButtonClick(this, 'searchParamPlateDimension', 'plateDimension','plateDimensionPageNo','plateDimensiontbl','plateDimensiontbl');">Previous</a> -->
+							<!-- </span> -->
+							<!-- <th:block th:each="i: ${#numbers.sequence(0, genericList.totalPages - 1)}"> -->
+								<!-- <span th:if="${genericList.number == i}" class="selected">[[${i}+1]]</span> -->
+								<!-- <span th:unless="${genericList.number == i}"> -->
+									 <!-- <a th:value="${genericList.number}"  onclick="pageButtonClick(this, 'searchParamPlateDimension', 'plateDimension','plateDimensionPageNo','plateDimensiontbl','plateDimensiontbl');">[[${i}+1]]</a> -->
+								<!-- </span> -->
+							<!-- </th:block> -->
+							<!-- <span th:if="${genericList.hasNext()}"> -->
+								<!-- <a th:value="${genericList.number+1}" onclick="pageButtonClick(this, 'searchParamPlateDimension', 'plateDimension','plateDimensionPageNo','plateDimensiontbl','plateDimensiontbl');">Next</a> -->
+							<!-- </span> -->
+						<!-- </div> -->
+					</div>
+					
+				  </div>
+				  <!-- </th:block> -->
+				  </div>
+				</div><!-- /.Tab Pan -->
+				<div class="tab-pane fade" id="plate-five-plate-colors" role="tabpanel" aria-labelledby="plate-five-plate-colors-tab">
+				  <div id="PlateColourDiv">
+				  <!-- <th:block th:if="${PlateColorHtml}"> -->
+				  <div class="add-master d-md-flex flex-md-row mt-md-5">
+				  <form  id="plateColourMaster" th:object="${plateColorMasterObj}">
+				  <input type="hidden" class="form-control" th:field="*{id}" id="enter-plate-colour-id" aria-describedby="enter zone name">                 
+				
+					<div class="state form-group row ml-0 w-100">
+					  <label for="plate-dim" class="col-form-label mr-3">Enter Plate Color:</label>
+					  <div class="col-xl-3 col-md-5 mr-md-5 mb-3 p-0">
+						<input type="text" class="form-control" size="80" th:field="*{plateColor}" id="enter-plate-color" placeholder="Enter Plate Color">
+					  <span style="color:red;"  id="enter-plate-color-note"></span>
+					  </div>
+					  <button type="button" class="col-xl-2 col-md-3 col-sm-4 mt-md-0 mt-2 mb-3 ml-md-0 mr-md-0 ml-auto mr-auto btn btn-success shadow btn-add" onclick="ajaxPost('plateColourMaster','http://localhost:8080/getAdminPage/savePlateColour','plate-five-plate-colors','PlateColourDiv','http://localhost:8080/getAdminPage/PlateColourMaster');">Add to Master</button>
+					</div>
+					</form>
+				  </div>
+				  <div class="master-list mt-4">
+					<label for="cities">Plate Colors Added To Master</label>
+					
+					 <div class="float-right">
+						   <label for="name">Search: </label>
+						   <input type="text" id="searchParamPlateColour" style="text-align:left">
+						   <button type="button" class="btn btn-success" onclick="pageButtonClick('0', 'searchParamPlateColour','plateColour','plateColourPageNo','plateColourtbl','plateColourtbl');">search</button>
+					   </div>
+					<div id="plateColourtbl">
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered">
+						<thead>
+						  <tr>
+							<th scope="col-lg-2">SI.No</th>
+							<th scope="col-lg-4">Plate Color</th>
+							<th scope="col-lg-2">Edit</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr th:each="plateColour : ${genericList}">
+							<td th:text="${plateColour.id}">01</td>
+							<td th:text="${plateColour.plateColor}">PlateColor</td>
+							<td><i class="fa fa-edit" href="#"></i></td>
+						  </tr>                          
+						</tbody>
+					  </table>
+					</div>
+					<!-- <input type="hidden" th:value="${genericList.number}" id="plateColourPageNo" /> -->
+					  <!-- <div class="pagination-div"> -->
+							<!-- <span th:if="${genericList.hasPrevious()}"> -->
+								<!-- <a th:value="${genericList.number-1}"  onclick="pageButtonClick(this, 'searchParamPlateColour', 'plateColour','plateColourPageNo','plateColourtbl','plateColourtbl');">Previous</a> -->
+							<!-- </span> -->
+							<!-- <th:block th:each="i: ${#numbers.sequence(0, genericList.totalPages - 1)}"> -->
+								<!-- <span th:if="${genericList.number == i}" class="selected">[[${i}+1]]</span> -->
+								<!-- <span th:unless="${genericList.number == i}"> -->
+									 <!-- <a th:value="${genericList.number}"  onclick="pageButtonClick(this, 'searchParamPlateColour', 'plateColour','plateColourPageNo','plateColourtbl','plateColourtbl');">[[${i}+1]]</a> -->
+								<!-- </span> -->
+							<!-- </th:block> -->
+							<!-- <span th:if="${genericList.hasNext()}"> -->
+								<!-- <a th:value="${genericList.number+1}" onclick="pageButtonClick(this, 'searchParamPlateColour', 'plateColour','plateColourPageNo','plateColourtbl','plateColourtbl');">Next</a> -->
+							<!-- </span> -->
+						<!-- </div> -->
+					</div>
+				   
+				  </div>
+				  <!-- </th:block> -->
+				 </div>
+				</div><!-- /.Tab Pan -->
+				<div class="tab-pane fade" id="plate-five-plate-code" role="tabpanel" aria-labelledby="plate-five-plate-code-tab">
+				 <div id="PlateDimensionColourDiv">
+				 <!-- <th:block th:if="${PlateDimensionColourHtml}"> -->
+				 <form  id="plateDimensionColorMapping" th:object="${plateDimensionColorMappingObj}">
+				 <input type="hidden" class="form-control" th:field="*{id}" id="enter-plate-dim-col-id" aria-describedby="enter zone name">                 
+				
+				  <div class="add-master d-flex flex-column mt-md-5">
+					<div class="state form-group row">
+					  <div class="col-md-3 col-sm-6 mb-3">
+						<select class="mr-xl-5 p-0 form-control" th:field="*{dimensionId}" id="select-plate-dimcol-dim">
+						  <option th:value="0">Select Plate Dimension</option>
+						   <option th:each="plateDimensionMaster : ${plateDimensionMasterList}"
+									 th:value="${plateDimensionMaster.id}"
+									 th:text="${plateDimensionMaster.plateDimension}">
+							 </option>
+						</select>
+						<span style="color:red;"  id="select-plate-dimcol-dim-note"></span>
+					  </div>
+					  <div class="col-md-1 col-sm-6 mb-3">
+						<select class="mr-xl-5 p-0 form-control" th:field="*{unit}" id="select-plate-dimcol-unit">
+						  <option th:value="0">Select UoM</option>
+						   <option th:each="unitMaster : ${unitMasterList}"
+										 th:value="${unitMaster.id}"
+										 th:text="${unitMaster.unitCode}">
+						   </option>
+						</select>
+						<span style="color:red;"  id="select-plate-dimcol-unit-note"></span>
+					  </div>
+					  <div class="col-md-3 col-sm-6 mb-3">
+						<select class="mr-xl-5 p-0 form-control" th:field="*{colorId}" id="select-plate-dimcol-color">
+						  <option th:value="0">Select Plate Color</option>
+						   <option th:each="plateColorMaster : ${plateColorMasterList}"
+									 th:value="${plateColorMaster.id}"
+									 th:text="${plateColorMaster.plateColor}">
+							 </option>
+						</select>
+						<span style="color:red;"  id="select-plate-dimcol-color-note"></span>
+					  </div>
+					  <div class="col-md-4 col-sm-6 mr-md-5 mb-3">
+						<input type="text" class="form-control" th:field="*{plateCode}" id="enter-plate-dimcol-code" placeholder="Enter Plate Code">
+					  <span style="color:red;"  id="enter-plate-dimcol-code-note"></span>
+					  </div>
+					</div>
+					<button type="button" class="col-xl-2 col-md-3 col-sm-5 mt-2 mb-3 ml-auto mr-auto btn btn-success shadow btn-add" onclick="ajaxPost('plateDimensionColorMapping','http://localhost:8080/getAdminPage/savePlateDimensionColorMapping','plate-five-plate-code','PlateDimensionColourDiv','http://localhost:8080/getAdminPage/PlateDimensionColourMapping');">Add to Master</button>
+				  </div>
+				  </form>
+				  <div class="master-list mt-4">
+					<label for="cities">Plate Codes Added To Master</label>
+					
+					 <div class="float-right">
+						   <label for="name">Search: </label>
+						   <input type="text" id="searchParamPlateDimensionColour" style="text-align:left">
+						   <button type="button" class="btn btn-success" onclick="pageButtonClick('0', 'searchParamPlateDimensionColour','PlateDimensionColour','PlateDimensionColourPageNo','PlateDimensionColourtbl','PlateDimensionColourtbl');">search</button>
+					   </div>
+					<div id="PlateDimensionColourtbl">
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered">
+						<thead>
+						  <tr>
+							<th scope="col-lg-2">SI.No</th>
+							<th scope="col-lg-4">Plate Dimension</th>
+							<th scope="col-lg-4">Color</th>
+							<th scope="col-lg-4">Plate Code</th>
+							<th scope="col-lg-2">Edit</th>
+						  </tr>
+						</thead>
+						<tbody>
+						   <tr th:each="PlateDimensionColour : ${genericList}">
+							<td th:text="${PlateDimensionColour.id}">01</td>
+							<td th:text="${PlateDimensionColour.dimensionId.plateDimension}">PlateColor</td>
+							<td th:text="${PlateDimensionColour.colorId.plateColor}">PlateColor</td>
+							<td th:text="${PlateDimensionColour.plateCode}">PlateColor</td>
+							<td><i class="fa fa-edit" href="#"></i></td>
+						  </tr>                
+						</tbody>
+					  </table>
+					</div>
+					<!-- <input type="hidden" th:value="${genericList.number}" id="PlateDimensionColourPageNo" /> -->
+					  <!-- <div class="pagination-div"> -->
+							<!-- <span th:if="${genericList.hasPrevious()}"> -->
+								<!-- <a th:value="${genericList.number-1}"  onclick="pageButtonClick(this, 'searchParamPlateDimensionColour', 'PlateDimensionColour','PlateDimensionColourPageNo','PlateDimensionColourtbl','PlateDimensionColourtbl');">Previous</a> -->
+							<!-- </span> -->
+							<!-- <th:block th:each="i: ${#numbers.sequence(0, genericList.totalPages - 1)}"> -->
+								<!-- <span th:if="${genericList.number == i}" class="selected">[[${i}+1]]</span> -->
+								<!-- <span th:unless="${genericList.number == i}"> -->
+									 <!-- <a th:value="${genericList.number}"  onclick="pageButtonClick(this, 'searchParamPlateDimensionColour', 'PlateDimensionColour','PlateDimensionColourPageNo','PlateDimensionColourtbl','PlateDimensionColourtbl');">[[${i}+1]]</a> -->
+								<!-- </span> -->
+							<!-- </th:block> -->
+							<!-- <span th:if="${genericList.hasNext()}"> -->
+								<!-- <a th:value="${genericList.number+1}" onclick="pageButtonClick(this, 'searchParamPlateDimensionColour', 'PlateDimensionColour','PlateDimensionColourPageNo','PlateDimensionColourtbl','PlateDimensionColourtbl');">Next</a> -->
+							<!-- </span> -->
+						<!-- </div> -->
+					</div>
+				   
+				  </div>
+				  <!-- </th:block> -->
+				  </div>
+				</div><!-- /.Tab Pan -->
+				<div class="tab-pane fade show active" id="plate-five-lid-series" role="tabpanel" aria-labelledby="plate-five-plate-lid-series">
+				  <div id="PlateLidSeriesDiv">
+				  <!-- <th:block th:if="${plateMasterHtml}"> -->
+				  <div class="add-master d-flex flex-column mt-3">
+				  <form id="plateMaster" th:object="${plateMasterObj}">
+				  <input type="hidden" class="form-control" th:field="*{id}" id="enter-plate-master-id" aria-describedby="enter zone name">                 
+					<div class="state form-group row">
+					  <div class="row col-sm-6 mb-3 mr-sm-3 ml-0">
+						<span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-9">Plate Type:</span>
+						<select class="col-sm-6 mr-xl-5 p-0 form-control" th:field="*{plateCodeId}" id="select-plate-msater-type">
+						 <option th:value="0">Select Plate Type</option>
+						   <option th:each="PlateTypeMaster : ${PlateTypeMasterList}"
+									 th:value="${PlateTypeMaster.id}"
+									 th:text="${PlateTypeMaster.plateType}">
+							 </option>
+						</select>
+						<span style="color:red;"  id="select-plate-msater-type-note"></span>
+					  </div>
+					  <div class="row col-12 pl-0 ml-0 mb-5">
+						<div class="col-sm-4 row ml-0 pr-0 d-inline-flex flex-sm-row flex-sm-nowrap">
+						  <span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-9">Company Code</span>
+						  <input type="text" class="form-control" id="enter-company-code" placeholder="" readonly>
+						</div>
+						<div class="col-sm-4 row ml-0 pr-0 d-inline-flex flex-sm-row flex-sm-nowrap">
+						  <span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-9 text-sm-right">Starting Sequence</span>
+						  <input type="number" class="form-control" th:field="*{lidStartNumber}" id="enter-start-seq" placeholder="">
+						  <span style="color:red;"  id="enter-start-seq-note"></span>
+						</div>
+						<div class="col-sm-4 row ml-0 pr-0 d-inline-flex flex-sm-row flex-sm-nowrap">
+						  <span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-9 text-sm-right">Ending Sequence</span>
+						  <input type="number" class="form-control" th:field="*{lidEndNumber}" id="enter-end-seq" placeholder="">
+						  <span style="color:red;"  id="enter-end-seq-note"></span>
+						</div>
+					  </div>
+					  <button type="button" class="col-xl-2 col-md-3 col-sm-5 mt-md-0 mt-2 mb-3 ml-auto mr-auto btn btn-success shadow btn-add" onclick="ajaxPost('plateMaster','http://localhost:8080/getAdminPage/savePlateMaster','plate-five-lid-series','PlateLidSeriesDiv','http://localhost:8080/getAdminPage/PlateMaster');">Add to Master</button>
+					</div>
+					</form>
+				  </div>
+				  <div class="master-list mt-4">
+					<label for="cities">LID Series Added To Master</label>
+					
+					 <div class="float-right">
+						   <label for="name">Search: </label>
+						   <input type="text" id="searchParamPlateMaster" style="text-align:left">
+						   <button type="button" class="btn btn-success" onclick="pageButtonClick('0', 'searchParamPlateMaster','plateMaster','plateMasterPageNo','plateMastertbl','plateMastertbl');">search</button>
+					   </div>
+					<div id="plateMastertbl">
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered">
+						<thead>
+						  <tr>
+							<th scope="col-lg-2">SI.No</th>
+							<th scope="col-lg-4">Plate Code</th>
+							<th scope="col-lg-4">LID starting series</th>
+							<th scope="col-lg-2">Edit</th>
+						  </tr>
+						</thead>
+						<tbody>
+						   <tr th:each="PlateMaster : ${genericList}">
+							<td th:text="${PlateMaster.id}">01</td>
+							<td th:text="${PlateMaster.plateCodeId.plateType}">PlateColor</td>
+							<td th:text="${PlateMaster.lidStartNumber}">PlateColor</td>                          
+							<td><i class="fa fa-edit" href="#"></i></td>
+						  </tr>   
+						</tbody>
+					  </table>
+					</div>
+					<!-- <input type="hidden" th:value="${genericList.number}" id="plateMasterPageNo" /> -->
+					  <!-- <div class="pagination-div"> -->
+							<!-- <span th:if="${genericList.hasPrevious()}"> -->
+								<!-- <a th:value="${genericList.number-1}"  onclick="pageButtonClick(this, 'searchParamPlateMaster', 'plateMaster','plateMasterPageNo','plateMastertbl','plateMastertbl');">Previous</a> -->
+							<!-- </span> -->
+							<!-- <th:block th:each="i: ${#numbers.sequence(0, genericList.totalPages - 1)}"> -->
+								<!-- <span th:if="${genericList.number == i}" class="selected">[[${i}+1]]</span> -->
+								<!-- <span th:unless="${genericList.number == i}"> -->
+									 <!-- <a th:value="${genericList.number}"  onclick="pageButtonClick(this, 'searchParamPlateMaster', 'plateMaster','plateMasterPageNo','plateMastertbl','plateMastertbl');">[[${i}+1]]</a> -->
+								<!-- </span> -->
+							<!-- </th:block> -->
+							<!-- <span th:if="${genericList.hasNext()}"> -->
+								<!-- <a th:value="${genericList.number+1}" onclick="pageButtonClick(this, 'searchParamPlateMaster', 'plateMaster','plateMasterPageNo','plateMastertbl','plateMastertbl');">Next</a> -->
+							<!-- </span> -->
+						<!-- </div> -->
+					</div>
+					
+				  </div>
+				  <!-- </th:block> -->
+				 </div> 
+				</div><!-- /.Tab Pan -->
+			  </div><!-- /.Tab Content -->
+			</div>
+			<!-- /.card -->
+		  </div>
+		</div><!-- /.container-fluid -->
+	  </section>
+	  <!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+</div> <!-- Plate Master -->
+<script src="admin-master/pages/plate-master/plate-master.js"></script>

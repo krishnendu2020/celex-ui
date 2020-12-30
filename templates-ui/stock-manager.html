@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+
+<html class="" style="height: auto;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Celex</title>
+
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="././asset/img/celex_icon.png" />
+
+  <!-- Bootstrap CSS library -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- JQuery and Popper -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="asset/plugin/overlayScrollbars/css/OverlayScrollbars.min.css">
+
+  <!-- Material Iconic CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="././asset/css/admin/adminlte.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="././asset/css/stock-manager.css">
+  <link rel="stylesheet" href="././asset/css/common.css">
+  <link rel="stylesheet" href="././asset/css/util.css">
+
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" style="height: auto;">
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item d-lg-none">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fa fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block ml-lg-3">
+          <a href="#" class="nav-link lh-1-0 p-0 mb-2">Welcome! Stock Manager</a>
+          <a href="#" class="nav-link fs-13 lh-1-0 p-0">Logged In: 14/03/2020 9:45pm</a>
+        </li>
+      </ul>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <div class="col text-center">
+            <i class="fa fa-sign-out fa-lg"></i>
+            <a class="nav-link p-0 lh-1-0" data-widget="control-sidebar" data-slide="true" href="#" role="button">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar elevation-4 sidebar-light-danger">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-link navbar-white d-flex justify-content-center">
+        <img src="././asset/img/celex_logo_no_text.png" alt="Celex Logo" class="brand-image img-md img-push elevation-0 ml-0" style="opacity: .8">
+        <span class="brand-text font-weight-bold">CELEX</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar os-host os-theme-light os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-transition">
+        <div class="os-resize-observer-host observed">
+          <div class="os-resize-observer" style="left: 0px; right: auto;"></div>
+        </div>
+        <div class="os-size-auto-observer observed" style="height: calc(100% + 1px); float: left;">
+          <div class="os-resize-observer"></div>
+        </div>
+        <div class="os-content-glue" style="margin: 0px -8px; width: 249px; height: 862px;"></div>
+        <div class="os-padding">
+          <div class="os-viewport os-viewport-native-scrollbars-invisible" style="overflow-y: scroll;">
+            <div class="os-content" style="padding: 0px 8px; height: 100%; width: 100%;">
+              <!-- Sidebar user (optional) -->
+              <div class="user-panel mt-4 pb-3 mb-3 d-flex">
+                <div class="image text-center">
+                  <img src="././asset/img/user.png" class="img-circle elevation-3" alt="User Image">
+                </div>
+                <div class="info">
+                  <a href="#" class="d-block">User Name</a>
+                </div>
+              </div>
+
+              <!-- Sidebar Menu -->
+              <nav class="mt-3 mb-5">
+                <ul class="nav nav-pills nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu" data-accordion="false">
+                  <li class="nav-item"><a href="#dashboard" class="nav-link active"> <p>Dashboard</p> </a></li>
+                  <li class="nav-item"><a href="#almunium" class="nav-link"> <p>Alminium</p> </a></li>
+                  <li class="nav-item"><a href="#reflective-sheet" class="nav-link"> <p>Reflective Sheet</p> </a></li>
+                  <li class="nav-item"><a href="#hologram" class="nav-link"> <p>Hologram</p> </a></li>
+                  <li class="nav-item"><a href="#tlp" class="nav-link"> <p>TLP</p> </a></li>
+                  <li class="nav-item"><a href="#hot-stamping-foil" class="nav-link"> <p>Hot Stamping Foil</p> </a></li>
+                  <li class="nav-item"><a href="#masking-label" class="nav-link"> <p>Masking label</p> </a></li>
+                  <li class="nav-item"><a href="#loose-material" class="nav-link"> <p>Loose material</p> </a></li>
+                  <li class="nav-item"><a href="#packaging" class="nav-link"> <p>Packaging</p> </a></li>
+                </ul>
+              </nav>
+              <!-- /.sidebar-menu -->
+            </div>
+          </div>
+        </div>
+        <div class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable os-scrollbar-auto-hidden">
+          <div class="os-scrollbar-track">
+            <div class="os-scrollbar-handle" style="width: 100%; transform: translate(0px, 0px);"></div>
+          </div>
+        </div>
+        <div class="os-scrollbar os-scrollbar-vertical os-scrollbar-auto-hidden">
+          <div class="os-scrollbar-track">
+            <div class="os-scrollbar-handle" style="height: 72.8885%; transform: translate(0px, 0px);"></div>
+          </div>
+        </div>
+        <div class="os-scrollbar-corner"></div>
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <div class="tab-content nav-pans">
+      <div class="tab-pane active" id="dashboard" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Dashboard</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="row d-flex justify-content-center">
+                <div class="col-xl-3 col-md-4 col-sm-6 d-flex align-items-stretch pl-sm-3 pr-sm-3 p-0 mb-3">
+                  <div class="card shadow bg-white w-100">
+                    <div class="card-header border-bottom-0 pt-4">
+                      <a href="#almunium"><label>Aluminum Stock</label></a>
+                    </div>
+                    <div class="card-body pt-1 pb-0">
+                      <div class="master-table table-responsive">
+                        <table class="table table-striped table-hover table-bordered mb-0">
+                          <thead>
+                            <tr>
+                              <th scope="col-lg">Item Name</th>
+                              <th scope="col-lg">Avl Qty</th>
+                              <th scope="col-lg">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">AL 46.1</th>
+                              <td>200Kg</td>
+                              <td class="bg-red">Red</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">AL 48.2</th>
+                              <td>5000Kg</td>
+                               <td class="bg-yellow">Red</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="card-footer text-center bg-white pb-3">
+                      <a href="#"><label>More Details</label></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 d-flex align-items-stretch pl-sm-3 pr-sm-3 p-0 mb-3">
+                  <div class="card shadow bg-white w-100">
+                    <div class="card-header border-bottom-0 pt-4">
+                      <a href="#reflective-sheet"><label>Reflective Sheet Stock</label></a>
+                    </div>
+                    <div class="card-body pt-1 pb-0">
+                      <div class="master-table table-responsive">
+                        <table class="table table-striped table-hover table-bordered mb-0">
+                          <thead>
+                            <tr>
+                              <th scope="col-lg">Item Name</th>
+                              <th scope="col-lg">Avl Qty</th>
+                              <th scope="col-lg">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">RS-W-285X45</th>
+                              <td>500m sq</td>
+                              <td class="bg-red">Red</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">RS-Y-285X45</th>
+                              <td>5000m sq </td>
+                              <td class="bg-yellow">Yellow</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="card-footer text-center bg-white pb-3">
+                      <a href="#"><label>More Details</label></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 d-flex align-items-stretch pl-sm-3 pr-sm-3 p-0 mb-3">
+                  <div class="card shadow bg-white w-100">
+                    <div class="card-header border-bottom-0 pt-4">
+                      <a href="#hologram"><label>Hologram Stock</label></a>
+                    </div>
+                    <div class="card-body pt-1 pb-0">
+                      <div class="master-table table-responsive">
+                        <table class="table table-striped table-hover table-bordered mb-0">
+                          <thead>
+                            <tr>
+                              <th scope="col-lg">Item Name</th>
+                              <th scope="col-lg">Avl Qty</th>
+                              <th scope="col-lg">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">HG- 12X12</th>
+                              <td>500m sq </td>
+                               <td class="bg-red">Red</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="card-footer text-center bg-white pb-3">
+                      <a href="#"><label>More Details</label></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 d-flex align-items-stretch pl-sm-3 pr-sm-3 p-0 mb-3">
+                  <div class="card shadow bg-white w-100">
+                    <div class="card-header border-bottom-0 pt-4">
+                      <a href="#tlp"><label>TLP Stickers Stock</label></a>
+                    </div>
+                    <div class="card-body pt-1 pb-0">
+                      <div class="master-table table-responsive">
+                        <table class="table table-striped table-hover table-bordered mb-0">
+                          <thead>
+                            <tr>
+                              <th scope="col-lg">Item Name</th>
+                              <th scope="col-lg">Avl Qty</th>
+                              <th scope="col-lg">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">HG- 12X12</th>
+                              <td>500m sq </td>
+                               <td class="bg-red">Red</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="card-footer text-center bg-white pb-3">
+                      <a href="#"><label>More Details</label></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 d-flex align-items-stretch pl-sm-3 pr-sm-3 p-0 mb-3">
+                  <div class="card shadow bg-white w-100">
+                    <div class="card-header border-bottom-0 pt-4">
+                      <a href="#hot-stamping-foil"><label>Hot Stamping Foil</label></a>
+                    </div>
+                    <div class="card-body pt-1 pb-0">
+                      <div class="master-table table-responsive">
+                        <table class="table table-striped table-hover table-bordered mb-0">
+                          <thead>
+                            <tr>
+                              <th scope="col-lg">Item Name</th>
+                              <th scope="col-lg">Avl Qty</th>
+                              <th scope="col-lg">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">HSF-B-285X </th>
+                              <td>200</td>
+                               <td class="bg-red">Red</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">HSF-Y-285X </th>
+                              <td>500</td>
+                              <td class="bg-yellow">Red</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="card-footer text-center bg-white pb-3">
+                      <a href="#"><label>More Details</label></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 d-flex align-items-stretch pl-sm-3 pr-sm-3 p-0 mb-3">
+                  <div class="card shadow bg-white w-100">
+                    <div class="card-header border-bottom-0 pt-4">
+                      <a href="#masking-label"><label>Masking Lables</label></a>
+                    </div>
+                    <div class="card-body pt-1 pb-0">
+                      <div class="master-table table-responsive">
+                        <table class="table table-striped table-hover table-bordered mb-0">
+                          <thead>
+                            <tr>
+                              <th scope="col-lg">Item Name</th>
+                              <th scope="col-lg">Avl Qty</th>
+                              <th scope="col-lg">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">ML-GR-512X512</th>
+                              <td>500m sq</td>
+                               <td class="bg-red">Red</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">ML-O-512X512</th>
+                              <td>2000m sq</td>
+                               <td class="bg-yellow">Red</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="card-footer text-center bg-white pb-3">
+                      <a href="#"><label>More Details</label></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 d-flex align-items-stretch pl-sm-3 pr-sm-3 p-0 mb-3">
+                  <div class="card shadow bg-white w-100">
+                    <div class="card-header border-bottom-0 pt-4">
+                      <a href="#loose-material"><label>Loose Material</label></a>
+                    </div>
+                    <div class="card-body pt-1 pb-0">
+                      <div class="master-table table-responsive">
+                        <table class="table table-striped table-hover table-bordered mb-0">
+                          <thead>
+                            <tr>
+                              <th scope="col-lg">Item Name</th>
+                              <th scope="col-lg">Avl Qty</th>
+                              <th scope="col-lg">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">S-T1-25</th>
+                              <td>20000pcs</td>
+                              <td class="bg-green">Green</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Riv-T1-4</th>
+                              <td>3456pcs</td>
+                               <td class="bg-red">Red</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="card-footer text-center bg-white pb-3">
+                      <a href="#"><label>More Details</label></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 d-flex align-items-stretch pl-sm-3 pr-sm-3 p-0 mb-3">
+                  <div class="card shadow bg-white w-100">
+                    <div class="card-header border-bottom-0 pt-4">
+                      <a href="#packaging"><label>Packaging Items</label></a>
+                    </div>
+                    <div class="card-body pt-1 pb-0">
+                      <div class="master-table table-responsive">
+                        <table class="table table-striped table-hover table-bordered mb-0">
+                          <thead>
+                            <tr>
+                              <th scope="col-lg">Item Name</th>
+                              <th scope="col-lg">Avl Qty</th>
+                              <th scope="col-lg">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">SB-T1-285X45</th>
+                              <td>4567</td>
+                               <td class="bg-red">Red</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">BB-T1-300X455</th>
+                              <td>35478</td>
+                               <td class="bg-yellow">Red</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="card-footer text-center bg-white pb-3">
+                      <a href="#"><label>More Details</label></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Dashboard -->
+      <div class="tab-pane" id="almunium" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Almunium</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="almunium-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="almunium-stock-in-tab" data-toggle="pill" href="#almunium-stock-in" role="tab" aria-controls="almunium-stock-in" aria-selected="true">Stock In</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="almunium-stock-review-tab" data-toggle="pill" href="#almunium-stock-review" role="tab" aria-controls="almunium-stock-review" aria-selected="false">Stock Review</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="almunium-tabContent">
+                    <div class="tab-pane fade show active" id="almunium-stock-in" role="tabpanel" aria-labelledby="almunium-stock-in-tab">
+                      <div class="p-2 pl-sm-5 pr-sm-5">
+                        <div class="row form-group">
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Aluminium Type:</h5>
+                            <select class="p-0 form-control" id="select-aluminium-type">
+                              <option>Select Aluminium Type</option>
+                              <option>West</option>
+                              <option>North</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Vendor Name</h5>
+                            <select class="p-0 form-control" id="select-vendor-name">
+                              <option>Select Vendor</option>
+                              <option>West</option>
+                              <option>North</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Qty.</h5>
+                            <div class="row d-flex flex-row ml-0 mr-0">
+                              <input type="text" class="form-control col-8 mr-auto" id="enter-almunium-qty" placeholder="Enter Qty">
+                              <select class="p-0 form-control col-3" id="select-almunium-qty-unit">
+                                <option>Unit</option>
+                                <option>Kg</option>
+                                <option>Sq Mtr</option>
+                                <option>mm</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Batch No.</h5>
+                            <input type="text" class="form-control" id="enter-almunium-batch-num" placeholder="Enter Batch No">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Container No</h5>
+                            <input type="text" class="form-control" id="enter-almunium-container-num" placeholder="Enter Container No">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter No of Rolls</h5>
+                            <input type="text" class="form-control" id="enter-almunium-rolls-num" placeholder="Enter No of Rolls">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Invoice No.</h5>
+                            <input type="text" class="form-control" id="enter-almunium-invoice-num" placeholder="Enter Invoice No.">
+                          </div>
+                        </div>
+                        <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column btns justify-content-center mt-sm-1 mb-sm-3">
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mr-sm-5 mt-3">Add Item To Stock</button>
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mt-3">Add New</button>
+                        </div>
+                      </div>
+                    </div><!-- Stock In -->
+                    <div class="tab-pane fade" id="almunium-stock-review" role="tabpanel" aria-labelledby="almunium-stock-review-tab">
+                      <div class="master-list mt-0">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL.NO</th>
+                                <th scope="col-lg">Item code</th>
+                                <th scope="col-lg">Item Name</th>
+                                <th scope="col-lg">Avl Qty</th>
+                                <th scope="col-lg">Batch No</th>
+                                <th scope="col-lg">Container No.</th>
+                                <th scope="col-lg">No. of Rolls</th>
+                                <th scope="col-lg">Inv</th>
+                                <th scope="col-lg">Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>AL 46.1</td>
+                                <td>Aluminium</td>
+                                <td>2000kg</td>
+                                <td>1234</td>
+                                <td>12</td>
+                                <td>4</td>
+                                <td>Cel/01/23</td>
+                                <td class="bg-red">Red</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- Stock Review -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Almunium -->
+      <div class="tab-pane" id="reflective-sheet" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Reflective Sheet</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="reflective-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="reflective-stock-in-tab" data-toggle="pill" href="#reflective-stock-in" role="tab" aria-controls="reflective-stock-in" aria-selected="true">Stock In</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="reflective-stock-review-tab" data-toggle="pill" href="#reflective-stock-review" role="tab" aria-controls="reflective-stock-review" aria-selected="false">Stock Review</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="reflective-tabContent">
+                    <div class="tab-pane fade show active" id="reflective-stock-in" role="tabpanel" aria-labelledby="reflective-stock-in-tab">
+                      <div class="p-2 pl-sm-5 pr-sm-5">
+                        <div class="row form-group">
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Reflective Sheet</h5>
+                            <select class="p-0 form-control" id="select-aluminium-type">
+                              <option>Select Reflective Sheet</option>
+                              <option>West</option>
+                              <option>North</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Vendor Name</h5>
+                            <select class="p-0 form-control" id="select-vendor-name">
+                              <option>Select Vendor</option>
+                              <option>West</option>
+                              <option>North</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Qty.</h5>
+                            <div class="row d-flex flex-row ml-0 mr-0">
+                              <input type="text" class="form-control col-8 mr-auto" id="enter-reflective-sheet-qty" placeholder="Enter Qty">
+                              <select class="p-0 form-control col-3" id="select-hologram-qty-unit">
+                                <option>Unit</option>
+                                <option>Kg</option>
+                                <option>Sq Mtr</option>
+                                <option>mm</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Batch No.</h5>
+                            <input type="text" class="form-control" id="enter-reflective-sheet-batch-num" placeholder="Enter Batch No">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Box No</h5>
+                            <input type="text" class="form-control" id="enter-reflective-sheet-container-num" placeholder="Enter Container No">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter No of Rolls</h5>
+                            <input type="text" class="form-control" id="enter-reflective-sheet-rolls-num" placeholder="Enter No of Rolls">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Invoice No.</h5>
+                            <input type="text" class="form-control" id="enter-reflective-sheet-invoice-num" placeholder="Enter Invoice No.">
+                          </div>
+                        </div>
+                        <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column btns justify-content-center mt-sm-1 mb-sm-3">
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mr-sm-5 mt-3">Add Item To Stock</button>
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mt-3">Add New</button>
+                        </div>
+                      </div>
+                    </div><!-- Stock In -->
+                    <div class="tab-pane fade" id="reflective-stock-review" role="tabpanel" aria-labelledby="reflective-stock-review-tab">
+                      <div class="master-list mt-0">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL.NO</th>
+                                <th scope="col-lg">Item code</th>
+                                <th scope="col-lg">Item Name</th>
+                                <th scope="col-lg">Avl Qty</th>
+                                <th scope="col-lg">Batch No</th>
+                                <th scope="col-lg">Box No.</th>
+                                <th scope="col-lg">No. of Rolls</th>
+                                <th scope="col-lg">Inv</th>
+                                <th scope="col-lg">Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>RS-Y-285X45</td>
+                                <td>Yellow Reflective Sheet</td>
+                                <td>200 M Sq.</td>
+                                <td>1234</td>
+                                <td>20</td>
+                                <td>3</td>
+                                <td>CE/01/23</td>
+                                <td class="bg-red">Red</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- Stock Review -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Reflective Sheet -->
+      <div class="tab-pane" id="hologram" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Hologram</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="hologram-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="hologram-stock-in-tab" data-toggle="pill" href="#hologram-stock-in" role="tab" aria-controls="hologram-stock-in" aria-selected="true">Stock In</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="hologram-stock-review-tab" data-toggle="pill" href="#hologram-stock-review" role="tab" aria-controls="hologram-stock-review" aria-selected="false">Stock Review</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="hologram-tabContent">
+                    <div class="tab-pane fade show active" id="hologram-stock-in" role="tabpanel" aria-labelledby="hologram-stock-in-tab">
+                      <div class="p-2 pl-sm-5 pr-sm-5">
+                        <div class="row form-group">
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Hologram Type</h5>
+                            <select class="p-0 form-control" id="select-aluminium-type">
+                              <option>Select Hologram Type</option>
+                              <option>West</option>
+                              <option>North</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Vendor Name</h5>
+                            <select class="p-0 form-control" id="select-vendor-name">
+                              <option>Select Vendor</option>
+                              <option>West</option>
+                              <option>North</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Qty.</h5>
+                            <div class="row d-flex flex-row ml-0 mr-0">
+                              <input type="text" class="form-control col-8 mr-auto" id="enter-hologram-qty" placeholder="Enter Qty">
+                              <select class="p-0 form-control col-3" id="select-hologram-qty-unit">
+                                <option>Unit</option>
+                                <option>Kg</option>
+                                <option>Sq Mtr</option>
+                                <option>mm</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Batch No.</h5>
+                            <input type="text" class="form-control" id="enter-hologram-batch-num" placeholder="Enter Batch No">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Box No</h5>
+                            <input type="text" class="form-control" id="enter-hologram-container-num" placeholder="Enter Container No">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter No of Rolls</h5>
+                            <input type="text" class="form-control" id="enter-hologram-rolls-num" placeholder="Enter No of Rolls">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Invoice No.</h5>
+                            <input type="text" class="form-control" id="enter-hologram-invoice-num" placeholder="Enter Invoice No.">
+                          </div>
+                        </div>
+                        <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column btns justify-content-center mt-sm-1 mb-sm-3">
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mr-sm-5 mt-3">Add Item To Stock</button>
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mt-3">Add New</button>
+                        </div>
+                      </div>
+                    </div><!-- Stock In -->
+                    <div class="tab-pane fade" id="hologram-stock-review" role="tabpanel" aria-labelledby="hologram-stock-review-tab">
+                      <div class="master-list mt-0">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL.NO</th>
+                                <th scope="col-lg">Item code</th>
+                                <th scope="col-lg">Item Name</th>
+                                <th scope="col-lg">Avl Qty</th>
+                                <th scope="col-lg">Batch No</th>
+                                <th scope="col-lg">Box No.</th>
+                                <th scope="col-lg">No. of Rolls</th>
+                                <th scope="col-lg">Inv</th>
+                                <th scope="col-lg">Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>HG-45X45</td>
+                                <td>Hologram</td>
+                                <td>2000M Sq.</td>
+                                <td>1234</td>
+                                <td>20</td>
+                                <td>3</td>
+                                <td>CE/01/23</td>
+                                <td class="bg-red">Red</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- Stock Review -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Hologram -->
+      <div class="tab-pane" id="tlp" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">TLP</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="tlp-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="tlp-stock-in-tab" data-toggle="pill" href="#tlp-stock-in" role="tab" aria-controls="tlp-stock-in" aria-selected="true">Stock In</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="tlp-stock-review-tab" data-toggle="pill" href="#tlp-stock-review" role="tab" aria-controls="tlp-stock-review" aria-selected="false">Stock Review</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="tlp-tabContent">
+                    <div class="tab-pane fade show active" id="tlp-stock-in" role="tabpanel" aria-labelledby="tlp-stock-in-tab">
+                      <div class="p-2 pl-sm-5 pr-sm-5">
+                        <div class="row form-group">
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Item Type</h5>
+                            <select class="p-0 form-control" id="select-aluminium-type">
+                              <option>Select TLP Type</option>
+                              <option>West</option>
+                              <option>North</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Vendor Name</h5>
+                            <select class="p-0 form-control" id="select-vendor-name">
+                              <option>Select Vendor</option>
+                              <option>West</option>
+                              <option>North</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Qty.</h5>
+                            <div class="row d-flex flex-row ml-0 mr-0">
+                              <input type="text" class="form-control col-8 mr-auto" id="enter-tlp-qty" placeholder="Enter Qty">
+                              <select class="p-0 form-control col-3" id="select-tlp-qty-unit">
+                                <option>Unit</option>
+                                <option>Kg</option>
+                                <option>Sq Mtr</option>
+                                <option>mm</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Batch No.</h5>
+                            <input type="text" class="form-control" id="enter-tlp-batch-num" placeholder="Enter Batch No">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Box No</h5>
+                            <input type="text" class="form-control" id="enter-tlp-container-num" placeholder="Enter Container No">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter No of Rolls</h5>
+                            <input type="text" class="form-control" id="enter-tlp-rolls-num" placeholder="Enter No of Rolls">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Invoice No.</h5>
+                            <input type="text" class="form-control" id="enter-tlp-invoice-num" placeholder="Enter Invoice No.">
+                          </div>
+                        </div>
+                        <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column btns justify-content-center mt-sm-1 mb-sm-3">
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mr-sm-5 mt-3">Add Item To Stock</button>
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mt-3">Add New</button>
+                        </div>
+                      </div>
+                    </div><!-- Stock In -->
+                    <div class="tab-pane fade" id="tlp-stock-review" role="tabpanel" aria-labelledby="tlp-stock-review-tab">
+                      <div class="master-list mt-0">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL.NO</th>
+                                <th scope="col-lg">Item code</th>
+                                <th scope="col-lg">Item Name</th>
+                                <th scope="col-lg">Avl Qty</th>
+                                <th scope="col-lg">Batch No</th>
+                                <th scope="col-lg">Box No.</th>
+                                <th scope="col-lg">No. of Rolls</th>
+                                <th scope="col-lg">Inv</th>
+                                <th scope="col-lg">Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>TLP-285X45</td>
+                                <td>TLP Sticker</td>
+                                <td>200 M Sq.</td>
+                                <td>1234</td>
+                                <td>20</td>
+                                <td>3</td>
+                                <td>CE/01/23</td>
+                                <td class="bg-red">Red</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- Stock Review -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- TLP -->
+      <div class="tab-pane" id="hot-stamping-foil" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Hot Stamping Foil</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="hot-stamping-foil-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="hot-stamping-foil-stock-in-tab" data-toggle="pill" href="#hot-stamping-foil-stock-in" role="tab" aria-controls="hot-stamping-foil-stock-in" aria-selected="true">Stock In</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="hot-stamping-foil-stock-review-tab" data-toggle="pill" href="#hot-stamping-foil-stock-review" role="tab" aria-controls="hot-stamping-foil-stock-review" aria-selected="false">Stock Review</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="hot-stamping-foil-tabContent">
+                    <div class="tab-pane fade show active" id="hot-stamping-foil-stock-in" role="tabpanel" aria-labelledby="hot-stamping-foil-stock-in-tab">
+                      <div class="p-2 pl-sm-5 pr-sm-5">
+                        <div class="row form-group">
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Hot Stamping Foil Type</h5>
+                            <select class="p-0 form-control" id="select-hot-stamping-foil--type">
+                              <option>Select HSF</option>
+                              <option>West</option>
+                              <option>North</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Vendor Name</h5>
+                            <select class="p-0 form-control" id="select-hot-stamping-foil-vendor-name">
+                              <option>Select Vendor</option>
+                              <option>West</option>
+                              <option>North</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Qty.</h5>
+                            <div class="row d-flex flex-row ml-0 mr-0">
+                              <input type="text" class="form-control col-8 mr-auto" id="enter-hot-stamping-foil-qty" placeholder="Enter Qty">
+                              <select class="p-0 form-control col-3" id="select-hot-stamping-foil-qty-unit">
+                                <option>Unit</option>
+                                <option>Kg</option>
+                                <option>Sq Mtr</option>
+                                <option>mm</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Batch No.</h5>
+                            <input type="text" class="form-control" id="enter-hot-stamping-foil-batch-num" placeholder="Enter Batch No">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Box No</h5>
+                            <input type="text" class="form-control" id="enter-hot-stamping-foil-container-num" placeholder="Enter Container No">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter No of Rolls</h5>
+                            <input type="text" class="form-control" id="enter-hot-stamping-foil-rolls-num" placeholder="Enter No of Rolls">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Invoice No.</h5>
+                            <input type="text" class="form-control" id="enter-hot-stamping-foil-invoice-num" placeholder="Enter Invoice No.">
+                          </div>
+                        </div>
+                        <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column btns justify-content-center mt-sm-1 mb-sm-3">
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mr-sm-5 mt-3">Add Item To Stock</button>
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mt-3">Add New</button>
+                        </div>
+                      </div>
+                    </div><!-- Stock In -->
+                    <div class="tab-pane fade" id="hot-stamping-foil-stock-review" role="tabpanel" aria-labelledby="hot-stamping-foil-stock-review-tab">
+                      <div class="master-list mt-0">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL.NO</th>
+                                <th scope="col-lg">Item code</th>
+                                <th scope="col-lg">Item Name</th>
+                                <th scope="col-lg">Avl Qty</th>
+                                <th scope="col-lg">Batch No</th>
+                                <th scope="col-lg">Box No.</th>
+                                <th scope="col-lg">No. of Rolls</th>
+                                <th scope="col-lg">Inv</th>
+                                <th scope="col-lg">Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>HSF-B-285X45</td>
+                                <td>Black HSF</td>
+                                <td>200 M Sq.</td>
+                                <td>1234</td>
+                                <td>20</td>
+                                <td>3</td>
+                                <td>CE/01/23</td>
+                                <td class="bg-red">Red</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- Stock Review -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Hot Stamping foil -->
+      <div class="tab-pane" id="masking-label" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Masking Label</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="masking-label-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="masking-label-stock-in-tab" data-toggle="pill" href="#masking-label-stock-in" role="tab" aria-controls="masking-label-stock-in" aria-selected="true">Stock In</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="masking-label-stock-review-tab" data-toggle="pill" href="#masking-label-stock-review" role="tab" aria-controls="masking-label-stock-review" aria-selected="false">Stock Review</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="masking-label-tabContent">
+                    <div class="tab-pane fade show active" id="masking-label-stock-in" role="tabpanel" aria-labelledby="masking-label-stock-in-tab">
+                      <div class="p-2 pl-sm-5 pr-sm-5">
+                        <div class="row form-group">
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Masking Label</h5>
+                            <select class="p-0 form-control" id="select-aluminium-type">
+                              <option>Select ML</option>
+                              <option>West</option>
+                              <option>North</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Vendor Name</h5>
+                            <select class="p-0 form-control" id="select-vendor-name">
+                              <option>Select Vendor</option>
+                              <option>West</option>
+                              <option>North</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Qty.</h5>
+                            <div class="row d-flex flex-row ml-0 mr-0">
+                              <input type="text" class="form-control col-8 mr-auto" id="enter-masking-label-qty" placeholder="Enter Qty">
+                              <select class="p-0 form-control col-3" id="select-masking-label-qty-unit">
+                                <option>Unit</option>
+                                <option>Kg</option>
+                                <option>Sq Mtr</option>
+                                <option>mm</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Batch No.</h5>
+                            <input type="text" class="form-control" id="enter-masking-label-batch-num" placeholder="Enter Batch No">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Box No</h5>
+                            <input type="text" class="form-control" id="enter-masking-label-container-num" placeholder="Enter Container No">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter No of Rolls</h5>
+                            <input type="text" class="form-control" id="enter-masking-label-rolls-num" placeholder="Enter No of Rolls">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Invoice No.</h5>
+                            <input type="text" class="form-control" id="enter-masking-label-invoice-num" placeholder="Enter Invoice No.">
+                          </div>
+                        </div>
+                        <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column btns justify-content-center mt-sm-1 mb-sm-3">
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mr-sm-5 mt-3">Add Item To Stock</button>
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mt-3">Add New</button>
+                        </div>
+                      </div>
+                    </div><!-- Stock In -->
+                    <div class="tab-pane fade" id="masking-label-stock-review" role="tabpanel" aria-labelledby="masking-label-stock-review-tab">
+                      <div class="master-list mt-0">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL.NO</th>
+                                <th scope="col-lg">Item code</th>
+                                <th scope="col-lg">Item Name</th>
+                                <th scope="col-lg">Avl Qty</th>
+                                <th scope="col-lg">Batch No</th>
+                                <th scope="col-lg">Box No.</th>
+                                <th scope="col-lg">No. of Rolls</th>
+                                <th scope="col-lg">Inv</th>
+                                <th scope="col-lg">Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>RS-Y-285X45</td>
+                                <td>Yellow Reflective Sheet</td>
+                                <td>200 M Sq.</td>
+                                <td>1234</td>
+                                <td>20</td>
+                                <td>3</td>
+                                <td>CE/01/23</td>
+                                <td class="bg-red">Red</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- Stock Review -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Masking label -->
+      <div class="tab-pane" id="loose-material" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Loose Material</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="loose-material-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="loose-material-stock-in-tab" data-toggle="pill" href="#loose-material-stock-in" role="tab" aria-controls="loose-material-stock-in" aria-selected="true">Stock In</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="loose-material-stock-review-tab" data-toggle="pill" href="#loose-material-stock-review" role="tab" aria-controls="loose-material-stock-review" aria-selected="false">Stock Review</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="loose-material-tabContent">
+                    <div class="tab-pane fade show active" id="loose-material-stock-in" role="tabpanel" aria-labelledby="loose-material-stock-in-tab">
+                      <div class="p-2 pl-sm-5 pr-sm-5">
+                        <div class="row form-group">
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Loose Item</h5>
+                            <select class="p-0 form-control" id="select-aluminium-type">
+                              <option>Select Item</option>
+                              <option>West</option>
+                              <option>North</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Vendor Name</h5>
+                            <select class="p-0 form-control" id="select-vendor-name">
+                              <option>Select Vendor</option>
+                              <option>West</option>
+                              <option>North</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Qty.</h5>
+                            <div class="row d-flex flex-row ml-0 mr-0">
+                              <input type="text" class="form-control col-8 mr-auto" id="enter-loose-material-qty" placeholder="Enter Qty">
+                              <select class="p-0 form-control col-3" id="select-loose-material-qty-unit">
+                                <option>Unit</option>
+                                <option>Kg</option>
+                                <option>Sq Mtr</option>
+                                <option>mm</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Batch No.</h5>
+                            <input type="text" class="form-control" id="enter-loose-material-batch-num" placeholder="Enter Batch No">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Box No</h5>
+                            <input type="text" class="form-control" id="enter-loose-material-container-num" placeholder="Enter Container No">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter No of pieces/box</h5>
+                            <input type="text" class="form-control" id="enter-loose-material-rolls-num" placeholder="Enter No of pieces/box">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Invoice No.</h5>
+                            <input type="text" class="form-control" id="enter-loose-material-invoice-num" placeholder="Enter Invoice No.">
+                          </div>
+                        </div>
+                        <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column btns justify-content-center mt-sm-1 mb-sm-3">
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mr-sm-5 mt-3">Add Item To Stock</button>
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mt-3">Add New</button>
+                        </div>
+                      </div>
+                    </div><!-- Stock In -->
+                    <div class="tab-pane fade" id="loose-material-stock-review" role="tabpanel" aria-labelledby="loose-material-stock-review-tab">
+                      <div class="master-list mt-0">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL.NO</th>
+                                <th scope="col-lg">Item code</th>
+                                <th scope="col-lg">Item Name</th>
+                                <th scope="col-lg">Avl Qty</th>
+                                <th scope="col-lg">Batch No</th>
+                                <th scope="col-lg">Box No.</th>
+                                <th scope="col-lg">Inv</th>
+                                <th scope="col-lg">Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>SC-S-20X20 Screw 200 pieces
+                                <th scope="row">1</th>
+                                <td>SC-S-20X20</td>
+                                <td>Screw</td>
+                                <td>200 pieces</td>
+                                <td>234</td>
+                                <td>23</td>
+                                <td>CE/01/23</td>
+                                <td class="bg-red">Red</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- Stock Review -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Loose Material -->
+      <div class="tab-pane" id="packaging" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Packaging</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="packaging-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="packaging-stock-in-tab" data-toggle="pill" href="#packaging-stock-in" role="tab" aria-controls="packaging-stock-in" aria-selected="true">Stock In</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="packaging-stock-review-tab" data-toggle="pill" href="#packaging-stock-review" role="tab" aria-controls="packaging-stock-review" aria-selected="false">Stock Review</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="packaging-tabContent">
+                    <div class="tab-pane fade show active" id="packaging-stock-in" role="tabpanel" aria-labelledby="packaging-stock-in-tab">
+                      <div class="p-2 pl-sm-5 pr-sm-5">
+                        <div class="row form-group">
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Packaging</h5>
+                            <select class="p-0 form-control" id="select-packaging--type">
+                              <option>Select ML</option>
+                              <option>West</option>
+                              <option>North</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Vendor Name</h5>
+                            <select class="p-0 form-control" id="select-packaging-vendor-name">
+                              <option>Select Vendor</option>
+                              <option>West</option>
+                              <option>North</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Qty.</h5>
+                            <div class="row d-flex flex-row ml-0 mr-0">
+                              <input type="text" class="form-control col-8 mr-auto" id="enter-packaging-qty" placeholder="Enter Qty">
+                              <select class="p-0 form-control col-3" id="select-packaging-qty-unit">
+                                <option>Unit</option>
+                                <option>Kg</option>
+                                <option>Sq Mtr</option>
+                                <option>mm</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Batch No.</h5>
+                            <input type="text" class="form-control" id="enter-packaging-batch-num" placeholder="Enter Batch No">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter Box No</h5>
+                            <input type="text" class="form-control" id="enter-packaging-container-num" placeholder="Enter Container No">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Enter No of Rolls</h5>
+                            <input type="text" class="form-control" id="enter-packaging-rolls-num" placeholder="Enter No of Rolls">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 pl-3 pr-3">
+                            <h5 for="item-type" class="col-form-label">Invoice No.</h5>
+                            <input type="text" class="form-control" id="enter-packaging-invoice-num" placeholder="Enter Invoice No.">
+                          </div>
+                        </div>
+                        <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column btns justify-content-center mt-sm-1 mb-sm-3">
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mr-sm-5 mt-3">Add Item To Stock</button>
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mt-3">Add New</button>
+                        </div>
+                      </div>
+                    </div><!-- Stock In -->
+                    <div class="tab-pane fade" id="packaging-stock-review" role="tabpanel" aria-labelledby="packaging-stock-review-tab">
+                      <div class="master-list mt-0">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL.NO</th>
+                                <th scope="col-lg">Item code</th>
+                                <th scope="col-lg">Item Name</th>
+                                <th scope="col-lg">Avl Qty</th>
+                                <th scope="col-lg">Batch No</th>
+                                <th scope="col-lg">Box No.</th>
+                                <th scope="col-lg">Inv</th>
+                                <th scope="col-lg">Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>SBox-20X20</td>
+                                <td>Small Box</td>
+                                <td>200pcs</td>
+                                <td>34</td>
+                                <td>23</td>
+                                <td>CE/01/23</td>
+                                <td class="bg-red">Red</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- Stock Review -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Packaging -->
+    </div>
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- AdminLTE App -->
+  <script type="text/javascript" src="asset/js/adminlte.js"></script>
+
+  <!-- Custom Javascript -->
+  <script type="text/javascript" src="asset/js/common.js"></script>
+  <script type="text/javascript" src="asset/js/stock-manager.js"></script>
+
+</body>
+
+</html>

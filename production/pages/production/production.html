@@ -1,0 +1,343 @@
+<div class="tab-pane active" id="production" role="menu">
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper" style="min-height: 806px;">
+	  <!-- Content Header (Page header) -->
+	  <div class="content-header">
+		<div class="container-fluid">
+		  <div class="row mb-2">
+			<div class="col-sm-6">
+			  <h1 class="m-0 text-dark">Production</h1>
+			</div><!-- /.col -->
+		  </div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+	  </div>
+	  <!-- /.content-header -->
+
+	  <!-- Main content -->
+	  <section class="content">
+		<div class="container-fluid">
+		  <div class="card card-tabs shadow">
+			<div class="card-header p-0 pt-1 border-bottom-0 tab">
+			  <ul class="nav nav-tabs" id="production-tab" role="tablist">
+				<li class="nav-item">
+				  <a class="nav-link active" id="production-1-tab" data-toggle="pill" href="#production-1" role="tab" aria-controls="production-1" aria-selected="true">Produnction Line 1</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="production-2-tab" data-toggle="pill" href="#production-2" role="tab" aria-controls="production-2" aria-selected="false">Production Line 2</a>
+				</li>
+			  </ul>
+			</div>
+			<div class="card-body pt-4 pb-5 pl-4 pr-4">
+			  <!-- Tab Content -->
+			  <div class="tab-content" id="production-tabContent">
+				<div class="tab-pane fade show active" id="production-1" role="tabpanel" aria-labelledby="production-1-tab">
+				  <div class="row w-100 justify-content-between">
+					<div class="col-xl-5 col-lg-6 col-md-6 mb-3">
+					  <div class="row title">
+						<h5 class="mb-1">Current Plate Type: BLANK-Y-285X45</h5>
+					  </div>
+					</div>
+					<div class="col-xl-4 col-lg-6 col-md-6">
+					  <div class="row form-group d-flex flex-sm-row flex-column justify-content-end">
+						<span for="item-type" class="col-form-label pl-0 mr-sm-3">Change Plate Type</span>
+						<select class="form-control col-md-6 col-5" id="select-prod-1-plate-type">
+						  <option>Select Plate Type</option>
+						  <option>BLANK-Y-285X45</option>
+						  <option>BLANK-W-285X45</option>
+						</select>
+					  </div>
+					</div>
+				  </div>
+				  <div class="master-list mt-3 mb-5">
+					<h6>Stock Details</h6>
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered">
+						<thead>
+						  <tr>
+							<th scope="col-lg" width="3%">Select</th>
+							<th scope="col-lg" width="10%">Item</th>
+							<th scope="col-lg" width="10%">Item Type</th>
+							<th scope="col-lg" width="10%">Batch No.</th>
+							<th scope="col-lg" width="10%">Coil/Roll no</th>
+							<th scope="col-lg" width="10%">Avl. Qty</th>
+							<th scope="col-lg" width="15%">Expected No. of Plates</th>
+							<th scope="col-lg" width="10%">Production</th>
+							<th scope="col-lg" width="10%">Susspense</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<th scope="row" class="text-center">
+							  <div class="custom-control custom-radio">
+								<input class="custom-control-input" type="radio" id="select-prod-1-1" name="select-prod-1-1">
+								<label for="select-prod-1-1" class="custom-control-label"></label>
+							  </div>
+							</th>
+							<td>Alunimnium Coil</td>
+							<td>
+							  <select class="form-control">
+								<option>AL Type</option>
+								<option>option 2</option>
+								<option>option 3</option>
+								<option>option 4</option>
+								<option>option 5</option>
+							  </select>
+							</td>
+							<td><input type="text" class="form-control" placeholder="Enter Batch No."></td>
+							<td><input type="text" class="form-control" placeholder="Enter Coil/Roll no"></td>
+							<td><input type="text" class="form-control" placeholder="Enter Avl. Qty	"></td>
+							<td><input type="text" class="form-control" placeholder="Enter Expected No. of Plates"></td>
+							<td><input type="text" class="form-control" placeholder="Enter Production"></td>
+							<td><input type="text" class="form-control" placeholder="Enter Susspense"></td>
+						  </tr>
+						  <tr>
+							<th scope="row" class="text-center">
+							  <div class="custom-control custom-radio">
+								<input class="custom-control-input" type="radio" id="select-prod-1-2" name="select-prod-1-2">
+								<label for="select-prod-1-2" class="custom-control-label"></label>
+							  </div>
+							</th>
+							<td>Reflective Sheet</td>
+							<td>
+							  <select class="form-control">
+								<option>RS Type</option>
+								<option>option 2</option>
+								<option>option 3</option>
+								<option>option 4</option>
+								<option>option 5</option>
+							  </select>
+							</td>
+							<td><input type="text" class="form-control" placeholder="Enter Batch No."></td>
+							<td><input type="text" class="form-control" placeholder="Enter Coil/Roll no"></td>
+							<td><input type="text" class="form-control" placeholder="Enter Avl. Qty	"></td>
+							<td><input type="text" class="form-control" placeholder="Enter Expected No. of Plates"></td>
+							<td><input type="text" class="form-control" placeholder="Enter Production"></td>
+							<td><input type="text" class="form-control" placeholder="Enter Susspense"></td>
+						  </tr>
+						  <tr>
+							<th scope="row" class="text-center">
+							  <div class="custom-control custom-radio">
+								<input class="custom-control-input" type="radio" id="select-prod-1-3" name="select-prod-1-3">
+								<label for="select-prod-1-3" class="custom-control-label"></label>
+							  </div>
+							</th>
+							<td>Hologram</td>
+							<td>
+							  <select class="form-control">
+								<option>HG Type</option>
+								<option>option 2</option>
+								<option>option 3</option>
+								<option>option 4</option>
+								<option>option 5</option>
+							  </select>
+							</td>
+							<td><input type="text" class="form-control" placeholder="Enter Batch No."></td>
+							<td><input type="text" class="form-control" placeholder="Enter Coil/Roll no"></td>
+							<td><input type="text" class="form-control" placeholder="Enter Avl. Qty	"></td>
+							<td><input type="text" class="form-control" placeholder="Enter Expected No. of Plates"></td>
+							<td><input type="text" class="form-control" placeholder="Enter Production"></td>
+							<td><input type="text" class="form-control" placeholder="Enter Susspense"></td>
+						  </tr>
+						</tbody>
+					  </table>
+					</div>
+					<div class="row d-flex flex-sm-row flex-column justify-content-center mt-sm-1 mb-sm-3">
+					  <button class="btn btn-danger shadow mb-auto min-we-10 max-we-sm-13 mr-sm-5 mt-3">Exhausted</button>
+					  <button class="btn btn-primary shadow mb-auto min-we-10 mr-sm-5 mt-3">Remove from Production</button>
+					  <button class="btn btn-success shadow mb-auto min-we-8 max-we-sm-10 mt-3">Get From Stock</button>
+					</div>
+				  </div>
+				  <div class="row d-flex justify-content-center">
+					<div class="col-xl-3 col-sm-6 mr-sm-3 mb-3">
+					  <div class="row form-group d-flex flex-sm-row flex-column justify-content-between mb-2">
+						<span for="item-type" class="col-form-label title min-we-6 pl-0 mr-sm-3">Good Plates</span>
+						<input type="text" class="form-control col mt-sm-0 mt-3" id="enter-prod-1-good-plates" placeholder="Enter Good Plates">
+					  </div>
+					  <div class="row form-group d-flex flex-sm-row flex-column justify-content-between mb-2">
+						<span for="item-type" class="col-form-label title min-we-6 pl-0 mr-sm-3">Bad Plates</span>
+						<input type="text" class="form-control col mt-sm-0 mt-3" id="enter-prod-1-bad-plates" placeholder="Enter Bad Plates">
+					  </div>
+					  <div class="row form-group d-flex flex-sm-row flex-column justify-content-between mb-2">
+						<span for="item-type" class="col-form-label title min-we-6 pl-0 mr-sm-3">Total Plates</span>
+						<input type="text" class="form-control col mt-sm-0 mt-3" id="enter-prod-1-total-plates" placeholder="Enter Total Plates">
+					  </div>
+					  <div class="row form-group d-flex flex-sm-row flex-column justify-content-between mb-2">
+						<span for="item-type" class="col-form-label title min-we-6 pl-0 mr-sm-3">Operator</span>
+						<input type="text" class="form-control col mt-sm-0 mt-3" id="enter-prod-1-operator" placeholder="Enter Operator">
+					  </div>
+					  <div class="row form-group d-flex flex-sm-row flex-column justify-content-between mb-2">
+						<span for="item-type" class="col-form-label title min-we-6 pl-0 mr-sm-3">Remarks</span>
+						<input type="text" class="form-control col mt-sm-0 mt-3" id="enter-prod-1-remarks" placeholder="Enter Remarks">
+					  </div>
+					</div>
+					<div class="col-sm-5 mr-sm-3">
+					  <div class="master-list p-2 pt-3 mb-5 border">
+						<label>Excess Usage</label>
+						<div class="master-table table-responsive mt-2">
+						  <table class="table table-striped table-hover table-bordered">
+							<thead>
+							  <tr>
+								<th scope="col-lg">Item</th>
+								<th scope="col-lg">Unit</th>
+								<th scope="col-lg">Qty.</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<th scope="row">Aluminium Coil</th>
+								<td>Kg</td>
+								<td></td>
+							  </tr>
+							  <tr>
+								<th scope="row">Reflective Sheet</th>
+								<td>SqMt</td>
+								<td></td>
+							  </tr>
+							  <tr>
+								<th scope="row">Hologram</th>
+								<td>Pcs</td>
+								<td></td>
+							  </tr>
+							</tbody>
+						  </table>
+						</div>
+					  </div>
+					</div>
+					<div class="col-xl-3 col-md-6 col-6">
+					  <div class="row mt-xl-5 mt-auto mb-4 justify-content-xl-start justify-content-center">
+						<div class="custom-control custom-checkbox">
+						  <input class="custom-control-input" type="checkbox" id="prod-1-hologram-done" value="prod-1-hologram-done">
+						  <label for="prod-1-hologram-done" class="custom-control-label">Hologram Done</label>
+						</div>
+					  </div>
+					  <div class="row w-100">
+						<button class="btn btn-success shadow w-100">Update Production</button>
+					  </div>
+					</div>
+				  </div>
+				</div><!-- Production Line 1 -->
+				<div class="tab-pane fade" id="production-2" role="tabpanel" aria-labelledby="production-2-tab">
+				  <div class="row w-100 justify-content-between">
+					<div class="col-xl-5 col-lg-6 col-md-6 mb-3">
+					  <div class="row title">
+						<h5 class="mb-1">Current Plate Type: Laser-W27-340X200</h5>
+					  </div>
+					</div>
+					<div class="col-xl-4 col-lg-6 col-md-6">
+					  <div class="row form-group d-flex flex-sm-row flex-column justify-content-end">
+						<span for="item-type" class="col-form-label pl-0 mr-sm-3">Change Plate Type</span>
+						<select class="form-control col-md-6 col-5" id="select-prod-2-plate-type">
+						  <option>Select Plate Type</option>
+						  <option>Laser-W27-340X200</option>
+						  <option>Laser-Y27-340X200</option>
+						</select>
+					  </div>
+					</div>
+				  </div>
+				  <div class="master-list mt-3 mb-5">
+					<h6>Stock Details</h6>
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered">
+						<thead>
+						  <tr>
+							<th scope="col-lg">Select</th>
+							<th scope="col-lg">Item</th>
+							<th scope="col-lg">Item Type</th>
+							<th scope="col-lg">Batch No.</th>
+							<th scope="col-lg">Coil/Roll no</th>
+							<th scope="col-lg">Avl. Qty</th>
+							<th scope="col-lg">Expected No. of Plates</th>
+							<th scope="col-lg">Production</th>
+							<th scope="col-lg">Susspense</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<th scope="row" class="text-center">
+							  <div class="custom-control custom-radio">
+								<input class="custom-control-input" type="radio" id="select-prod-2-1" name="select-prod-2-1">
+								<label for="select-prod-2-1" class="custom-control-label"></label>
+							  </div>
+							</th>
+							<td>Hologram</td>
+							<td>
+							  <select class="form-control">
+								<option>HG Type</option>
+								<option>option 2</option>
+								<option>option 3</option>
+								<option>option 4</option>
+								<option>option 5</option>
+							  </select>
+							</td>
+							<td><input type="text" class="form-control" placeholder="Enter Batch No."></td>
+							<td><input type="text" class="form-control" placeholder="Enter Coil/Roll no"></td>
+							<td><input type="text" class="form-control" placeholder="Enter Avl. Qty	"></td>
+							<td><input type="text" class="form-control" placeholder="Enter Expected No. of Plates"></td>
+							<td><input type="text" class="form-control" placeholder="Enter Production"></td>
+							<td><input type="text" class="form-control" placeholder="Enter Susspense"></td>
+						  </tr>
+						</tbody>
+					  </table>
+					</div>
+					<div class="row d-flex flex-sm-nowrap flex-sm-row flex-column justify-content-center mt-sm-1 mb-sm-3">
+					  <button class="btn btn-primary shadow mb-auto min-we-10 mr-sm-5 mt-3">Remove from Production</button>
+					  <button class="btn btn-success shadow mb-auto min-we-8 max-we-sm-10 mt-3">Get From Stock</button>
+					</div>
+				  </div>
+				  <div class="row d-flex justify-content-between">
+					<div class="col-xl-4 col-lg-6 col-sm-7">
+					  <label>Production Details:</label>
+					  <div class="row form-group mb-sm-2 mb-3">
+						<span for="item-type" class="col-form-label min-we-9 mr-3 pl-0">Laser Number</span>
+						<select class="col-xl-4 col-sm-5 form-control" id="select-ticket-type">
+						  <option>10 Digit</option>
+						  <option>West</option>
+						  <option>North</option>
+						</select>
+					  </div>
+					  <div class="row form-group mb-sm-2 mb-3">
+						<span for="item-type" class="col-form-label min-we-9 mr-3 pl-0">Starting LID Number</span>
+						<input type="text" class="form-control col-sm col-12 mt-0" id="enter-prod-2-start-lid-num" placeholder="Enter Starting LID Number">
+					  </div>
+					  <div class="row form-group mb-sm-2 mb-3">
+						<span for="item-type" class="col-form-label min-we-9 mr-3 pl-0">End LID Number</span>
+						<input type="text" class="form-control col-sm col-12 mt-0" id="enter-prod-2-end-lid-num" placeholder="Enter End LID Number">
+					  </div>
+					</div>
+					<div class="col-xl-3 col-sm-5 mb-3">
+					  <div class="row form-group d-flex flex-sm-row flex-column justify-content-between mb-2">
+						<span for="item-type" class="col-form-label title min-we-6 pl-0 mr-sm-3">Good Plates</span>
+						<input type="text" class="form-control col mt-sm-0 mt-3" id="enter-prod-2-good-plates" placeholder="Enter Good Plates">
+					  </div>
+					  <div class="row form-group d-flex flex-sm-row flex-column justify-content-between mb-2">
+						<span for="item-type" class="col-form-label title min-we-6 pl-0 mr-sm-3">Bad Plates</span>
+						<input type="text" class="form-control col mt-sm-0 mt-3" id="enter-prod-2-bad-plates" placeholder="Enter Bad Plates">
+					  </div>
+					  <div class="row form-group d-flex flex-sm-row flex-column justify-content-between mb-2">
+						<span for="item-type" class="col-form-label title min-we-6 pl-0 mr-sm-3">Total Plates</span>
+						<input type="text" class="form-control col mt-sm-0 mt-3" id="enter-prod-2-total-plates" placeholder="Enter Total Plates">
+					  </div>
+					  <div class="row form-group d-flex flex-sm-row flex-column justify-content-between mb-2">
+						<span for="item-type" class="col-form-label title min-we-6 pl-0 mr-sm-3">Operator</span>
+						<input type="text" class="form-control col mt-sm-0 mt-3" id="enter-prod-2-operator" placeholder="Enter Operator">
+					  </div>
+					  <div class="row form-group d-flex flex-sm-row flex-column justify-content-between mb-2">
+						<span for="item-type" class="col-form-label title min-we-6 pl-0 mr-sm-3">Remarks</span>
+						<input type="text" class="form-control col mt-sm-0 mt-3" id="enter-prod-2-remarks" placeholder="Enter Remarks">
+					  </div>
+					</div>
+				  </div>
+				  <div class="row text-center">
+					<button class="btn btn-success shadow text-center ml-auto mr-auto">Update Production</button>
+				  </div>
+				</div><!-- Production Line 2 -->
+			  </div><!-- /.Tab Content -->
+			</div>
+			<!-- /.card -->
+		  </div>
+		</div><!-- /.container-fluid -->
+	  </section>
+	  <!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+  </div> <!-- Production -->

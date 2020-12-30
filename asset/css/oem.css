@@ -1,0 +1,38 @@
+/*
+ *  Searchbar
+ */
+ .search-bar-right {
+  flex-wrap: nowrap;
+  border: 1px solid rgb(206, 212, 218);
+  border-radius: 5px;
+}
+
+.search-bar-right:hover,
+.search-bar-right:focus {
+  border-color: var(--input-hover-border);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px var(--input-hover-border);
+  outline: 0 none;
+}
+
+.search-bar-right .input-group {
+  width: auto;
+}
+
+.search-bar-right input {
+  padding-left: 0;
+}
+
+.search-bar-right input:focus {
+  box-shadow: none !important;
+}
+
+/*
+ *  Others
+ */
+.import-report-btn {
+  text-decoration: underline;
+}
+
+#list-dealers .master-table.table-responsive table {
+  min-width: 1600px;
+}

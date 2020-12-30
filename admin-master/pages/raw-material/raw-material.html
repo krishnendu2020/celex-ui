@@ -1,0 +1,280 @@
+<div class="tab-pane" id="raw-material" role="menu">
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper" style="min-height: 806px;">
+	  <!-- Content Header (Page header) -->
+	  <div class="content-header">
+		<div class="container-fluid">
+		  <div class="row mb-2">
+			<div class="col-sm-6">
+			  <h1 class="m-0 text-dark">Raw Material Master</h1>
+			</div><!-- /.col -->
+		  </div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+	  </div>
+	  <!-- /.content-header -->
+
+	  <!-- Main content -->
+	  <section class="content">
+		<div class="container-fluid">
+		  <div class="card card-tabs shadow">
+		  <th:block th:if="${RawMaterialMasterHtml}">
+			<div class="card-header p-0 pt-1 border-bottom-0 tab">
+			
+			  <ul class="nav nav-tabs" id="raw-mat-six-tab" role="tablist">
+			 <th:block th:each=" itemMaster, iterator : ${itemMasterList}">
+			  <li class="nav-item">
+				  <a class="nav-link" th:id="'rawMaterial'+${iterator.index}" data-toggle="pill" th:href="'#raw-mat-six-'+${iterator.index}" th:onclick="|divLoad('raw-mat-six-${iterator.index}','raw-mat-six-${iterator.index}','http://localhost:8080/getAdminPage/RawMaterialMaster?itemTypeId=${itemMaster.itemTypeCode.id}&itemId=${itemMaster.id}')|" role="tab" aria-controls="raw-mat-six-aluminium" aria-selected="false" th:text="${itemMaster.itemName}"></a>
+				</li>
+				</th:block>
+				<!--<li class="nav-item">
+				  <a class="nav-link active" id="raw-mat-six-aluminium-tab" data-toggle="pill" href="#raw-mat-six-aluminium" role="tab" aria-controls="raw-mat-six-aluminium" aria-selected="true">Aluminium</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="raw-mat-six-refletive-tab" data-toggle="pill" href="#raw-mat-six-refletive" role="tab" aria-controls="raw-mat-six-refletive" aria-selected="false">Reflective Sheet</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="raw-mat-six-hologram-tab" data-toggle="pill" href="#raw-mat-six-hologram" role="tab" aria-controls="raw-mat-six-hologram" aria-selected="false">Hologram</a>
+				</li>-->
+			  </ul>
+			  
+			</div>
+			<div class="card-body pt-4 pb-5 pl-4 pr-4">
+			  <!-- Tab Content -->
+			  <div class="tab-content" id="raw-mat-six-tabContent">
+			  <th:block th:each=" itemMaster, iterator : ${itemMasterList}">
+				<div class="tab-pane" th:id="'raw-mat-six-'+${iterator.index}" role="tabpanel" aria-labelledby="raw-mat-six-aluminium-tab">
+				  <form th:id="'rawMaterialMaster'+${iterator.index}" th:object="${rawMaterialMasterObj}">
+				  <input type="text" class="form-control" th:field="*{id}" th:id="'enter-raw-material-id'+${iterator.index}" aria-describedby="enter zone name">             
+				  <div class="add-master d-sm-flex flex-sm-column">
+					<div class="state form-group row justify-content-xl-start justify-content-between">
+					  <div class="col-md-6 col-sm-10 row ml-0 mb-3 mr-sm-3">
+						<span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-8 max-we-11">Item Name</span>
+						<input type="hidden" class="col-sm-6 form-control" name="itemId" th:id="'select-raw-material-item-id'+${iterator.index}" placeholder="Enter Item Name" th:value="${itemMaster.id}" readonly>
+						<!-- <input type="text" class="col-sm-6 form-control" th:field="*{itemId}" th:id="'select-raw-material-item-id'+${iterator.index}" placeholder="Enter Item Name" th:value="${itemMaster.itemTypeCode.id}" readonly>-->
+						<input type="text" class="col-sm-6 form-control" id="enter-aluminium-name" placeholder="Enter Item Name" th:value="${itemMaster.itemName}"  readonly>
+					  </div>
+					  <div class="col-md-6 col-sm-10 row ml-0 mb-3 mr-sm-3">
+						<span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-8 max-we-11">Plate Size</span>
+						<div class="row col-sm-8 col-12 ml-0 pl-0 d-flex flex-row flex-nowrap">
+						  <select class="col mr-1 form-control" th:field="*{itemDimension}" th:id="'select-raw-material-item-dim'+${iterator.index}" data-placeholder="Select Plate Size">
+							<option th:value="0">Select Plate Dimension</option>
+							 <option th:each="plateDimensionMaster : ${plateDimensionMasterList}"
+								 th:value="${plateDimensionMaster.id}"
+								 th:text="${plateDimensionMaster.plateDimension}">
+							 </option>
+						  </select>
+						  <span style="color:red;" th:id="'select-raw-material-item-dim-note'+${iterator.index}"></span>
+						  <select class="col-sm-2 col-2 p-0 ml-sm-2 ml-auto form-control" th:field="*{unitId}" th:id="'select-raw-material-unit'+${iterator.index}">
+							<option th:value="0">Select UoM</option>
+						   <option th:each="unitMaster : ${unitMasterList}"
+										 th:value="${unitMaster.id}"
+										 th:text="${unitMaster.unitCode}">
+						   </option>
+						  </select>
+						  <span style="color:red;" th:id="'select-raw-material-unit-note'+${iterator.index}"></span>
+						</div>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3 mr-md-1">
+						<span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-8 max-we-11">Item Code</span>
+						<input type="text" class="col-md-6 col-sm-5 form-control" th:field="*{itemCode}" th:id="'select-raw-material-item-code'+${iterator.index}" placeholder="Enter Item Code">
+					  <span style="color:red;" th:id="'select-raw-material-item-code-note'+${iterator.index}"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3">
+						<span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-8 max-we-11">HSN Code</span>
+						<input type="text" class="col-md-6 col-sm-5 form-control" th:field="*{itemHsn}" th:id="'select-raw-material-item-hsn-code'+${iterator.index}" placeholder="Enter HSN Code">
+					  <span style="color:red;" th:id="'select-raw-material-item-hsn-code-note'+${iterator.index}"></span>
+					  </div>
+					</div>
+					<div class="row btns justify-content-center mt-3">
+					  <button type="button" class="col-lg-2 col-sm-3 btn btn-success shadow mb-auto" th:onclick="|ajaxPost('rawMaterialMaster${iterator.index}','http://localhost:8080/getAdminPage/saveRawMaterialMaster','raw-mat-six-${iterator.index}','raw-mat-six-${iterator.index}','http://localhost:8080/getAdminPage/RawMaterialMaster?itemTypeId=${itemMaster.itemTypeCode.id}&itemId=${itemMaster.id}')|">Add to Master</button>
+					</div>
+				  </div>
+				  </form>
+				  <div class="master-list mt-4">
+					<label for="cities">Items Added To Master</label>                        
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered">
+						<thead>
+						  <tr>
+							<th scope="col-lg">Item Name</th>
+							<th scope="col-lg">Item Code</th>
+							<th scope="col-lg">HSN Code</th>
+							<th scope="col-lg">Edit</th>
+						  </tr>
+						</thead>
+						<tbody>                            
+						  <tr th:each="rawMaterialMaster  : ${genericList}">
+						  <th:block th:if="${rawMaterialMaster.itemId.itemName == itemMaster.itemName}">
+							  <!-- <th th:text="${stat.index}">01</th> -->
+							  <td th:text="${rawMaterialMaster.itemId.itemName}">PlateColor</td>
+							  <td th:text="${rawMaterialMaster.itemCode}">PlateColor</td>                                                  
+							  <td th:text="${rawMaterialMaster.itemHsn}">PlateColor</td>                                                  
+							  <td><i class="fa fa-edit" href="#" th:onclick="|divLoad('raw-mat-six-${iterator.index}','raw-mat-six-${iterator.index}','http://localhost:8080/getAdminPage/RawMaterialMaster?itemTypeId=${itemMaster.itemTypeCode.id}&itemId=${itemMaster.id}&id=${rawMaterialMaster.id}')|"></i></td>
+						  </th:block>
+						   </tr>                              
+						</tbody>
+					  </table>
+					</div>
+				   
+				  </div>
+				</div><!-- /.Tab Pan -->
+				</th:block>
+				<!--<div class="tab-pane fade" id="raw-mat-six-1" role="tabpanel" aria-labelledby="raw-mat-six-refletive-tab">
+				  <div class="add-master d-sm-flex flex-sm-column">
+					<div class="state form-group row justify-content-xl-start justify-content-between">
+					  <div class="col-sm-6 row ml-0 mb-3 mr-sm-1">
+						<span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-8 max-we-11">Item Name</span>
+						<input type="text" class="col-md-6 col-sm-5 form-control" id="enter-refletive-name" placeholder="Enter Item Name" value="Reflective Sheet" readonly>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3">
+						<span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-8 max-we-11">Enter Color</span>
+						<select class="col-md-6 col-sm-5 p-0 form-control" id="select-refletive-color">
+						  <option>Select Color</option>
+						  <option>White</option>
+						  <option>Yellow</option>
+						</select>
+					  </div>
+					  <div class="col-md-6 col-sm-10 row ml-0 mb-3 mr-sm-3">
+						<span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-8 max-we-11">Plate Size</span>
+						<div class="row col-sm-8 col-12 ml-0 pl-0 d-flex flex-row flex-nowrap">
+						  <select class="col mr-1 form-control" id="select-aluminium-dim-1" data-placeholder="Select Plate Size">
+							<option>285X45</option>
+							<option>200X100</option>
+							<option>500X120</option>
+							<option>340X200</option>
+						  </select>
+						  <select class="col-sm-2 col-2 p-0 ml-sm-2 ml-auto form-control" id="select-aluminium-unit-1">
+							<option>UoM</option>
+							<option>m</option>
+							<option>mm</option>
+						  </select>
+						</div>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3 mr-md-1">
+						<span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-8 max-we-11">Item Code</span>
+						<input type="text" class="col-md-6 col-sm-5 form-control" id="enter-refletive-code" placeholder="Enter Item Code">
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3">
+						<span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-8 max-we-11">HSN Code</span>
+						<input type="text" class="col-md-6 col-sm-5 form-control" id="enter-refletive-hsn-code" placeholder="Enter HSN Code">
+					  </div>
+					</div>
+					<div class="row btns justify-content-center mt-3">
+					  <button class="col-lg-2 col-sm-3 btn btn-success shadow mb-auto">Add to Master</button>
+					</div>
+				  </div>
+				  <div class="master-list mt-4">
+					<label for="cities">Items Added To Master</label>
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered">
+						<thead>
+						  <tr>
+							<th scope="col-lg">SL.No.</th>
+							<th scope="col-lg">Item Name</th>
+							<th scope="col-lg">Color</th>
+							<th scope="col-lg">Dimension</th>
+							<th scope="col-lg">Item Code</th>
+							<th scope="col-lg">HSN Code</th>
+							<th scope="col-lg">Edit</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<th scope="row">01</th>
+							<td>Reflective Sheet</td>
+							<td>White</td>
+							<td>340X200</td>
+							<td>RS-W-340X200</td>
+							<td>1234</td>
+							<td><i class="fa fa-edit" href="#"></i></td>
+						  </tr>
+						  <tr>
+							<th scope="row">01</th>
+							<td>Reflective Sheet</td>
+							<td>Yellow</td>
+							<td>285X45</td>
+							<td>RS-W-285X45</td>
+							<td>1234</td>
+							<td><i class="fa fa-edit" href="#"></i></td>
+						  </tr>                              
+						</tbody>
+					  </table>
+					</div>
+				  </div>
+				</div>
+				<div class="tab-pane fade" id="raw-mat-six-2" role="tabpanel" aria-labelledby="raw-mat-six-hologram-tab">
+				  <div class="add-master d-sm-flex flex-sm-column">
+					<div class="state form-group row justify-content-xl-start justify-content-between">
+					  <div class="col-md-6 col-sm-10 row ml-0 mb-3 mr-sm-3">
+						<span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-8 max-we-11">Item Name</span>
+						<input type="text" class="col-sm-6 form-control" id="enter-hologram-name" placeholder="Enter Item Name" value="Hologram" readonly>
+					  </div>
+					  <div class="col-md-6 col-sm-10 row ml-0 mb-3 mr-sm-3">
+						<span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-8 max-we-11">Plate Size</span>
+						<div class="row col-sm-8 col-12 ml-0 pl-0 d-flex flex-row flex-nowrap">
+						  <select class="col mr-1 form-control" id="select-aluminium-dim-2" data-placeholder="Select Plate Size">
+							<option>285X45</option>
+							<option>200X100</option>
+							<option>500X120</option>
+							<option>340X200</option>
+						  </select>
+						  <select class="col-sm-2 col-2 p-0 ml-sm-2 ml-auto form-control" id="select-aluminium-unit-2">
+							<option>UoM</option>
+							<option>m</option>
+							<option>mm</option>
+						  </select>
+						</div>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3 mr-md-1">
+						<span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-8 max-we-11">Item Code</span>
+						<input type="text" class="col-md-6 col-sm-5 form-control" id="enter-hologram-code" placeholder="Enter Item Code">
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3">
+						<span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-8 max-we-11">HSN Code</span>
+						<input type="text" class="col-md-6 col-sm-5 form-control" id="enter-hologram-hsn-code" placeholder="Enter HSN Code">
+					  </div>
+					</div>
+					<div class="row btns justify-content-center mt-3">
+					  <button class="col-lg-2 col-sm-3 btn btn-success shadow mb-auto">Add to Master</button>
+					</div>
+				  </div>
+				  <div class="master-list mt-4">
+					<label for="cities">Items Added To Master</label>
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered">
+						<thead>
+						  <tr>
+							<th scope="col-lg">SL.No.</th>
+							<th scope="col-lg">Item Name</th>
+							<th scope="col-lg">Dimension</th>
+							<th scope="col-lg">Item Code</th>
+							<th scope="col-lg">HSN Code</th>
+							<th scope="col-lg">Edit</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<th scope="row">01</th>
+							<td>Hologram</td>
+							<td>25X25</td>
+							<td>H-25X25</td>
+							<td>1234</td>
+							<td><i class="fa fa-edit" href="#"></i></td>
+						  </tr>                           
+						</tbody>
+					  </table>
+					</div>
+				  </div>
+				</div>-->
+			  </div><!-- /.Tab Content -->
+			</div>
+			</th:block>
+			<!-- /.card -->
+		  </div>
+		</div><!-- /.container-fluid -->
+	  </section>
+	  <!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+</div> <!-- Raw Material Master -->
+<script src="admin-master/pages/raw-material/raw-material.js"></script>

@@ -1,0 +1,82 @@
+<div class="tab-pane" id="tax-master" role="menu">
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper" style="min-height: 806px;">
+	  <!-- Content Header (Page header) -->
+	  <div class="content-header">
+		<div class="container-fluid">
+		  <div class="row mb-2">
+			<div class="col-sm-6">
+			  <h1 class="m-0 text-dark">Tax Master</h1>
+			</div><!-- /.col -->
+		  </div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+	  </div>
+	  <!-- /.content-header -->
+
+	  <!-- Main content -->
+	  <section class="content">
+		<div class="container-fluid">
+		  <div class="card shadow pt-5 pb-5 pl-4 pr-4">
+		  <!-- <th:block th:if="${TaxMasterHtml}"> -->
+		   <form id="taxMaster" th:object="${taxMasterObj}">
+		   <input type="hidden" class="form-control" th:field="*{id}" id="enter-tax-master-id" aria-describedby="enter zone name">                                          
+			<div class="add-master d-sm-flex flex-sm-row flex-sm-wrap">
+			  <div class="tax-detail row col-12 ml-0 mb-4 p-0">
+				<p for="tax-detail" class="col-form-label">Tax Details</p>
+			  </div>
+			  <div class="tax-type row col-sm-6 ml-0 mb-4 p-0">
+				<p for="tax-type" class="col-form-label col-md-2 col-3 pl-0 min-we-9 max-we-12">Enter Tax Type:</p>
+				<input type="text" class="col-sm-4 form-control" th:field="*{taxType}" id="enter-tax-type" aria-describedby="enter Tax Type">
+				<span style="color:red;" th:id="enter-tax-type-note"></span>
+			  </div>
+			  <div class="tax-rate row col-sm-6 ml-0 mb-4 p-0">
+				<p for="tax-rate" class="col-form-label col-md-2 col-3 pl-0 min-we-9 max-we-12">Enter Tax Rate (%):</p>
+				<input type="text" class="col-sm-4 form-control" th:field="*{taxRate}" id="enter-tax-rate" aria-describedby="enter Tax Rate">
+				<span style="color:red;" th:id="enter-tax-rate-note"></span>
+			  </div>
+			  <div class="row col-12 mt-3">
+				<button type="button" class="col-xl-2 col-md-3 col-sm-4 mb-3 mt-md-auto mt-3 ml-auto mr-auto btn btn-success shadow btn-ad" onclick="ajaxPost('taxMaster','http://localhost:8080/getAdminPage/saveTaxMaster','tax-master','tax-master','http://localhost:8080/getAdminPage/TaxMaster');">Add to Master</button>
+			  </div>
+			</div>
+			</form>
+			<div class="master-list mt-4">
+			  <label for="cities">Taxes Added To Master</label>
+			  
+			  <div class="master-table table-responsive">
+				<table class="table table-striped table-hover table-bordered">
+				  <thead>
+					<tr>
+					  <th scope="col-lg-2">SL.No.</th>
+					  <th scope="col-lg-4">Tax Name</th>
+					  <th scope="col-lg-4">Tax Rate</th>
+					  <th scope="col-lg-2">Edit</th>
+					  <th scope="col-lg-2">Status</th>
+					</tr>
+				  </thead>
+				  <tbody>                      
+					<tr th:each="TaxMaster : ${genericList}">
+					  <th th:text="${TaxMaster.id}">01</th>
+					  <td th:text="${TaxMaster.taxType}">PlateColor</td>
+					  <td th:text="${TaxMaster.taxRate}">PlateColor</td>                                                  
+					  <td><i class="fa fa-edit" href="#"></i></td>
+					  <td>
+						<select class="col-xl-6 p-0 form-control" id="taxStatus" th:onChange="|changeStatus(${TaxMaster.id},this,'tax-master','tax-master','http://localhost:8080/getAdminPage/TaxMaster')|">                            
+						  <option th:selected="1 == ${TaxMaster.status}"  value="1">Active</option>
+						  <option th:selected="0 == ${TaxMaster.status}" value="0">Inactive</option>
+						</select>
+					  </td>
+				   </tr>                        
+				  </tbody>
+				</table>
+			  </div>
+			 
+			</div>
+			<!-- </th:block> -->
+		  </div>
+		</div><!-- /.container-fluid -->
+	  </section>
+	  <!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+</div> <!-- Tax Master -->
+<script src="admin-master/pages/tax-master/tax-master.js"></script>

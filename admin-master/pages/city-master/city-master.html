@@ -1,0 +1,102 @@
+<div class="tab-pane" id="city-master" role="menu">
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper" style="min-height: 806px;">
+	  <!-- Content Header (Page header) -->
+	  <div class="content-header">
+		<div class="container-fluid">
+		  <div class="row mb-2">
+			<div class="col-sm-6">
+			  <h1 class="m-0 text-dark">City Master</h1>
+			</div><!-- /.col -->
+		  </div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+	  </div>
+	  <!-- /.content-header -->
+
+	  <!-- Main content -->
+	  <section class="content">
+		<div class="container-fluid">
+		<!-- <th:block th:if="${cityMasterHtml}"> -->
+		  <div class="card shadow pt-5 pb-5 pl-4 pr-4">
+			<form  id="cityMaster" method="GET">
+			<div class="add-master d-sm-flex flex-sm-row flex-sm-wrap align-item-md-end justify-content-md-start justify-content-sm-between justify-content-center">
+			  <div class="city-name col-md-3 col-sm-5 mr-sm-5 p-0 mb-3">
+				<label for="city-name">Enter City Name</label>
+				<input type="text" class="form-control" name="cityName" id="enter-city-name" onkeyup="textCase('enter-city-name');" aria-describedby="enter city name">
+				<span style="color:red;"  id="enter-city-name-note"></span>
+			  </div>
+			  <select class="col-md-3 col-sm-5 mr-md-5 mt-sm-auto mt-4 p-0 mb-3 form-control form-control" name="stateId" id="select-city-state">
+				<option th:value="0">Select State Name</option>
+				 <option th:each="stateMaster : ${stateMasterList}"
+						 th:value="${stateMaster.id}"
+						 th:text="${stateMaster.stateName}">
+				 </option>
+			  </select>
+			  <span style="color:red;"  id="select-city-state-note"></span>
+			  <button type="button" class="col-xl-2 col-md-3 col-sm-4 mb-3 mt-md-auto mt-3 ml-md-0 ml-auto mr-auto btn btn-success shadow btn-ad" onclick="ajaxPost('cityMaster','http://localhost:8080/getAdminPage/saveCityMaster','city-master','city-master','http://localhost:8080/getAdminPage/CityMaster');">Add to Master</button>
+			</div>
+			</form>
+			<div class="master-list mt-4">
+			  <label for="cities">Cities Added To Master</label>
+			  
+				<div class="float-right">
+				   <label for="name">Search: </label>
+				   <input type="text" id="searchParamCity" style="text-align:left">
+				   <button type="button" class="btn btn-success" onclick="pageButtonClick('0', 'searchParamCity','city','cityMasterPageNo','citytbl','citytbl');">search</button>
+			   </div>
+			<div id="citytbl">
+			  <div class="master-table table-responsive">
+				<table class="table table-striped table-hover table-bordered">
+				  <thead>
+					<tr>
+					  <th scope="col-lg-2">SI.No</th>
+					  <th scope="col-lg-4">City Name</th>
+					  <th scope="col-lg-4">States</th>
+					  <th scope="col-lg-2">Edit</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<!--  <tr th:each="cityMaster : ${genericList}">
+					  <th th:text="|${cityMaster[0]}"></th>
+					  <td th:text="|${cityMaster[1]}">West Bengal</td>
+					  <td th:text="|${cityMaster[4]}">North Bengal</td>
+					  <td><i class="fa fa-edit" href="#"></i></td>
+					</tr> -->
+					<tr th:each="cityMaster : ${genericList}">
+					  <th th:text="${cityMaster.id}"></th>
+					  <td th:text="${cityMaster.cityName}">West Bengal</td>
+					  <td th:text="${cityMaster.stateId.stateName}">North Bengal</td>
+					  <td><i class="fa fa-edit" href="#"></i></td>
+					</tr>
+				  </tbody>
+				</table>
+			  </div>
+			  <!-- <input type="hidden" th:value="${genericList.number}" id="cityMasterPageNo" /> -->
+			  <!-- <div class="pagination-div"> -->
+					<!-- <span th:if="${genericList.hasPrevious()}"> -->
+						<!-- <a th:value="${genericList.number-1}"  onclick="pageButtonClick(this, 'searchParamCity', 'city','cityMasterPageNo','citytbl','citytbl');">Previous</a> -->
+					<!-- </span> -->
+					<!-- <th:block th:each="i: ${#numbers.sequence(0, genericList.totalPages - 1)}"> -->
+						<!-- <span th:if="${genericList.number == i}" class="selected">[[${i}+1]]</span> -->
+						<!-- <span th:unless="${genericList.number == i}"> -->
+							 <!-- <a th:value="${genericList.number}"  onclick="pageButtonClick(this, 'searchParamCity', 'city','cityMasterPageNo','citytbl','citytbl');">[[${i}+1]]</a> -->
+						<!-- </span> -->
+					<!-- </th:block> -->
+					<!-- <span th:if="${genericList.hasNext()}"> -->
+						<!-- <a th:value="${genericList.number+1}" onclick="pageButtonClick(this, 'searchParamCity', 'city','cityMasterPageNo','citytbl','citytbl');">Next</a> -->
+					<!-- </span> -->
+				<!-- </div> -->
+				</div>
+				
+			</div>
+		  </div>
+		  <!-- </th:block> -->
+			   <!-- <th:block th:unless="${cityMasterHtml}"> -->
+			   <!-- </th:block> -->
+		</div><!-- /.container-fluid -->
+	  </section>
+	  <!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+</div> <!-- City Master -->
+<script src="admin-master/pages/city-master/city-master.js"></script>

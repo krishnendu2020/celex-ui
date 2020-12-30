@@ -1,0 +1,640 @@
+<div class="tab-pane" id="reports" role="menu">
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper" style="min-height: 806px;">
+	  <!-- Content Header (Page header) -->
+	  <div class="content-header">
+		<div class="container-fluid">
+		  <div class="row mb-2">
+			<div class="col-sm-6">
+			  <h1 class="m-0 text-dark">Invoices</h1>
+			</div><!-- /.col -->
+		  </div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+	  </div>
+	  <!-- /.content-header -->
+
+	  <!-- Main content -->
+	  <section class="content">
+		<div class="container-fluid">
+		  <div class="card card-tabs shadow">
+			<div class="card-header p-0 pt-1 border-bottom-0 tab">
+			  <ul class="nav nav-tabs" id="reports-six-tab" role="tablist">
+				<li class="nav-item">
+				  <a class="nav-link active" id="reports-six-pay-tab" data-toggle="pill" href="#reports-six-pay" role="tab" aria-controls="reports-six-pay" aria-selected="true">Payment Reports</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="reports-six-emboss-tab" data-toggle="pill" href="#reports-six-emboss" role="tab" aria-controls="reports-six-emboss" aria-selected="false">Embossing Station Reports</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="reports-six-dealer-tab" data-toggle="pill" href="#reports-six-dealer" role="tab" aria-controls="reports-six-dealer" aria-selected="false">Dealer Reports</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="reports-six-job-tab" data-toggle="pill" href="#reports-six-job" role="tab" aria-controls="reports-six-job" aria-selected="false">Job Reports</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="reports-six-dispatch-tab" data-toggle="pill" href="#reports-six-dispatch" role="tab" aria-controls="reports-six-dispatch" aria-selected="false">Disptach Reports</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="reports-six-stock-tab" data-toggle="pill" href="#reports-six-stock" role="tab" aria-controls="reports-six-stock" aria-selected="false">Stock Report</a>
+				</li>
+			  </ul>
+			</div>
+			<div class="card-body pt-4 pb-3 pl-4 pr-4">
+			  <!-- Tab Content -->
+			  <div class="tab-content" id="reports-six-tabContent">
+				<div class="tab-pane fade show active" id="reports-six-pay" role="tabpanel" aria-labelledby="reports-six-pay-tab">
+				  <label for="trans-date" class="ml-0">Transaction By Date:</label>
+				  <div class="p-0 pl-sm-0 pr-sm-3">
+					<div class="row mb-3">
+					  <div class="col-md-2 col-sm-4 mt-3 mr-sm-3">
+						<input type="text" class="form-control datetimepicker-input" data-target="#report-pay-from" id="report-pay-from">
+						<div class="ml-sm-3">
+						  <h5 for="item-type" class="col-form-label">From</h5>
+						</div>
+					  </div>
+					  <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+						<input type="text" class="form-control datetimepicker-input" data-target="#report-pay-to" id="report-pay-to">
+						<div class="ml-sm-3">
+						  <h5 for="item-type" class="col-form-label">To</h5>
+						</div>
+					  </div>
+					  <button class="btn btn-primary shadow mb-auto mt-3 ml-2 mb-3">Fetch Report</button>
+					</div>
+				  </div>
+				  <div class="master-list mt-sm-3 mt-1 mb-3">
+					<div class="row form-group justify-content-between mb-3 pl-2 pr-2">
+					  <select class="col-xl-3 col-md-4 col-sm-5 form-control" id="select-pay-trans">
+						<option>All Transaction</option>
+						<option>West</option>
+						<option>North</option>
+					  </select>
+					  <a href="#" class="export-excel pl-0 pt-2 pr-5">Export Excel</a>
+					</div>
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered mb-0">
+						<thead>
+						  <tr>
+							<th scope="col-lg">SL No.</th>
+							<th scope="col-lg">State HQ</th>
+							<th scope="col-lg">Dealer Name</th>
+							<th scope="col-lg">Manufacturer Name</th>
+							<th scope="col-lg">Celex Code</th>
+							<th scope="col-lg">Code Manufacture</th>
+							<th scope="col-lg">Transaction Date</th>
+							<th scope="col-lg">Rcv Amount</th>
+							<th scope="col-lg">Rcv Via</th>
+							<th scope="col-lg">Rcv Remarks</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						</tbody>
+					  </table>
+					</div>
+				  </div>
+				  <div class="row form-group justify-content-center mb-4">
+					<button class="btn btn-primary shadow mb-auto">Print Invoice</button>
+				  </div>
+				</div><!-- Payment Report -->
+				<div class="tab-pane fade" id="reports-six-emboss" role="tabpanel" aria-labelledby="reports-six-emboss-tab">
+				  <label for="trans-date" class="ml-0">Transaction By Date:</label>
+				  <div class="p-0 pl-sm-0 pr-sm-3">
+					<div class="row mb-3">
+					  <div class="col-md-2 col-sm-4 mt-3 mr-sm-3">
+						<input type="text" class="form-control datetimepicker-input" data-target="#report-emboss-from" id="report-emboss-from">
+						<div class="ml-sm-3">
+						  <h5 for="item-type" class="col-form-label">From</h5>
+						</div>
+					  </div>
+					  <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+						<input type="text" class="form-control datetimepicker-input" data-target="#report-emboss-to" id="report-emboss-to">
+						<div class="ml-sm-3">
+						  <h5 for="item-type" class="col-form-label">To</h5>
+						</div>
+					  </div>
+					  <button class="btn btn-primary shadow mb-auto mt-3 ml-2 mb-3">Fetch Report</button>
+					</div>
+				  </div>
+				  <div class="master-list mt-sm-3 mt-1 mb-3">
+					<div class="row form-group justify-content-between mb-3 pl-2 pr-2">
+					  <select class="col-xl-3 col-md-4 col-sm-5 form-control" id="select-emboss-loose">
+						<option>Loose</option>
+						<option>West</option>
+						<option>North</option>
+					  </select>
+					</div>
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered mb-0">
+						<thead>
+						  <tr>
+							<th scope="col-lg">SL No.</th>
+							<th scope="col-lg">State HQ</th>
+							<th scope="col-lg">Dealer Name</th>
+							<th scope="col-lg">Manufacturer Name</th>
+							<th scope="col-lg">Celex Code</th>
+							<th scope="col-lg">Code Manufacture</th>
+							<th scope="col-lg">Transaction Date</th>
+							<th scope="col-lg">Rcv Amount</th>
+							<th scope="col-lg">Rcv Via</th>
+							<th scope="col-lg">Rcv Remarks</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						</tbody>
+					  </table>
+					</div>
+				  </div>
+				</div><!-- Embossing Report -->
+				<div class="tab-pane fade" id="reports-six-dealer" role="tabpanel" aria-labelledby="reports-six-dealer-tab">
+				  <label for="trans-date" class="ml-0">Transaction By Date:</label>
+				  <div class="p-0 pl-sm-0 pr-sm-3">
+					<div class="row mb-3">
+					  <div class="col-md-2 col-sm-4 mt-3 mr-sm-3">
+						<input type="text" class="form-control datetimepicker-input" data-target="#report-dealer-from" id="report-dealer-from">
+						<div class="ml-sm-3">
+						  <h5 for="item-type" class="col-form-label">From</h5>
+						</div>
+					  </div>
+					  <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+						<input type="text" class="form-control datetimepicker-input" data-target="#report-dealer-to" id="report-dealer-to">
+						<div class="ml-sm-3">
+						  <h5 for="item-type" class="col-form-label">To</h5>
+						</div>
+					  </div>
+					  <button class="btn btn-primary shadow mb-auto mt-3 ml-2 mb-3">Fetch Report</button>
+					</div>
+				  </div>
+				  <div class="master-list mt-sm-3 mt-1 mb-3">
+					<div class="row form-group justify-content-between mb-3 pl-2 pr-2">
+					  <select class="col-xl-3 col-md-4 col-sm-5 form-control" id="select-dealer-loose">
+						<option>Loose</option>
+						<option>West</option>
+						<option>North</option>
+					  </select>
+					</div>
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered mb-0">
+						<thead>
+						  <tr>
+							<th scope="col-lg">SL No.</th>
+							<th scope="col-lg">State HQ</th>
+							<th scope="col-lg">Dealer Name</th>
+							<th scope="col-lg">Manufacturer Name</th>
+							<th scope="col-lg">Celex Code</th>
+							<th scope="col-lg">Code Manufacture</th>
+							<th scope="col-lg">Transaction Date</th>
+							<th scope="col-lg">Rcv Amount</th>
+							<th scope="col-lg">Rcv Via</th>
+							<th scope="col-lg">Rcv Remarks</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						</tbody>
+					  </table>
+					</div>
+				  </div>
+				</div><!-- Dealer Reports -->
+				<div class="tab-pane fade" id="reports-six-job" role="tabpanel" aria-labelledby="reports-six-job-tab">
+				  <label for="trans-date" class="ml-0">Transaction By Date:</label>
+				  <div class="p-0 pl-sm-0 pr-sm-3">
+					<div class="row mb-3">
+					  <div class="col-md-2 col-sm-4 mt-3 mr-sm-3">
+						<input type="text" class="form-control datetimepicker-input" data-target="#report-job-from" id="report-job-from">
+						<div class="ml-sm-3">
+						  <h5 for="item-type" class="col-form-label">From</h5>
+						</div>
+					  </div>
+					  <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+						<input type="text" class="form-control datetimepicker-input" data-target="#report-job-to" id="report-job-to">
+						<div class="ml-sm-3">
+						  <h5 for="item-type" class="col-form-label">To</h5>
+						</div>
+					  </div>
+					  <button class="btn btn-primary shadow mb-auto mt-3 ml-2 mb-3">Fetch Report</button>
+					</div>
+				  </div>
+				  <div class="master-list mt-sm-3 mt-1 mb-3">
+					<div class="row form-group justify-content-between mb-3 pl-2 pr-2">
+					  <select class="col-xl-3 col-md-4 col-sm-5 form-control" id="select-job-loose">
+						<option>Loose</option>
+						<option>West</option>
+						<option>North</option>
+					  </select>
+					</div>
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered mb-0">
+						<thead>
+						  <tr>
+							<th scope="col-lg">SL No.</th>
+							<th scope="col-lg">State HQ</th>
+							<th scope="col-lg">Dealer Name</th>
+							<th scope="col-lg">Manufacturer Name</th>
+							<th scope="col-lg">Celex Code</th>
+							<th scope="col-lg">Code Manufacture</th>
+							<th scope="col-lg">Transaction Date</th>
+							<th scope="col-lg">Rcv Amount</th>
+							<th scope="col-lg">Rcv Via</th>
+							<th scope="col-lg">Rcv Remarks</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						</tbody>
+					  </table>
+					</div>
+				  </div>
+				</div><!-- Job Reports -->
+				<div class="tab-pane fade" id="reports-six-dispatch" role="tabpanel" aria-labelledby="reports-six-dispatch-tab">
+				  <label for="trans-date" class="ml-0">Transaction By Date:</label>
+				  <div class="p-0 pl-sm-0 pr-sm-3">
+					<div class="row mb-3">
+					  <div class="col-md-2 col-sm-4 mt-3 mr-sm-3">
+						<input type="text" class="form-control datetimepicker-input" data-target="#report-dispatch-from" id="report-dispatch-from">
+						<div class="ml-sm-3">
+						  <h5 for="item-type" class="col-form-label">From</h5>
+						</div>
+					  </div>
+					  <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+						<input type="text" class="form-control datetimepicker-input" data-target="#report-dispatch-to" id="report-dispatch-to">
+						<div class="ml-sm-3">
+						  <h5 for="item-type" class="col-form-label">To</h5>
+						</div>
+					  </div>
+					  <button class="btn btn-primary shadow mb-auto mt-3 ml-2 mb-3">Fetch Report</button>
+					</div>
+				  </div>
+				  <div class="master-list mt-sm-3 mt-1 mb-3">
+					<div class="row form-group justify-content-between mb-3 pl-2 pr-2">
+					  <select class="col-xl-3 col-md-4 col-sm-5 form-control" id="select-dispatch-loose">
+						<option>Loose</option>
+						<option>West</option>
+						<option>North</option>
+					  </select>
+					</div>
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered mb-0">
+						<thead>
+						  <tr>
+							<th scope="col-lg">SL No.</th>
+							<th scope="col-lg">State HQ</th>
+							<th scope="col-lg">Dealer Name</th>
+							<th scope="col-lg">Manufacturer Name</th>
+							<th scope="col-lg">Celex Code</th>
+							<th scope="col-lg">Code Manufacture</th>
+							<th scope="col-lg">Transaction Date</th>
+							<th scope="col-lg">Rcv Amount</th>
+							<th scope="col-lg">Rcv Via</th>
+							<th scope="col-lg">Rcv Remarks</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						</tbody>
+					  </table>
+					</div>
+				  </div>
+				</div><!-- Dispatch Reports -->
+				<div class="tab-pane fade" id="reports-six-stock" role="tabpanel" aria-labelledby="reports-six-stock-tab">
+				  <label for="trans-date" class="ml-0">Transaction By Date:</label>
+				  <div class="p-0 pl-sm-0 pr-sm-3">
+					<div class="row mb-3">
+					  <div class="col-md-2 col-sm-4 mt-3 mr-sm-3">
+						<input type="text" class="form-control datetimepicker-input" data-target="#report-stock-from" id="report-stock-from">
+						<div class="ml-sm-3">
+						  <h5 for="item-type" class="col-form-label">From</h5>
+						</div>
+					  </div>
+					  <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+						<input type="text" class="form-control datetimepicker-input" data-target="#report-stock-to" id="report-stock-to">
+						<div class="ml-sm-3">
+						  <h5 for="item-type" class="col-form-label">To</h5>
+						</div>
+					  </div>
+					  <button class="btn btn-primary shadow mb-auto mt-3 ml-2 mb-3">Fetch Report</button>
+					</div>
+				  </div>
+				  <div class="master-list mt-sm-3 mt-1 mb-3">
+					<div class="row form-group justify-content-between mb-3 pl-2 pr-2">
+					  <select class="col-xl-3 col-md-4 col-sm-5 form-control" id="select-stock-loose">
+						<option>Loose</option>
+						<option>West</option>
+						<option>North</option>
+					  </select>
+					</div>
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered mb-0">
+						<thead>
+						  <tr>
+							<th scope="col-lg">SL No.</th>
+							<th scope="col-lg">State HQ</th>
+							<th scope="col-lg">Dealer Name</th>
+							<th scope="col-lg">Manufacturer Name</th>
+							<th scope="col-lg">Celex Code</th>
+							<th scope="col-lg">Code Manufacture</th>
+							<th scope="col-lg">Transaction Date</th>
+							<th scope="col-lg">Rcv Amount</th>
+							<th scope="col-lg">Rcv Via</th>
+							<th scope="col-lg">Rcv Remarks</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						</tbody>
+					  </table>
+					</div>
+				  </div>
+				</div><!-- Stock Reports -->
+			  </div><!-- /.Tab Content -->
+			</div>
+			<!-- /.card -->
+		  </div>
+		</div><!-- /.container-fluid -->
+	  </section>
+	  <!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+  </div> <!-- Reports -->

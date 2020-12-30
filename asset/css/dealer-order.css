@@ -1,0 +1,28 @@
+.card-body a:hover {
+  text-decoration: underline !important;
+}
+
+.card-body a h1{
+  font-size: 4em;
+  color: var(--blue);
+}
+
+.card-body a label:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#wallet-main,
+#wallet-submit {
+  display: none;
+}
+
+#wallet-main.show,
+#wallet-submit.show {
+  display: inline;
+}
+
+.custom-control-label::before,
+.custom-control-label::after {
+  left: -1.1rem !important;
+}

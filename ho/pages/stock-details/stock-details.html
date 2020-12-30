@@ -1,0 +1,293 @@
+<div class="tab-pane" id="stock-details" role="menu">
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper" style="min-height: 806px;">
+	  <!-- Content Header (Page header) -->
+	  <div class="content-header">
+		<div class="container-fluid">
+		  <div class="row mb-2">
+			<div class="col-sm-6">
+			  <h1 class="m-0 text-dark">Stock Details</h1>
+			</div><!-- /.col -->
+		  </div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+	  </div>
+	  <!-- /.content-header -->
+
+	  <!-- Main content -->
+	  <section class="content">
+		<div class="container-fluid">
+		  <div class="card card-tabs shadow">
+			<div class="card-header p-0 pt-1 border-bottom-0 tab">
+			  <ul class="nav nav-tabs" id="stock-two-tab" role="tablist">
+				<li class="nav-item">
+				  <a class="nav-link active" id="stock-two-in-tab" data-toggle="pill" href="#stock-two-in" role="tab" aria-controls="stock-two-in" aria-selected="true">Stock In From Factory</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="stock-two-out-tab" data-toggle="pill" href="#stock-two-out" role="tab" aria-controls="stock-two-out" aria-selected="false">Stock Out To Embossing Station</a>
+				</li>
+			  </ul>
+			</div>
+			<div class="card-body pt-4 pb-3 pl-4 pr-4">
+			  <!-- Tab Content -->
+			  <div class="tab-content" id="stock-two-tabContent">
+				<div class="tab-pane fade show active" id="stock-two-in" role="tabpanel" aria-labelledby="stock-two-in-tab">
+				  <label for="trans-date" class="ml-3">Stock Details By Date:</label>
+				  <div class="p-2 pl-sm-3 pr-sm-3">
+					<div class="row">
+					  <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+						<input type="text" class="form-control datetimepicker-input" data-target="#stock-in-from" id="stock-in-from">
+						<div class="ml-sm-3 mb-3">
+						  <h5 for="item-type" class="col-form-label">From</h5>
+						</div>
+					  </div>
+					  <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+						<input type="text" class="form-control datetimepicker-input" data-target="#stock-in-to" id="stock-in-to">
+						<div class="ml-sm-3 mb-3">
+						  <h5 for="item-type" class="col-form-label">To</h5>
+						</div>
+					  </div>
+					  <button class="btn btn-success shadow mb-auto mt-3 ml-2">Fetch Report</button>
+					</div>
+				  </div>
+				  <div class="master-list mt-4">
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered mb-0">
+						<thead>
+						  <tr>
+							<th scope="col-lg">Sl.No</th>
+							<th scope="col-lg">Item Name</th>
+							<th scope="col-lg"></th>
+							<th scope="col-lg">Code</th>
+							<th scope="col-lg">Qty.</th>
+							<th scope="col-lg">Unit</th>
+							<th scope="col-lg">From</th>
+							<th scope="col-lg">To</th>
+							<th scope="col-lg">Per Box Qty</th>
+							<th scope="col-lg">SUFFIX</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<th scope="row">01</th>
+							<td>LID Plates</td>
+							<td>LID-W-285X45</td>
+							<td>21</td>
+							<td>5.9</td>
+							<td>Kg</td>
+							<td>BA2301882001</td>
+							<td>BA2301882100</td>
+							<td>100</td>
+							<td></td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						</tbody>
+					  </table>
+					</div>
+					<div class="row ml-3 mr-3 mt-3 mb-2 justify-content-center">
+					  <div class="mb-3">
+						<button class="btn btn-success shadow">Add To Stock</button>
+					  </div>
+					</div>
+				  </div>
+				</div><!-- Stock In From Factory -->
+				<div class="tab-pane fade" id="stock-two-out" role="tabpanel" aria-labelledby="stock-two-out-tab">
+				  <div id="out-main" class="show">
+					<label for="trans-date" class="ml-3 mb-3">List of Embossing Station:</label>
+					<div class="p-2 pr-sm-3">
+					  <div class="row d-flex ml-0 mr-0">
+						<div class="col-xl-4 col-lg-5 col-sm-7 mr-sm-5 mb-3">
+						  <form class="form-inline search-bar bg-light">
+							<div class="input-group">
+							  <div class="input-group-append">
+								<button class="btn btn-navbar" type="submit">
+								  <i class="fa fa-search"></i>
+								</button>
+							  </div>
+							</div>
+							<input class="form-control form-control border-0 bg-light w-100" type="search" placeholder="ES Name" aria-label="Search">
+						  </form>
+						</div>
+					  </div>
+					</div>
+					<div class="master-list mt-1 mb-3">
+					  <div class="master-table table-responsive">
+						<table class="table table-striped table-hover table-bordered mb-0">
+						  <thead>
+							<tr>
+							  <th scope="col-lg">SI.No</th>
+							  <th scope="col-lg">Name</th>
+							  <th scope="col-lg">ES Code</th>
+							  <th scope="col-lg">State</th>
+							  <th scope="col-lg">Zone</th>
+							  <th scope="col-lg">Last Modified</th>
+							  <th scope="col-lg">Prority Level</th>
+							  <th scope="col-lg">Action</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <th scope="row">01</th>
+							  <td class="pt-3">Topsia</tdcal>
+							  <td class="pt-3">001</td>
+							  <td class="pt-3">WB</td>
+							  <td class="pt-3">1</td>
+							  <td class="pt-3">24/03/2020</td>
+							  <td class="pt-3 bg-red">High</td>
+							  <td class="text-center"><button class="btn btn-success shadow text-sm" id="stock-action">Allot Plates</button></td>
+							</tr>
+							<tr>
+							  <th scope="row">02</th>
+							  <td class="pt-3">Falta</tdcal>
+							  <td class="pt-3">002</td>
+							  <td class="pt-3">WB</td>
+							  <td class="pt-3">2</td>
+							  <td class="pt-3">24/03/2020</td>
+							  <td class="pt-3 bg-blue">Medium</td>
+							  <td class="text-center"><button class="btn btn-success shadow text-sm" id="stock-action">Allot Plates</button></td>
+							</tr>
+							<tr>
+							  <th scope="row">03</th>
+							  <td class="pt-3">Topsia</tdcal>
+							  <td class="pt-3">003</td>
+							  <td class="pt-3">WB</td>
+							  <td class="pt-3">3</td>
+							  <td class="pt-3">24/03/2020</td>
+							  <td class="pt-3 bg-yellow">Low</td>
+							  <td class="text-center"><button class="btn btn-success shadow text-sm" id="stock-action">Allot Plates</button></td>
+							</tr>
+						  </tbody>
+						</table>
+					  </div>
+					</div>
+				  </div>
+				  <div id="out-subcontent" class="">
+					<label for="trans-date" class="ml-3 mb-3">Stock Out:</label>
+					<div class="master-list mt-1 mb-3">
+					  <div class="master-table table-responsive">
+						<table class="table table-striped table-hover table-bordered mb-0">
+						  <thead>
+							<tr>
+							  <th scope="col-lg">SL.No</th>
+							  <th scope="col-lg">Item Name</th>
+							  <th scope="col-lg">Qty</th>
+							  <th scope="col-lg">Unit</th>
+							  <th scope="col-lg">Type</th>
+							  <th scope="col-lg">LID Series</th>
+							  <th scope="col-lg">Enter No. of boxe</th>
+							  <th scope="col-lg">Action</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <th scope="row">01</th>
+							  <td class="pt-3">Laser-W-285X45</tdcal>
+							  <td class="pt-3">6</td>
+							  <td class="pt-3">Boxes</td>
+							  <td class="pt-3">0</td>
+							  <td class="pt-3">BA2100002345</td>
+							  <td class="text-center"><input type="text" class="form-control" id="enter-boxes" placeholder="Enter No. of Boxes"></td>
+							  <td class="text-center"><button class="btn btn-success shadow text-sm" id="stock-add">Add</button></td>
+							</tr>
+							<tr>
+							  <th scope="row">&nbsp;</th>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							</tr>
+							<tr>
+							  <th scope="row">&nbsp;</th>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							</tr>
+							<tr>
+							  <th scope="row">&nbsp;</th>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							</tr>
+							<tr>
+							  <th scope="row">&nbsp;</th>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							  <td>&nbsp;</td>
+							</tr>
+						  </tbody>
+						</table>
+					  </div>
+					</div>
+				  </div>
+				</div><!-- Stock Out To Embossing Station -->
+			  </div><!-- /.Tab Content -->
+			</div>
+			<!-- /.card -->
+		  </div>
+		</div><!-- /.container-fluid -->
+	  </section>
+	  <!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+  </div> <!-- Stock In From Factory -->

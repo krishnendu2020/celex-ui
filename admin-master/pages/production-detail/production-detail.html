@@ -1,0 +1,140 @@
+<div class="tab-pane" id="production-detail" role="menu">
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper" style="min-height: 806px;">
+	  <!-- Content Header (Page header) -->
+	  <div class="content-header">
+		<div class="container-fluid">
+		  <div class="row mb-2">
+			<div class="col-sm-6">
+			  <h1 class="m-0 text-dark">Production Detail Master</h1>
+			</div><!-- /.col -->
+		  </div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+	  </div>
+	  <!-- /.content-header -->
+
+	  <!-- Main content -->
+	  <section class="content">
+		<div class="container-fluid">
+		  <div class="card shadow pt-5 pb-5 pl-4 pr-4">
+		  <th:block th:if="${ProductionDetailsHtml}">
+			<div class="add-master d-sm-flex flex-sm-row flex-sm-wrap">
+			<form id="productionDetails" th:object="${productionDetailsObj}">
+			<input type="hidden" class="form-control" th:field="*{id}" id="enter-prod-details-id" aria-describedby="enter zone name">             
+		  
+			  <div class="state form-group row justify-content-xl-start justify-content-between">
+				<div class="col-sm-6 row ml-0 mb-3 mr-md-1">
+				  <span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-9">Plate Type</span>
+				  <select class="col-xl-7 col-lg-6 col-md-5 p-0 form-control" th:field="*{plateTypeId}" id="select-prod-details-plate-type">
+					<option th:value="0">Select Plate Type</option>
+					 <option th:each="PlateTypeMaster : ${PlateTypeMasterList}"
+					  th:value="${PlateTypeMaster.id}"
+					  th:text="${PlateTypeMaster.plateType}">
+					 </option>
+				  </select>
+				  <span style="color:red;"  id="select-prod-details-plate-type-note"></span>
+				</div>
+				<div class="col-sm-6 row ml-0 mb-3">
+				  <span for="prod-color" class="col-form-label col-sm-2 pl-0 min-we-9">&nbsp;</span>
+				</div>
+				<div class="col-sm-6 row ml-0 mb-3 mr-md-1">
+				  <span for="item-type" class="col-form-label col-sm-2 pl-0 mt-auto min-we-9">Aluminium Type</span>
+				  <div class="row d-md-flex flex-md-row flex-md-unwrap col-md-7 justify-content-between">
+					<select class="col-7 p-0 mt-auto mr-1 form-control" th:field="*{aluminiumTypeId}" id="select-prod-details-alum-type">
+					  <option th:value="0">Select Aluminium Type</option>
+						 <option th:each="rawMaterialMasterAl : ${rawMaterialMasterAlList}"
+						  th:value="${rawMaterialMasterAl.id}"
+						  th:text="${rawMaterialMasterAl.itemCode}">
+					 </option>
+					</select>
+					<span style="color:red;"  id="select-prod-details-alum-type-note"></span>
+					<div class="fit-qty col-2 ml-0 p-0 max-we-5 text-center">
+					  <p for="fit-qty" class="col-form-label pb-0 pt-0">Qty</p>
+					  <input type="number" class="form-control" th:field="*{aluminiumQty}" id="enter-prod-details-alum-qty" aria-describedby="Enter Qty">
+					<span style="color:red;"  id="enter-prod-details-alum-qty-note"></span>
+					</div>
+					<select class="col-2 mt-auto p-0 form-control" th:field="*{aluminiumUnitId}" id="select-prod-details-alum-unit">
+					  <option th:value="0">Select Unit</option>
+						 <option th:each="unitMaster : ${unitMasterList}"
+								 th:value="${unitMaster.id}"
+								 th:text="${unitMaster.unitCode}">
+					   </option>
+					</select>
+					<span style="color:red;"  id="select-prod-details-alum-unit-note"></span>
+				  </div>
+				</div>
+				<div class="col-sm-6 row ml-0 mb-3">
+				  <span for="item-type" class="col-form-label col-sm-2 pl-0 mt-auto min-we-9">Reflective Sheet</span>
+				  <div class="row d-md-flex flex-md-row flex-md-unwrap col-md-7 justify-content-between">
+					<select class="col-7 p-0 mt-auto mr-1 form-control" th:field="*{reflectiveSheetId}" id="select-prod-details-rs-type">
+					  <option th:value="0">Select Reflective Sheet</option>
+						 <option th:each="rawMaterialMasterRe : ${rawMaterialMasterReList}"
+						  th:value="${rawMaterialMasterRe.id}"
+						  th:text="${rawMaterialMasterRe.itemCode}">
+					 </option>
+					</select>
+					<span style="color:red;"  id="select-prod-details-rs-type-note"></span>
+					<div class="fit-qty col-2 ml-0 p-0 max-we-5 text-center">
+					  <p for="fit-qty" class="col-form-label pb-0 pt-0">Qty</p>
+					  <input type="number" class="form-control" th:field="*{reflectiveQty}" id="enter-prod-details-rs-qty" aria-describedby="Enter Qty">
+					<span style="color:red;"  id="enter-prod-details-rs-qty-note"></span>
+					</div>
+					<select class="col-2 mt-auto p-0 form-control" th:field="*{reflectiveUnitId}" id="select-prod-details-rs-unit">
+					  <option th:value="0">Select Unit</option>
+						 <option th:each="unitMaster : ${unitMasterList}"
+								 th:value="${unitMaster.id}"
+								 th:text="${unitMaster.unitCode}">
+					   </option>
+					</select>
+					<span style="color:red;"  id="select-prod-details-rs-unit-note"></span>
+				  </div>
+				</div>
+				<div class="col-sm-6 row ml-0 mb-3 mt-sm-2 mt-3 mr-md-1">
+				  <p for="tlp-status" class="col-form-label col-2 pl-0 pt-0 min-we-9">Hologram</p>
+				  <div class="custom-control custom-checkbox">
+				   <input class="custom-control-input" type="checkbox" name="isHologramRequired" id="hologram" value="122" th:checked="*{isHologramRequired} == 1">
+					<label for="customCheckbox1" class="custom-control-label">Required</label>
+				  </div>
+				</div>
+				<div class="col-sm-6 row ml-0 mb-3">
+				  <p for="prod-name" class="col-form-label col-sm-2 pl-0 min-we-9">Production Code</p>
+				  <input type="text" class="col-xl-7 col-lg-6 col-md-5 form-control" th:field="*{productionCode}" id="enter-prod-detail-code" aria-describedby="Enter Production Code">
+				<span style="color:red;"  id="enter-prod-detail-code-note"></span>
+				</div>
+			  </div>
+			  <div class="row col-12">
+				<button type="button" class="col-xl-2 col-md-3 col-sm-4 mb-3 mt-md-auto mt-3 ml-auto mr-auto btn btn-success shadow btn-ad" onclick="ajaxPost('productionDetails','http://localhost:8080/getAdminPage/saveProductionDetails','production-detail','production-detail','http://localhost:8080/getAdminPage/ProductionDetails');">Add to Master</button>
+			  </div>
+			  </form>
+			</div>
+			<div class="master-list mt-4">
+			  <label for="cities">Packages Added To Master</label>
+			  <div class="master-table table-responsive">
+				<table class="table table-striped table-hover table-bordered">
+				  <thead>
+					<tr>
+					  <th scope="col-lg-4">Production Code</th>
+					  <th scope="col-lg-4">HOLOGRAM Status</th>
+					  <th scope="col-lg-2">Edit</th>
+					</tr>
+				  </thead>
+				  <tbody>                     
+					 <tr th:each="ProductionDetails, stat  : ${genericList}">                       
+					  <td th:text="${ProductionDetails.productionCode}">PlateColor</td>
+					  <td th:if="${ProductionDetails.isHologramRequired == '1'}" th:text="Yes" >PlateColor</td>		                                                                          		                                                                          
+					  <td th:if="${ProductionDetails.isHologramRequired == '0'}" th:text="No" >PlateColor</td>		                                                                          		                                                                          
+					  <td><i class="fa fa-edit" href="#" ></i></td>
+				   </tr>   
+				  </tbody>
+				</table>
+			  </div>
+			</div>
+			</th:block>
+		  </div>
+		</div><!-- /.container-fluid -->
+	  </section>
+	  <!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+</div> <!-- Production Detail Master -->
+<script src="admin-master/pages/production-detail/production-detail.js"></script>

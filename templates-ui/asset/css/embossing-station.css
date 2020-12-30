@@ -1,0 +1,62 @@
+.row {
+  margin: 0;
+}
+
+.card-footer a,
+table a {
+  color: #007bff !important;
+  text-decoration: none;
+}
+
+.card-footer a:hover,
+table a:hover {
+  text-decoration: underline;
+}
+
+#dealer-report-main,
+#dealer-report-detail,
+#block-js-main,
+#block-js-order,
+#unblock-js-main,
+#unblock-js-order,
+#stock-action-main,
+#stock-action-detail,
+#make-main,
+#make-submit,
+#make-detail,
+#quality-main,
+#quality-detail,
+#dispatch-main,
+#dispatch-detail,
+#oem-wise-main,
+#oem-wise-detail {
+  display: none;
+}
+
+#dealer-report-main.show,
+#dealer-report-detail.show,
+#block-js-main.show,
+#block-js-order.show,
+#unblock-js-main.show,
+#unblock-js-order.show,
+#stock-action-main.show,
+#stock-action-detail.show,
+#make-main.show,
+#make-submit.show,
+#make-detail.show,
+#quality-main.show,
+#quality-detail.show,
+#dispatch-main.show,
+#dispatch-detail.show,
+#oem-wise-main.show,
+#oem-wise-detail.show  {
+  display: inline;
+}
+
+#block-js-main table {
+  min-width: 700px;
+}
+
+#block-js-order table {
+  min-width: 1600px;
+}

@@ -1,0 +1,222 @@
+<div class="tab-pane" id="supplier-master" role="menu">
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper" style="min-height: 806px;">
+	  <!-- Content Header (Page header) -->
+	  <div class="content-header">
+		<div class="container-fluid">
+		  <div class="row mb-2">
+			<div class="col-sm-6">
+			  <h1 class="m-0 text-dark">Supplier Master</h1>
+			</div><!-- /.col -->
+		  </div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+	  </div>
+	  <!-- /.content-header -->
+
+	  <!-- Main content -->
+	  <section class="content">
+		<div class="container-fluid">
+		  <div class="card card-tabs shadow">
+			<div class="card-header p-0 pt-1 border-bottom-0 tab">
+			  <ul class="nav nav-tabs" id="supplier-two-tab" role="tablist">
+				<li class="nav-item">
+				  <a class="nav-link active" id="supplier-two-details-tab" data-toggle="pill" href="#supplier-two-details" role="tab" aria-controls="supplier-two-details" aria-selected="true">Supplier Details</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="supplier-two-list-tab" data-toggle="pill" href="#supplier-two-list" role="tab" aria-controls="supplier-two-list" aria-selected="false">List of Supplier</a>
+				</li>
+			  </ul>
+			</div>
+			<div class="card-body pt-4 pb-5 pl-4 pr-4">
+			  <!-- Tab Content -->
+			  <div class="tab-content" id="supplier-two-tabContent">
+				<div class="tab-pane fade show active" id="supplier-two-details" role="tabpanel" aria-labelledby="supplier-two-details-tab">
+				  <div id="supplierTwoDetails">
+				  <th:block th:if="${SupplierMasterHtml}">
+				  <form id="supplierMasterBean" th:object="${supplierMasterBeanObj}">
+				   <input type="hidden" class="form-control" th:field="*{id}" id="enter-supplier-master-id" aria-describedby="enter zone name">             
+		  
+				  <div class="add-master d-sm-flex flex-sm-column">
+					<div class="state form-group row justify-content-xl-start justify-content-between">
+					  <div class="col-sm-6 row ml-0 mb-3 mr-md-1">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Dealer Name</span>
+						<input type="text" class="col-xl-7 form-control" th:field="*{supplierName}" id="enter-supplier-master-name" placeholder="Enter Dealer Name">
+					  <span style="color:red;"  id="enter-supplier-master-name-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Contact Person</span>
+						<input type="text" class="col-xl-7 form-control" th:field="*{contactPerson}" id="enter-supplier-master-contact" placeholder="Enter Contact Person">
+					  <span style="color:red;"  id="enter-supplier-master-contact-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3 mr-md-1">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Phone Number</span>
+						<input type="number" class="col-xl-7 form-control" th:field="*{phoneNumber}" id="enter-supplier-master-phone" placeholder="Enter Phone Number">
+					  <span style="color:red;"  id="enter-supplier-master-phone-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Email Id</span>
+						<input type="text" class="col-xl-7 form-control" th:field="*{email}" id="enter-supplier-master-email" placeholder="Enter Email ID">
+					  <span style="color:red;"  id="enter-supplier-master-email-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3 mr-md-1">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Address Line 1</span>
+						<input type="text" class="col-xl-7 form-control" th:field="*{addressLine1}" id="enter-supplier-master-address-line-first" placeholder="Enter Address Line 1">
+					  <span style="color:red;"  id="enter-supplier-master-address-line-first-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Address Line 2</span>
+						<input type="text" class="col-xl-7 form-control" th:field="*{addressLine2}" id="enter-supplier-master-address-line-second" placeholder="Enter Address Line 2">
+					  <span style="color:red;"  id="enter-supplier-master-address-line-second-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3 mr-md-1">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">City</span>
+						<select class="col-xl-7 p-0 form-control" th:field="*{cityId}" id="select-supplier-master-city">
+						   <option th:value="0">Select City Name</option>
+						   <option th:each="cityMaster : ${cityMasterList}"
+									 th:value="${cityMaster.id}"
+									 th:text="${cityMaster.cityName}">
+							 </option>
+						</select>
+						<span style="color:red;"  id="select-supplier-master-city-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">State</span>
+						<select class="col-xl-7 p-0 form-control" th:field="*{stateId}" id="select-supplier-master-state">
+						  <option th:value="0">Select State Name</option>
+						   <option th:each="stateMaster : ${stateMasterList}"
+									 th:value="${stateMaster.id}"
+									 th:text="${stateMaster.stateName}">
+							 </option>
+						</select>
+						<span style="color:red;"  id="select-supplier-master-state-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3 mr-md-1">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Enter Pin Code</span>
+						<input type="text" class="col-xl-7 form-control" th:field="*{pinId}" id="enter-supplier-master-pin-code" placeholder="Enter Pin Code">
+					  <span style="color:red;"  id="enter-supplier-master-pin-code-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Enter PAN Number</span>
+						<input type="text" class="col-xl-7 form-control" th:field="*{pan}" id="enter-supplier-master-pan-num" placeholder="Enter PAN Number">
+					  <span style="color:red;"  id="enter-supplier-master-pan-num-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3 mr-md-1">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Enter GSTIN</span>
+						<input type="text" class="col-xl-7 form-control" th:field="*{gstNumber}" id="enter-supplier-master-gstin" placeholder="Enter GSTIN">
+					  <span style="color:red;"  id="enter-supplier-master-gstin-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Raw Material Supplied</span>
+						<select class="col-xl-7 p-0 form-control" th:field="*{rawMaterialTypeId}" id="select-supplier-master-raw-material">
+						  <option th:value="0">Select State Name</option>
+						   <option th:each="itemMasterR : ${itemMasterRList}"
+									 th:value="${itemMasterR.id}"
+									 th:text="${itemMasterR.itemName}">
+							 </option>
+						</select>
+						<span style="color:red;"  id="select-supplier-master-raw-material-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3 mr-md-1">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Vendor Code</span>
+						<input type="text" class="col-xl-7 form-control" th:field="*{vendorCode}" id="enter-supplier-master-vendor-code" placeholder="Enter Vendor Code">
+					  <span style="color:red;"  id="enter-supplier-master-vendor-code-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Delivery Time</span>
+						<input type="number" class="col-xl-7 form-control" th:field="*{deliveryTime}" id="enter-supplier-master-deli-time" placeholder="Enter Delivary Time">
+					  <span style="color:red;"  id="enter-supplier-master-deli-time-note"></span>
+					  </div>
+					</div>
+					<th:block th:if="${supplierMasterFile}">
+					<div class="row btns justify-content-center mt-5">
+					  <i class="fa fa-upload fa-2x mb-3 d-sm-inline d-none" href="#"></i>
+					  <div class="col-lg-3 col-sm-4 ml-sm-3 mr-sm-5 mb-3 p-0 d-flex flex-column text-sm-left text-center max-we-13">
+						<!-- <button class="btn btn-success shadow mb-auto">Upload Contract</button> -->
+						<input type="hidden" th:field="*{document}" value="Upload Contract" class="btn btn-success shadow mb-auto">
+						<input type="file" name="file" value="Upload Contract" class="btn btn-success shadow mb-auto">
+						<span>**.pdf, .doc, .docx files</span>
+						<span>**Size upto 5MB</span>
+					  </div>
+					  <button type="button" class="col-lg-2 col-sm-3 btn btn-success shadow mb-auto min-we-10 max-we-sm-13" onclick="ajaxPost('supplierMasterBean','http://localhost:8080/getAdminPage/saveSupplierMaster','supplier-master','supplier-master','http://localhost:8080/getAdminPage/SupplierMaster');">Update to Master</button>
+					</div>
+					</th:block>
+					<th:block th:unless="${supplierMasterFile}">
+					<div class="row btns justify-content-center mt-5">
+					  <i class="fa fa-upload fa-2x mb-3 d-sm-inline d-none" href="#"></i>
+					  <div class="col-lg-3 col-sm-4 ml-sm-3 mr-sm-5 mb-3 p-0 d-flex flex-column text-sm-left text-center max-we-13">
+						<!-- <button class="btn btn-success shadow mb-auto">Upload Contract</button> -->
+						<input type="file" name="file" id="enter-supplier-master-file" value="Upload Contract" class="btn btn-success shadow mb-auto">
+						<span>**.pdf, .doc, .docx files</span>
+						<span>**Size upto 5MB</span>
+						<span style="color:red;"  id="enter-supplier-master-file-note"></span>
+					  </div>
+					  <button type="button" class="col-lg-2 col-sm-3 btn btn-success shadow mb-auto min-we-10 max-we-sm-13" onclick="ajaxPost('supplierMasterBean','http://localhost:8080/getAdminPage/saveSupplierMaster','supplier-master','supplier-master','http://localhost:8080/getAdminPage/SupplierMaster');">Add to Master</button>
+					</div>
+					</th:block>
+				  </div>
+				  </form>
+				  </th:block>
+				  </div>
+				</div><!-- /.Tab Pan -->
+				<div class="tab-pane fade" id="supplier-two-list" role="tabpanel" aria-labelledby="supplier-two-list-tab">
+				  <div id="supplierTwoDiv">
+				  <th:block th:if="${SupplierMasterTwoHtml}">
+				  <div class="master-list mt-4">
+					<label for="vendor-list">Suppliers Added To Master</label>
+					<div class="float-right">
+						   <label for="name">Search: </label>
+						   <input type="text" id="searchParamSupplierMaster" style="text-align:left">
+						   <button type="button" class="btn btn-success" onclick="pageButtonClick('0', 'searchParamSupplierMaster','SupplierMaster','supplierMasterPageNo','supplierMastertbl','supplierMastertbl');">search</button>
+				   </div>
+				  <div id="supplierMastertbl">
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered">
+						<thead>
+						  <tr>
+							<!-- <th scope="col-lg">SI.No.</th> -->
+							<th scope="col-lg">Vendor code</th>
+							<th scope="col-lg">Vendor Name</th>
+							<th scope="col-lg">Contact Person</th>
+							<th scope="col-lg">Phone Number</th>
+							<th scope="col-lg">Material Supplied</th>
+							<th scope="col-lg">Edit</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <!--<tr>
+							<th scope="row">01</th>
+							<td>HC-01</td>
+							<td>HC</td>
+							<td>R Singh</td>
+							<td>+91 9830537337</td>
+							<td>Aluninium</td>
+							<td><i class="fa fa-edit" href="#"></i></td>
+						  </tr> -->
+						  <tr th:each="supplierDetails, stat  : ${genericList}">                       
+							  <td th:text="${supplierDetails.vendorCode}">PlateColor</td>
+							  <td th:text="${supplierDetails.supplierName}">PlateColor</td>
+							  <td th:text="${supplierDetails.contactPerson}">PlateColor</td>
+							  <td th:text="${supplierDetails.phoneNumber}">PlateColor</td>
+							  <td th:text="${supplierDetails.rawMaterialTypeId.itemName}">PlateColor</td>		                          		                          		                                                                          		                                                                          
+							  <td><i class="fa fa-edit" href="#" ></i></td>
+						   </tr>                  
+						</tbody>
+					  </table>
+					</div>
+					
+					</div>
+				  </div>
+				  </th:block>
+				  </div>
+				</div><!-- /.Tab Pan -->
+			  </div><!-- /.Tab Content -->
+			</div>
+			<!-- /.card -->
+		  </div>
+		</div><!-- /.container-fluid -->
+	  </section>
+	  <!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+</div> <!-- Supplier Master -->
+<script src="admin-master/pages/supplier-master/supplier-master.js"></script>

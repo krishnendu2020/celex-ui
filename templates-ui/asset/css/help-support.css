@@ -1,0 +1,64 @@
+.row {
+  margin: 0;
+}
+
+#dashboard a {
+  text-decoration: underline;
+}
+
+.subtitlebar-box {
+  border: 1px solid rgba(128, 128, 128, 1.0);
+}
+
+.subtitlebar {
+  border: 1px solid rgba(128, 128, 128, 1.0);
+  text-align: center;
+}
+
+.subtitlebar.active {
+  background: var(--blue);
+}
+
+.subtitlebar.active label {
+  color: white;
+}
+
+.subtitlebar label {
+  padding: 5px;
+  margin: 0;
+  color: black;
+  cursor: pointer;
+}
+
+.subtitlebar:hover label {
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+table tbody td a {
+  text-decoration: none;
+}
+
+table tbody td a:hover {
+  text-decoration: underline;
+}
+
+#ticket-main {
+  display: none;
+}
+
+#ticket-main.show {
+  display: inline;
+}
+
+#ticket-detail {
+  display: none;
+}
+
+#ticket-detail.show {
+  display: inline;
+}
+
+.subdescription {
+  border: 2px solid rgba(128, 128, 128, 1.0);
+}

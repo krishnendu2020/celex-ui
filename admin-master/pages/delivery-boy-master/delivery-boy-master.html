@@ -1,0 +1,237 @@
+<div class="tab-pane" id="delivery-boy" role="menu">
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper" style="min-height: 806px;">
+	  <!-- Content Header (Page header) -->
+	  <div class="content-header">
+		<div class="container-fluid">
+		  <div class="row mb-2">
+			<div class="col-sm-6">
+			  <h1 class="m-0 text-dark">Delivery Boy Master</h1>
+			</div><!-- /.col -->
+		  </div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+	  </div>
+	  <!-- /.content-header -->
+
+	  <!-- Main content -->
+	  <section class="content">
+		<div class="container-fluid">
+		  <div class="card card-tabs shadow">
+			<div class="card-header p-0 pt-1 border-bottom-0 tab">
+			  <ul class="nav nav-tabs" id="deli-boy-two-tab" role="tablist">
+				<li class="nav-item">
+				  <a class="nav-link active" id="deli-boy-two-details-tab" data-toggle="pill" href="#deli-boy-two-details" role="tab" aria-controls="deli-boy-two-details" aria-selected="true">Delivery Boy Details</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="deli-boy-two-list-tab" data-toggle="pill" href="#deli-boy-two-list" role="tab" aria-controls="deli-boy-two-list" aria-selected="false">List of Delivery Boys</a>
+				</li>
+			  </ul>
+			</div>
+			<div class="card-body pt-4 pb-5 pl-4 pr-4">
+			  <!-- Tab Content -->
+			  <div class="tab-content" id="deli-boy-two-tabContent">
+				<div class="tab-pane fade show active" id="deli-boy-two-details" role="tabpanel" aria-labelledby="deli-boy-two-details-tab">
+				 <div id="deliveryFirst">
+				 <th:block th:if="${DeliveryBoyMasterHtml}">
+				  <form id="deliveryBoyMasterBean" th:object="${deliveryBoyMasterBeanObj}">
+				  <input type="hidden" class="form-control" th:field="*{id}" id="enter-deli-boy-id" aria-describedby="enter zone name">                           
+				  <div class="add-master d-sm-flex flex-sm-column">
+					<div class="state form-group row justify-content-xl-start justify-content-between">
+					  <div class="col-12 mb-3 ml-2 custom-control custom-checkbox">
+						<input class="custom-control-input" type="checkbox" name="status" id="deli-boy-activity-check" value="122" th:checked="*{status} == 1">
+						<label for="deli-boy-activity-check" class="custom-control-label">Delivery Boy Is Active</label>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3 mr-md-1">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Delivery Boy Name</span>
+						<input type="text" class="col-xl-7 form-control" th:field="*{name}" id="enter-deli-boy-name" placeholder="Enter Delivary Boy Name">
+					  <span style="color:red;" th:id="enter-deli-boy-name-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Delivery Boy Id</span>
+						<input type="text" class="col-xl-7 form-control" th:field="*{userId}" id="enter-deli-boy-code" placeholder="Enter Delivary Boy ID">
+					  <span style="color:red;" th:id="enter-deli-boy-code-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3 mr-md-1">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Phone Number</span>
+						<input type="number" class="col-xl-7 form-control" th:field="*{phone}" id="enter-deli-boy-phone" placeholder="Enter Phone Number">
+					  <span style="color:red;" th:id="enter-deli-boy-phone-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Email Id</span>
+						<input type="text" class="col-xl-7 form-control" th:field="*{emailId}" id="enter-deli-boy-email" placeholder="Enter Email ID">
+					  <span style="color:red;" th:id="enter-deli-boy-email-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3 mr-md-1">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Address Line 1</span>
+						<input type="text" class="col-xl-7 form-control" th:field="*{addressLine1}" id="enter-deli-boy-address-line-first" placeholder="Enter Address Line 1">
+					  <span style="color:red;" th:id="enter-deli-boy-address-line-first-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Address Line 2</span>
+						<input type="text" class="col-xl-7 form-control" th:field="*{addressLine2}" id="enter-deli-boy-address-line-second" placeholder="Enter Address Line 2">
+					  <span style="color:red;" th:id="enter-deli-boy-address-line-second-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3 mr-md-1">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">City</span>
+						<select class="col-xl-7 p-0 form-control" th:field="*{cityId}" id="select-deli-boy-city">
+						  <option th:value="0">Select City Name</option>
+						   <option th:each="cityMaster : ${cityMasterList}"
+									 th:value="${cityMaster.id}"
+									 th:text="${cityMaster.cityName}">
+							 </option>
+						</select>
+						<span style="color:red;" th:id="select-deli-boy-city-note"></span>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3">
+						<span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">State</span>
+						<select class="col-xl-7 p-0 form-control" th:field="*{stateId}" id="select-deli-boy-state">
+						  <option th:value="0">Select State Name</option>
+						   <option th:each="stateMaster : ${stateMasterList}"
+									 th:value="${stateMaster.id}"
+									 th:text="${stateMaster.stateName}">
+							 </option>
+						</select>
+						<span style="color:red;" th:id="select-deli-boy-state-note"></span>
+					  </div>
+					  <div class="col-sm-6 ml-0 mb-sm-auto mb-3 mr-md-1 w-100 d-flex flex-column">
+						<div class="row ml-0 mr-0 mb-3">
+						  <span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Enter Pin Code</span>
+						  <input type="text" class="col-xl-7 form-control" th:field="*{pinCode}" id="enter-deli-boy-pi-code" placeholder="Enter Pin Code">
+						<span style="color:red;" th:id="enter-deli-boy-pi-code-note"></span>
+						</div>
+						<div class="row ml-0 mr-0">
+						  <span for="item-type" class="col-form-label col-sm-3 pl-0 min-we-11">Embossing Stations</span>
+						  <select class="col-xl-7 p-0 form-control" th:field="*{embossingStationId}" id="select-deli-emboss-station">
+							<option th:value="0">Select State Name</option>
+						   <option th:each="embossingStationMaster : ${embossingStationMasterList}"
+									 th:value="${embossingStationMaster.id}"
+									 th:text="${embossingStationMaster.stationName}">
+							 </option>
+						  </select>
+						  <span style="color:red;" th:id="select-deli-emboss-station-note"></span>
+						</div>
+					  </div>
+					  <div class="col-sm-6 row ml-0 mb-3">
+						<span for="item-type" class="col-form-label col-sm-3 pt-xl-0 pl-0 min-we-11">Select Id Proof</span>
+						<div class="col-md-6">
+						  <!-- checkbox -->
+						  <div class="form-group">
+							<div class="custom-control custom-checkbox">
+							  <input class="custom-control-input" type="checkbox" name="panCard" id="deli-pan-card" value="122" th:checked="*{panCard} == 1">
+							  <label for="pan-card" class="custom-control-label">PAN Card</label>
+							</div>
+							<div class="custom-control custom-checkbox">
+							  <input class="custom-control-input" type="checkbox" name="aadharCard" id="deli-adhaar-card" value="122" th:checked="*{aadharCard} == 1">
+							  <label for="adhaar-card" class="custom-control-label">Adhaar Card</label>
+							</div>
+							<div class="custom-control custom-checkbox">
+							  <input class="custom-control-input" type="checkbox" name="others" id="deli-other-card" value="122" th:checked="*{others} == 1">
+							  <label for="others" class="custom-control-label">Other</label>
+							</div>
+							<span class="text-sm">**Any one for ID Proof</span>
+							<span style="color:red;" th:id="deli-card-note"></span>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<th:block th:if="${deliveryBoyFile}">
+					<div class="row btns justify-content-center mt-3">
+					<i class="fa fa-upload fa-2x mb-3 d-sm-inline d-none" href="#"></i>
+					  <div class="col-md-3 col-sm-4 ml-sm-3 mr-sm-5 mb-3 p-0 d-flex flex-column text-sm-left text-center max-we-sm-13">
+						<!-- <button class="btn btn-success shadow mb-auto">Upload Contract</button> -->
+						 <input type="hidden" th:field="*{document}" value="Upload Contract" class="btn btn-success shadow mb-auto">
+						 <input type="file" name="file" value="Upload Contract" class="btn btn-success shadow mb-auto">                        
+						<span>**.pdf, .doc, .docx files</span>
+						<span>**Size upto 5MB</span>
+					  </div>
+					  <button type="button" class="col-lg-2 col-sm-3 btn btn-success shadow mb-auto min-we-10 max-we-sm-13" onclick="ajaxPost('deliveryBoyMasterBean','http://localhost:8080/getAdminPage/saveDeliveryBoyMaster','delivery-boy','delivery-boy','http://localhost:8080/getAdminPage/DeliveryBoyMaster');">Update to Master</button>
+					</div>
+					</th:block>
+					<th:block th:unless="${deliveryBoyFile}">
+					<div class="row btns justify-content-center mt-3">
+					  <i class="fa fa-upload fa-2x mb-3 d-sm-inline d-none" href="#"></i>
+					  <div class="col-md-3 col-sm-4 ml-sm-3 mr-sm-5 mb-3 p-0 d-flex flex-column text-sm-left text-center max-we-sm-13">
+						<!-- <button class="btn btn-success shadow mb-auto">Upload Contract</button> -->
+						 <input type="file" th:field="*{file}" id="deli-boy-file" value="Upload Contract" class="btn btn-success shadow mb-auto">                        
+						<span>**.pdf, .doc, .docx files</span>
+						<span>**Size upto 5MB</span>
+					  <span style="color:red;" th:id="deli-boy-file-note"></span>
+					  </div>
+					  <button type="button" class="col-lg-2 col-sm-3 btn btn-success shadow mb-auto min-we-10 max-we-sm-13" onclick="ajaxPost('deliveryBoyMasterBean','http://localhost:8080/getAdminPage/saveDeliveryBoyMaster','delivery-boy','delivery-boy','http://localhost:8080/getAdminPage/DeliveryBoyMaster');">Add to Master</button>
+					</div>
+					</th:block>
+				  </div>
+				  </form>
+				  </th:block>
+				  </div>
+				</div><!-- /.Tab Pan -->
+				<div class="tab-pane fade" id="deli-boy-two-list" role="tabpanel" aria-labelledby="deli-boy-two-list-tab">
+				  <div id="deliveryBoyTwo">
+				  <div class="master-list mt-4">
+					<label for="emboss-list">Delivery Boys Added To Master</label>
+					<th:block th:if="${DeliveryBoyMasterTwoHtml}">                                            
+					<div class="float-right">
+						   <label for="name">Search: </label>
+						   <input type="text" id="searchParamDeliveryBoy" style="text-align:left">
+						   <button type="button" class="btn btn-success" onclick="pageButtonClick('0', 'searchParamDeliveryBoy','DeliveryBoyMaster','DeliveryBoyPageNo','DeliveryBoytbl','DeliveryBoytbl');">search</button>
+					   </div>
+					<div id="DeliveryBoytbl">
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered">
+						<thead>
+						  <tr>
+							<!-- <th scope="col-lg">SL.No.</th> -->
+							<th scope="col-lg">Delivery Boy</th>
+							<th scope="col-lg">Boy</th>
+							<!-- <th scope="col-lg">Contact</th> -->
+							<th scope="col-lg">Phone Number</th>
+						   <!-- <th scope="col-lg">Service</th>
+							<th scope="col-lg">Shipway</th> -->
+							<th scope="col-lg">Edit</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr th:each="deliveryBoyMaster, stat : ${genericList}">
+							  <!-- <th th:text="${stat.index}">01</th> -->
+							  <td th:text="${deliveryBoyMaster.userId}">PlateColor</td>
+							  <td th:text="${deliveryBoyMaster.name}">PlateColor</td>                                                  
+							  <td th:text="${deliveryBoyMaster.phone}">PlateColor</td>                                                  
+							  <!-- <td th:text="${deliveryBoyMaster.phoneNumber}">PlateColor</td>                                                  
+							  <td th:text="${deliveryBoyMaster.dailyCapacity}">PlateColor</td>                                                  
+							  <td th:text="${deliveryBoyMaster.reorderLevelDays}">PlateColor</td> -->                                                  
+							  <td><i class="fa fa-edit" href="#" ></i></td>
+						   </tr>                 
+						</tbody>
+					  </table>
+					</div>
+					<!-- <input type="hidden" th:value="${genericList.number}" id="DeliveryBoyPageNo" /> -->
+					  <!-- <div class="pagination-div"> -->
+							<!-- <span th:if="${genericList.hasPrevious()}"> -->
+								<!-- <a th:value="${genericList.number-1}"  onclick="pageButtonClick(this, 'searchParamDeliveryBoy', 'DeliveryBoyMaster','DeliveryBoyPageNo','DeliveryBoytbl','DeliveryBoytbl');">Previous</a> -->
+							<!-- </span> -->
+							<!-- <th:block th:each="i: ${#numbers.sequence(0, genericList.totalPages - 1)}"> -->
+								<!-- <span th:if="${genericList.number == i}" class="selected">[[${i}+1]]</span> -->
+								<!-- <span th:unless="${genericList.number == i}"> -->
+									 <!-- <a th:value="${genericList.number}"  onclick="pageButtonClick(this, 'searchParamDeliveryBoy', 'DeliveryBoyMaster','DeliveryBoyPageNo','DeliveryBoytbl','DeliveryBoytbl');">[[${i}+1]]</a> -->
+								<!-- </span> -->
+							<!-- </th:block> -->
+							<!-- <span th:if="${genericList.hasNext()}"> -->
+								<!-- <a th:value="${genericList.number+1}" onclick="pageButtonClick(this, 'searchParamDeliveryBoy', 'DeliveryBoyMaster','DeliveryBoyPageNo','DeliveryBoytbl','DeliveryBoytbl');">Next</a> -->
+							<!-- </span> -->
+						<!-- </div> -->
+					</div>
+					</th:block>
+				  </div>
+				  </div>
+				</div><!-- /.Tab Pan -->
+			  </div><!-- /.Tab Content -->
+			</div>
+			<!-- /.card -->
+		  </div>
+		</div><!-- /.container-fluid -->
+	  </section>
+	  <!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+</div> <!-- Delivery Boy Master -->
+<script src="admin-master/pages/delivery-boy-master/delivery-boy-master.js"></script>

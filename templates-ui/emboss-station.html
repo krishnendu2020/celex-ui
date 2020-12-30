@@ -1,0 +1,3603 @@
+<!DOCTYPE html>
+
+<html class="" style="height: auto;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Celex</title>
+
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./asset/img/celex_icon.png" />
+
+  <!-- Bootstrap CSS library -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- JQuery and Popper -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="asset/plugin/overlayScrollbars/css/OverlayScrollbars.min.css">
+
+  <!-- Material Iconic CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="./asset/css/admin/adminlte.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./asset/css/embossing-station.css">
+  <link rel="stylesheet" href="./asset/css/common.css">
+  <link rel="stylesheet" href="./asset/css/util.css">
+
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" style="height: auto;">
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item d-lg-none">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fa fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block ml-lg-3">
+          <a href="#" class="nav-link lh-1-0 p-0 mb-2">Welcome! Help and Support</a>
+          <a href="#" class="nav-link fs-13 lh-1-0 p-0">Logged In: 14/03/2020 9:45pm</a>
+        </li>
+      </ul>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <div class="col text-center">
+            <i class="fa fa-sign-out fa-lg"></i>
+            <a class="nav-link p-0 lh-1-0" data-widget="control-sidebar" data-slide="true" href="#" role="button">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar elevation-4 sidebar-light-danger">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-link navbar-white d-flex justify-content-center">
+        <img src="./asset/img/celex_logo_no_text.png" alt="Celex Logo" class="brand-image img-md img-push elevation-0 ml-0" style="opacity: .8">
+        <span class="brand-text font-weight-bold">CELEX</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar os-host os-theme-light os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-transition">
+        <div class="os-resize-observer-host observed">
+          <div class="os-resize-observer" style="left: 0px; right: auto;"></div>
+        </div>
+        <div class="os-size-auto-observer observed" style="height: calc(100% + 1px); float: left;">
+          <div class="os-resize-observer"></div>
+        </div>
+        <div class="os-content-glue" style="margin: 0px -8px; width: 249px; height: 862px;"></div>
+        <div class="os-padding">
+          <div class="os-viewport os-viewport-native-scrollbars-invisible" style="overflow-y: scroll;">
+            <div class="os-content" style="padding: 0px 8px; height: 100%; width: 100%;">
+              <!-- Sidebar user (optional) -->
+              <div class="user-panel mt-4 pb-3 mb-3 d-flex">
+                <div class="image text-center">
+                  <img src="./asset/img/user.png" class="img-circle elevation-3" alt="User Image">
+                </div>
+                <div class="info">
+                  <a href="#" class="d-block">User Name</a>
+                </div>
+              </div>
+
+              <!-- Sidebar Menu -->
+              <nav class="mt-3 mb-5">
+                <ul class="nav nav-pills nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu" data-accordion="false">
+                  <li class="nav-item"><a href="#dashboard" class="nav-link active"> <p>Dashboard</p> </a></li>
+                  <li class="nav-item"><a href="#stock-details" class="nav-link"> <p>Stock Details</p> </a></li>
+                  <li class="nav-item"><a href="#jobsheet-functions" class="nav-link"> <p>Jobsheet Functions</p> </a></li>
+                  <li class="nav-item"><a href="#quality-checking" class="nav-link"> <p>Quality Checking</p> </a></li>
+                  <li class="nav-item"><a href="#tlp-print" class="nav-link"> <p>TLP Print</p> </a></li>
+                  <li class="nav-item"><a href="#file-import-export" class="nav-link"> <p>File Import/Export</p> </a></li>
+                  <li class="nav-item"><a href="#invoices" class="nav-link"> <p>Invoices</p> </a></li>
+                  <li class="nav-item"><a href="#delivery-function" class="nav-link"> <p>Delivery Function</p> </a></li>
+                  <li class="nav-item"><a href="#reprint" class="nav-link"> <p>Reprint</p> </a></li>
+                  <li class="nav-item"><a href="#report" class="nav-link"> <p>Report</p> </a></li>
+                  <li class="nav-item"><a href="#support" class="nav-link"> <p>Support</p> </a></li>
+                </ul>
+              </nav>
+              <!-- /.sidebar-menu -->
+            </div>
+          </div>
+        </div>
+        <div class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable os-scrollbar-auto-hidden">
+          <div class="os-scrollbar-track">
+            <div class="os-scrollbar-handle" style="width: 100%; transform: translate(0px, 0px);"></div>
+          </div>
+        </div>
+        <div class="os-scrollbar os-scrollbar-vertical os-scrollbar-auto-hidden">
+          <div class="os-scrollbar-track">
+            <div class="os-scrollbar-handle" style="height: 72.8885%; transform: translate(0px, 0px);"></div>
+          </div>
+        </div>
+        <div class="os-scrollbar-corner"></div>
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <div class="tab-content nav-pans">
+      <div class="tab-pane active" id="dashboard" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Dashboard</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="row d-flex justify-content-center">
+                <div class="row w-100">
+                  <div class="col-md-4 d-flex align-items-stretch pl-md-3 pr-md-3 p-0 mb-3">
+                    <div class="card shadow bg-white w-100">
+                      <div class="card-header border-bottom-0 pt-4">
+                        <h3>Embossing Station 1</h3>
+                      </div>
+                      <div class="card-body pt-1 pb-0">
+                        <div class="row mb-3">
+                          <div class="col-sm-10 border-bottom border-dark pb-1">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <label>&nbsp;&nbsp;&nbsp;4.8&nbsp;(&nbsp;67&nbsp;)</label>
+                          </div>
+                        </div>
+                        <div class="row mb-4">
+                          <div class="col-sm-10 border-bottom border-dark pb-1">
+                            <label>Contact Person :</label>
+                          </div>
+                        </div>
+                        <div class="row ml-3 mb-3"><i class="col-1 fa fa-map-marker mr-3 pt-1 fa-md"></i><span>Google Location</span></div>
+                        <div class="row ml-3 mb-3"><i class="col-1 fa fa-phone mr-3 pt-1 fa-md"></i><span>Contact Number</span></div>
+                        <div class="row ml-3 mb-5"><i class="col-1 fa fa-clock-o mr-3 pt-1 fa-md" aria-hidden="true"></i><span>Order Capacity</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-flex align-items-stretch pl-md-3 pr-md-3 p-0 mb-3">
+                    <div class="card shadow bg-white w-100">
+                      <div class="card-header border-transparent pt-4">
+                        <label class="card-title">Total Pending Consignment</label>
+                        <div class="card-tools mr-1">
+                          <label style="font-size: 1.1rem;">32</label>
+                        </div>
+                      </div>
+                      <!-- /.card-header -->
+                      <div class="card-body p-0">
+                        <div class="table-responsive">
+                          <table class="table m-0">
+                            <tbody>
+                              <tr>
+                                <td>Today</td>
+                                <td class="text-right">22</td>
+                              </tr>
+                              <tr>
+                                <td>1 Day</td>
+                                <td class="text-right">0</td>
+                              </tr>
+                              <tr>
+                                <td>2 Days</td>
+                                <td class="text-right">10</td>
+                              </tr>
+                              <tr>
+                                <td>3 Days</td>
+                                <td class="text-right"></td>
+                              </tr>
+                              <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- /.table-responsive -->
+                      </div>
+                      <!-- /.card-body -->
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-flex align-items-stretch pl-md-3 pr-md-3 p-0 mb-3">
+                    <div class="card shadow bg-white w-100">
+                      <div class="card-header border-transparent pt-4">
+                        <label class="card-title">Total Pending Embossing</label>
+                        <div class="card-tools mr-1">
+                          <label style="font-size: 1.1rem;">20</label>
+                        </div>
+                      </div>
+                      <!-- /.card-header -->
+                      <div class="card-body p-0">
+                        <div class="table-responsive">
+                          <table class="table m-0">
+                            <tbody>
+                              <tr>
+                                <td>Dispatch Before 2 PM</td>
+                                <td class="text-right">05</td>
+                              </tr>
+                              <tr>
+                                <td>Today</td>
+                                <td class="text-right">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td>Dispatch After 2 PM</td>
+                                <td class="text-right">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td>&nbsp;</td>
+                                <td class="text-right">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- /.table-responsive -->
+                      </div>
+                      <!-- /.card-body -->
+                    </div>
+                  </div>
+                </div>
+                <div class="row w-100">
+                  <div class="col-12 pl-md-3 pr-md-3 p-0 mb-3">
+                    <div class="card shadow bg-white w-100 ">
+                      <div class="card-body w-100">
+                        <div class="row w-100">
+                          <div class="col-sm-6 pl-md-3 pr-md-3 p-0 mb-4 text-center">
+                            <h4>Graphical Stock Review</h4>
+                            <div class="chart mt-3">
+                              <canvas id="barChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 pl-md-3 pr-md-3 p-0 mb-3 text-center">
+                            <h4>Embossing Station Overall Status</h4>
+                            <div class="master-list mt-4 h-100">
+                              <div class="master-table table-responsive">
+                                <table class="table table-striped table-hover table-bordered mb-0">
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">Total Orders Served</th>
+                                      <td>200</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Total Job Sheet Created</th>
+                                      <td>100</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Total Damaged Orders</th>
+                                      <td>10</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Total Despatch</th>
+                                      <td>150</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /.card-body-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Dashboard -->
+      <div class="tab-pane" id="stock-details" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Stock Details</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="stock-five-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="stock-five-in-tab" data-toggle="pill" href="#stock-five-in" role="tab" aria-controls="stock-five-in" aria-selected="true">Stock In</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="stock-five-transfer-tab" data-toggle="pill" href="#stock-five-transfer" role="tab" aria-controls="stock-five-transfer" aria-selected="false">Transfer Stock</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="stock-five-oem-tab" data-toggle="pill" href="#stock-five-oem" role="tab" aria-controls="stock-five-oem" aria-selected="false">OEM Wise Plate Stock</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="stock-five-lm-tab" data-toggle="pill" href="#stock-five-lm" role="tab" aria-controls="stock-five-lm" aria-selected="false">LM Reconcillation of Stock</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="stock-five-tabContent">
+                    <div class="tab-pane fade show active" id="stock-five-in" role="tabpanel" aria-labelledby="stock-five-in-tab">
+                      <div class="row show" id="stock-action-main">
+                        <div class="row">
+                          <label class="pt-2 mb-3 mr-2">Stock From</label>
+                          <!-- <select class="col-2 p-0 form-control min-we-4 max-we-5" id="select-stock-in">
+                            <option>HO</option>
+                            <option>Est.Stn</option>
+                          </select> -->
+                        </div>
+                        <div class="master-list mt-4">
+                          <div class="master-table table-responsive">
+                            <table class="table table-striped table-hover table-bordered min-we-60">
+                              <thead>
+                                <tr>
+                                  <th scope="col-lg">SL.No</th>
+                                  <th scope="col-lg">Transfer Challan</th>
+                                  <th scope="col-lg">Send Date</th>
+                                  <th scope="col-lg">Send From</th>
+                                  <th scope="col-lg">Action</th>
+                                  <th scope="col-lg">Acknowledge</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">01</th>
+                                  <td>ABCD-BA2100-2322</td>
+                                  <td>23/03/2020</td>
+                                  <td>Kolkata Factory</td>
+                                  <td><button class="btn btn-success">Details</button></td>
+                                  <td><button class="btn btn-success">Confirm</button></td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row" id="stock-action-detail">
+                        <label>Challan Number: ABCD-BA2100-2322</label>
+                        <div class="master-list mt-4">
+                          <div class="master-table table-responsive">
+                            <table class="table table-striped table-hover table-bordered">
+                              <thead>
+                                <tr>
+                                  <th scope="col-lg">Challan No</th>
+                                  <th scope="col-lg">No of Boxes</th>
+                                  <th scope="col-lg">Items</th>
+                                  <th scope="col-lg">Quantity</th>
+                                  <th scope="col-lg">unit</th>
+                                  <th scope="col-lg">From</th>
+                                  <th scope="col-lg">To</th>
+                                  <th scope="col-lg">Status</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>Box No 1</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>
+                                    <select class="p-0 form-control" id="select-status-1">
+                                      <option>Recieved</option>
+                                      <option>Missing</option>
+                                      <option>Damaged</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>Item 1</td>
+                                  <td>200</td>
+                                  <td>Pieces</td>
+                                  <td>BA2133354</td>
+                                  <td>BA212363567</td>
+                                  <td>
+                                    <select class="p-0 form-control" id="select-status-1">
+                                      <option>Recieved</option>
+                                      <option>Missing</option>
+                                      <option>Damaged</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>Item 2</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>
+                                    <select class="p-0 form-control" id="select-status-1">
+                                      <option>Recieved</option>
+                                      <option>Missing</option>
+                                      <option>Damaged</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>Item 3</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>
+                                    <select class="p-0 form-control" id="select-status-1">
+                                      <option>Recieved</option>
+                                      <option>Missing</option>
+                                      <option>Damaged</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>Item 4</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>
+                                    <select class="p-0 form-control" id="select-status-1">
+                                      <option>Recieved</option>
+                                      <option>Missing</option>
+                                      <option>Damaged</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>Item 5</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>
+                                    <select class="p-0 form-control" id="select-status-1">
+                                      <option>Recieved</option>
+                                      <option>Missing</option>
+                                      <option>Damaged</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>Box No 2</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- Stock In -->
+                    <div class="tab-pane fade" id="stock-five-transfer" role="tabpanel" aria-labelledby="stock-five-transfer-tab">
+                      <div class="row mb-3">
+                        <label class="w-100">Transfer Stock</label>
+                        <div class="row w-100 mb-3">
+                          <div class="master-list mt-2  w-100">
+                            <div class="master-table table-responsive">
+                              <table class="table table-striped table-hover table-bordered min-we-80">
+                                <thead>
+                                  <tr>
+                                    <th scope="col-lg">SL.No</th>
+                                    <th scope="col-lg">ITEM</th>
+                                    <th scope="col-lg">PRESENT STOCK</th>
+                                    <th scope="col-lg">STARTING LID</th>
+                                    <th scope="col-lg">Requested Quantity</th>
+                                    <th scope="col-lg">From LID</th>
+                                    <th scope="col-lg">To LID</th>
+                                    <th scope="col-lg">Date</th>
+                                    <th scope="col-lg">Transfer to.</th>
+                                    <th scope="col-lg">Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>LASER-W-200 X 100</td>
+                                    <td>3781</td>
+                                    <td>BA2300476993</td>
+                                    <td class="text-center"><input type="text" class="form-control" id="enter-quantity-num" placeholder="Enter Quantity Number"></td>
+                                    <td class="text-center"><input type="text" class="form-control" id="enter-from-lid" placeholder="Enter From LID"></td>
+                                    <td class="text-center"><input type="text" class="form-control" id="enter-to-lid" placeholder="Enter To LID"></td>
+                                    <td>04/20/2020</td>
+                                    <td>Oddisha</td>
+                                    <td><button class="btn btn-primary">Sent</button></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">&nbsp;</th>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">&nbsp;</th>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- Transfer Stock -->
+                    <div class="tab-pane fade" id="stock-five-oem" role="tabpanel" aria-labelledby="stock-five-oem-tab">
+                      <div class="row mb-3 show" id="oem-wise-main">
+                        <div class="row w-100 mb-3">
+                          <label class="mr-3 mb-3 pt-2">OEM Wise Plate</label>
+                        </div>
+                        <div class="row w-100 mb-3">
+                          <div class="master-list mt-2 w-100">
+                            <div class="master-table table-responsive">
+                              <table class="table table-striped table-hover table-bordered min-we-50">
+                                <thead>
+                                  <tr>
+                                    <th scope="col-lg">OEM NAME</th>
+                                    <th scope="col-lg">ITEM NAME</th>
+                                    <th scope="col-lg">Avlb. QTY</th>
+                                    <th scope="col-lg">LID FROM</th>
+                                    <th scope="col-lg">LID TO</th>
+                                    <th scope="col-lg">Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">TVS</th>
+                                    <td>Plate Type 1</td>
+                                    <td>500</td>
+                                    <td>1</td>
+                                    <td>500</td>
+                                    <td><button class="btn btn-primary">Details</button></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">&nbsp;</th>
+                                    <td>Plate Type 2</td>
+                                    <td>100</td>
+                                    <td>1</td>
+                                    <td>100</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">&nbsp;</th>
+                                    <td>&nbsp;</td>
+                                    <td>400</td>
+                                    <td>201</td>
+                                    <td>600</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">&nbsp;</th>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">&nbsp;</th>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Others</th>
+                                    <td>Plate Type 1</td>
+                                    <td>1000</td>
+                                    <td>10001</td>
+                                    <td>50001</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">&nbsp;</th>
+                                    <td>Plate Type 2</td>
+                                    <td>100</td>
+                                    <td>301</td>
+                                    <td>401</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">&nbsp;</th>
+                                    <td>&nbsp;</td>
+                                    <td>200</td>
+                                    <td>501</td>
+                                    <td>701</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mb-3" id="oem-wise-detail">
+                        <div class="row w-100 mb-3">
+                          <label class="mr-3 mb-3 pt-2">OEM Wise Plate</label>
+                        </div>
+                        <div class="row w-100 mb-3">
+                          <div class="master-list mt-2 w-100">
+                            <div class="master-table table-responsive">
+                              <table class="table table-striped table-hover table-bordered min-we-50">
+                                <thead>
+                                  <tr>
+                                    <th scope="col-lg">Source</th>
+                                    <th scope="col-lg">Plate Type</th>
+                                    <th scope="col-lg">Req Qty</th>
+                                    <th scope="col-lg">LID From</th>
+                                    <th scope="col-lg">LID TO</th>
+                                    <th scope="col-lg">Edit</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">
+                                      <select class="p-0 form-control" id="select-oem-wise-src-1">
+                                        <option>Others</option>
+                                        <option>TVS</option>
+                                      </select>
+                                    </th>
+                                    <td>
+                                      <select class="p-0 form-control" id="select-oem-wise-plate-1">
+                                        <option>Plate Type 1</option>
+                                        <option>Plate Type 2</option>
+                                        <option>Plate Type 3</option>
+                                      </select>
+                                    </td>
+                                    <td><input type="text" class="form-control" id="enter-req-qty-1" placeholder="Enter Req Qty"></td>
+                                    <td><input type="text" class="form-control" id="enter-lid-from-1" placeholder="Enter LDI From"></td>
+                                    <td><input type="text" class="form-control" id="enter-lid-to-1" placeholder="Enter LDI To"></td>
+                                    <td><button class="btn btn-primary">Edit</button></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- OEM Wise Plate Stock -->
+                    <div class="tab-pane fade" id="stock-five-lm" role="tabpanel" aria-labelledby="stock-five-lm-tab">
+                      <div class="row mb-3">
+                        <div class="row w-100 mb-3">
+                          <label class="mr-3 mb-3 pt-2">Loose Stock Reconcillation:</label>
+                          <div class="col-2 min-we-10 ml-0 pl-0">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#stock-recon-date" id="stock-recon-date">
+                          </div>
+                        </div>
+                        <div class="row w-100 mb-3">
+                          <div class="master-list mt-2 w-100">
+                            <div class="master-table table-responsive">
+                              <table class="table table-striped table-hover table-bordered min-we-60">
+                                <thead>
+                                  <tr>
+                                    <th scope="col-lg">SL.No</th>
+                                    <th scope="col-lg">Item Name</th>
+                                    <th scope="col-lg">Unit</th>
+                                    <th scope="col-lg">Present Stock</th>
+                                    <th scope="col-lg">Actual Stock</th>
+                                    <th scope="col-lg">Remarks</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>SNAP LOCK - 3/4" (4.8X19.1 mm)(002)</td>
+                                    <td>Pcs</td>
+                                    <td>20</td>
+                                    <td><input type="text" class="form-control" id="enter-actual-stock" placeholder="Enter Actual Stock"></td>
+                                    <td>
+                                      <select class="form-control" id="select-remarks">
+                                        <option>Select</option>
+                                        <option>West</option>
+                                        <option>North</option>
+                                      </select>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">&nbsp;</th>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">&nbsp;</th>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">&nbsp;</th>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">&nbsp;</th>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- LM Reconcillation of Stock -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Stock Details -->
+      <div class="tab-pane" id="jobsheet-functions" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Jobsheet Functions</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="jobsheet-seven-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="jobsheet-seven-block-tab" data-toggle="pill" href="#jobsheet-seven-block" role="tab" aria-controls="jobsheet-seven-block" aria-selected="false">Block For Jobsheet</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="jobsheet-seven-create-tab" data-toggle="pill" href="#jobsheet-seven-create" role="tab" aria-controls="jobsheet-seven-create" aria-selected="true">Make Jobsheet</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="jobsheet-seven-unblock-tab" data-toggle="pill" href="#jobsheet-seven-unblock" role="tab" aria-controls="jobsheet-seven-unblock" aria-selected="false">Unblock Jobsheet</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="jobsheet-seven-reprint-tab" data-toggle="pill" href="#jobsheet-seven-reprint" role="tab" aria-controls="jobsheet-seven-reprint" aria-selected="false">Reprint Jobsheet</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="jobsheet-seven-tabContent">
+                    <div class="tab-pane fade show active" id="jobsheet-seven-block" role="tabpanel" aria-labelledby="jobsheet-seven-block-tab">
+                      <div class="row mb-5 show" id="block-js-main">
+                        <div class="row w-100 mb-5">
+                          <label class="pt-2 mr-3">Block For Jobsheet:</label>
+                          <div class="row max-we-13">
+                            <select class="form-control" id="select-vehivle-cat">
+                              <option>Select Vehicle Package</option>
+                              <option>1</option>
+                              <option>2</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="row w-100 mb-1 justify-content-between">
+                          <form class="mb-3 form-inline search-bar bg-light">
+                            <div class="input-group">
+                              <div class="input-group-append">
+                                <button class="btn btn-navbar" type="submit">
+                                  <i class="fa fa-search"></i>
+                                </button>
+                              </div>
+                            </div>
+                            <input class="form-control form-control border-0 bg-light w-100" type="search" placeholder="Search Order" aria-label="Search Order">
+                          </form>
+                          <div class="row mb-3">
+                            <label class="pt-2 mr-3">Orders To Block</label>
+                            <div class="row max-we-13">
+                              <input type="text" class="form-control" id="enter-order-block" placeholder="Enter Order">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row w-100 mb-3">
+                          <div class="master-list mt-2 w-100">
+                            <div class="master-table table-responsive">
+                              <table class="table table-striped table-hover table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th class="text-center" scope="col-lg">
+                                      <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="order-num-all" value="order-num-all">
+                                        <label for="order-num-all" class="custom-control-label"></label>
+                                      </div>
+                                    </th>
+                                    <th scope="col-lg">#</th>
+                                    <th scope="col-lg">Manufacturer</th>
+                                    <th scope="col-lg">Dealer Name</th>
+                                    <th scope="col-lg">Code</th>
+                                    <th scope="col-lg">Total Order</th>
+                                    <th scope="col-lg">Check</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row" class="text-center">
+                                      <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="order-num-1" value="order-num-1">
+                                        <label for="order-num-1" class="custom-control-label"></label>
+                                      </div>
+                                    </th>
+                                    <td>1</td>
+                                    <td>YAMAHA</td>
+                                    <td>Liberty Moto Corp</td>
+                                    <td>179</td>
+                                    <td>1</td>
+                                    <td><button class="btn btn-success shadow">Order List</button></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row" class="text-center">
+                                      <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="order-num-2" value="order-num-2">
+                                        <label for="order-num-2" class="custom-control-label"></label>
+                                      </div>
+                                    </th>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row" class="text-center">
+                                      <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="order-num-3" value="order-num-3">
+                                        <label for="order-num-3" class="custom-control-label"></label>
+                                      </div>
+                                    </th>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row w-100 d-flex justify-content-center">
+                          <button class="btn btn-success">Block For Jobsheet</button>
+                        </div>
+                      </div>
+                      <div class="row mb-3" id="block-js-order">
+                        <div class="row w-100 mb-3">
+                          <div class="master-list mt-2 w-100">
+                            <div class="row"><label class="w-100 mb-1">Dealer: Shinrai Automobiles</label></div>
+                            <div class="row"><label class="w-100">Manufacturer: YAMAHA</label></div>
+                            <div class="master-table table-responsive">
+                              <table class="table table-striped table-hover table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th scope="col-lg">
+                                      <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="pan-card" value="option1">
+                                        <label for="pan-card" class="custom-control-label"></label>
+                                      </div>
+                                    </th>
+                                    <th scope="col-lg">#</th>
+                                    <th scope="col-lg">Order Date</th>
+                                    <th scope="col-lg">OEM</th>
+                                    <th scope="col-lg">Order No.</th>
+                                    <th scope="col-lg">Reg No.</th>
+                                    <th scope="col-lg">Vehicle Type</th>
+                                    <th scope="col-lg">Chassis No.</th>
+                                    <th scope="col-lg">Engine No.</th>
+                                    <th scope="col-lg">Type</th>
+                                    <th scope="col-lg">Fuel Type</th>
+                                    <th scope="col-lg">Front Size</th>
+                                    <th scope="col-lg">Rear Size</th>
+                                    <th scope="col-lg">TLP Required</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">
+                                      <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="pan-card" value="option1">
+                                        <label for="pan-card" class="custom-control-label"></label>
+                                      </div>
+                                    </th>
+                                    <td>1</td>
+                                    <td>2019-12-13 15:40:14</td>
+                                    <td>YAMAHA</td>
+                                    <td>071831912132001</td>
+                                    <td>KL07CS1608</td>
+                                    <td>Two Wheeler - SC <br/> (F:200x100, R200x100)</td>
+                                    <td>MEISEDIV5K0044049</td>
+                                    <td>E3Y3E0737490</td>
+                                    <td>Private</td>
+                                    <td></td>
+                                    <td>200*100</td>
+                                    <td>200*100</td>
+                                    <td>No</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">
+                                      <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="pan-card" value="option1">
+                                        <label for="pan-card" class="custom-control-label"></label>
+                                      </div>
+                                    </th>
+                                    <td>2</td>
+                                    <td>2019-12-13 16:40:14</td>
+                                    <td>YAMAHA</td>
+                                    <td>071831912132002</td>
+                                    <td>KL07CS1608</td>
+                                    <td>Two Wheeler - SC <br/> (F:200x100, R200x100)</td>
+                                    <td>MEISEDIVAK0096552</td>
+                                    <td>E3Y3E0850437</td>
+                                    <td>Private</td>
+                                    <td></td>
+                                    <td>200*100</td>
+                                    <td>200*100</td>
+                                    <td>No</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">
+                                      <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="pan-card" value="option1">
+                                        <label for="pan-card" class="custom-control-label"></label>
+                                      </div>
+                                    </th>
+                                    <td>3</td>
+                                    <td>2019-12-13 16:40:02</td>
+                                    <td>YAMAHA</td>
+                                    <td>071831912132003</td>
+                                    <td>KL32Q0520</td>
+                                    <td>Two Wheeler - SC <br/> (F:200x100, R200x100)</td>
+                                    <td>MEISEDIVAK0099510</td>
+                                    <td>E3Y3E0856418</td>
+                                    <td>Private</td>
+                                    <td></td>
+                                    <td>200*100</td>
+                                    <td>200*100</td>
+                                    <td>No</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row justify-content-center">
+                          <button class="btn btn-success shadow">Block For Jobsheet</button>
+                        </div>
+                      </div>
+                    </div><!-- Block For JS -->
+                    <div class="tab-pane fade" id="jobsheet-seven-create" role="tabpanel" aria-labelledby="jobsheet-seven-create-tab">
+                      <div class="row mb-3 show" id="make-main">
+                        <label class="w-100">Make Jobsheet</label>
+                        <div class="row w-100 mb-3">
+                          <div class="master-list mt-2  w-100">
+                            <div class="master-table table-responsive">
+                              <table class="table table-striped table-hover table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th scope="col-lg">#</th>
+                                    <th scope="col-lg">Item Name</th>
+                                    <th scope="col-lg">LID Prefix</th>
+                                    <th scope="col-lg">Size</th>
+                                    <th scope="col-lg">Color</th>
+                                    <th scope="col-lg">Present Stock</th>
+                                    <th scope="col-lg">Starting LID</th>
+                                    <th scope="col-lg">Required Quantity</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>LASER-G-285x45</td>
+                                    <td>BA01</td>
+                                    <td>285x45</td>
+                                    <td>GREEN</td>
+                                    <td>0</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>LASER-G-200x100</td>
+                                    <td>BA03</td>
+                                    <td>200x100</td>
+                                    <td>GREEN</td>
+                                    <td>0</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>LASER-G-500x120</td>
+                                    <td>BA05</td>
+                                    <td>500x120</td>
+                                    <td>GREEN</td>
+                                    <td>0</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">4</th>
+                                    <td>LASER-W-285x45</td>
+                                    <td>BA11</td>
+                                    <td>285x45</td>
+                                    <td>WHITE</td>
+                                    <td>1395</td>
+                                    <td>BA2100115606</td>
+                                    <td>2</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="col-lg">#</th>
+                                    <th scope="col-lg">Item Name</th>
+                                    <th scope="col-lg">LID Prefix</th>
+                                    <th scope="col-lg">Size</th>
+                                    <th scope="col-lg">Color</th>
+                                    <th scope="col-lg">Present Stock</th>
+                                    <th scope="col-lg">Starting LID</th>
+                                    <th scope="col-lg">Required Quantity</th>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row w-100 justify-content-center">
+                          <button class="btn btn-success shadow">Submit</button>
+                        </div>
+                      </div>
+                      <div class="row mb-3" id="make-submit">
+                        <label class="w-100">Jobsheet List</label>
+                        <div class="row w-100 mb-3">
+                          <div class="master-list mt-2  w-100">
+                            <div class="col-sm-6 pl-0 master-table table-responsive mb-3">
+                              <table class="table table-striped table-hover table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th class="text-center" scope="col-lg">
+                                      <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="block-submit-all" value="block-submit-all">
+                                        <label for="block-submit-all" class="custom-control-label"></label>
+                                      </div>
+                                    </th>
+                                    <th scope="col-lg">Jobsheet No</th>
+                                    <th scope="col-lg">Date</th>
+                                    <th scope="col-lg">Detail</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th class="text-center" scope="col-lg">
+                                      <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="block-submit-1" value="block-submit-1">
+                                        <label for="block-submit-1" class="custom-control-label"></label>
+                                      </div>
+                                    </th>
+                                    <th scope="row">059200505001</th>
+                                    <td>2020-05-05</td>
+                                    <td><button class="btn btn-primary shadow">Details</button></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mb-3" id="make-detail">
+                        <label class="w-100">Jobsheet List</label>
+                        <div class="row w-100 mb-3">
+                          <div class="master-list mt-2  w-100">
+                            <div class="col-sm-6 pl-0 master-table table-responsive mb-3">
+                              <table class="table table-striped table-hover table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th scope="col-lg">Jobsheet No</th>
+                                    <th scope="col-lg">Date</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">059200505001</th>
+                                    <td>2020-05-05</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div class="master-table table-responsive">
+                              <table class="table table-striped table-hover table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th scope="col-lg">#</th>
+                                    <th scope="col-lg">Order No</th>
+                                    <th scope="col-lg">Reg No</th>
+                                    <th scope="col-lg">Front Size</th>
+                                    <th scope="col-lg">Front ID</th>
+                                    <th scope="col-lg">Rear Size</th>
+                                    <th scope="col-lg">Rear LID</th>
+                                    <th scope="col-lg">Vehicle Type</th>
+                                    <th scope="col-lg">Vehicle Category</th>
+                                    <th scope="col-lg">Fuel Type</th>
+                                    <th scope="col-lg">Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">`1</th>
+                                    <td>07183212598731</td>
+                                    <td>KL07CS1608</td>
+                                    <td>200x100</td>
+                                    <td>BA2300572822</td>
+                                    <td>200x100</td>
+                                    <td>BA23000572823</td>
+                                    <td>Two Wheeler- SC(F:200x100, R:200x100)</td>
+                                    <td>&nbsp;</td>
+                                    <td>Private</td>
+                                    <td>
+                                      <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="make-js-action" value="make-action1">
+                                        <label for="make-js-action" class="custom-control-label"></label>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row w-100 justify-content-center d-flex flex-sm-row flex-column">
+                          <button class="btn btn-info shadow mr-sm-3 mb-3 min-we-13">Print Individual Jobsheet</button>
+                          <button class="btn btn-primary shadow mr-sm-3 mb-3 min-we-13">Print Consolidate Jobsheet</button>
+                          <button class="btn btn-danger shadow mb-3 min-we-13">Back to Make Jobsheet</button>
+                        </div>
+                      </div>
+                    </div><!-- Make JS -->
+                    <div class="tab-pane fade" id="jobsheet-seven-unblock" role="tabpanel" aria-labelledby="jobsheet-seven-unblock-tab">
+                      <div class="row mb-3 show" id="unblock-js-main">
+                        <label class="w-100">Unblock Jobsheet:</label>
+                        <div class="row w-100">
+                          <div class="master-list mt-2 w-100">
+                            <div class="master-table table-responsive">
+                              <table class="table table-striped table-hover table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th scope="col-lg">#</th>
+                                    <th scope="col-lg">Manufacturer</th>
+                                    <th scope="col-lg">Dealer Name</th>
+                                    <th scope="col-lg">Code</th>
+                                    <th scope="col-lg">Total Order</th>
+                                    <th scope="col-lg">Check</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>YAMAHA</td>
+                                    <td>Ninan Motors</td>
+                                    <td>181</td>
+                                    <td>1</td>
+                                    <td><button class="btn btn-success shadow">Order List</button></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>YAMAHA</td>
+                                    <td>Shinrai Automobiles</td>
+                                    <td>183</td>
+                                    <td>1</td>
+                                    <td><button class="btn btn-success shadow">Order List</button></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mb-3 " id="unblock-js-order">
+                        <div class="row"><label class="w-100">Dealer: Ninan Motors</label></div>
+                        <div class="row"><label class="w-100">Manufacturer: YAMAHA</label></div>
+                        <div class="row w-100 mb-3">
+                          <div class="master-list mt-2 w-100">
+                            <div class="master-table table-responsive">
+                              <table class="table table-striped table-hover table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th scope="col-lg">
+                                      <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="pan-card" value="option1">
+                                        <label for="pan-card" class="custom-control-label"></label>
+                                      </div>
+                                    </th>
+                                    <th scope="col-lg">#</th>
+                                    <th scope="col-lg">Order Date</th>
+                                    <th scope="col-lg">OEM</th>
+                                    <th scope="col-lg">Order No.</th>
+                                    <th scope="col-lg">Reg No.</th>
+                                    <th scope="col-lg">Vehicle Type</th>
+                                    <th scope="col-lg">Chassis No.</th>
+                                    <th scope="col-lg">Engine No.</th>
+                                    <th scope="col-lg">Type</th>
+                                    <th scope="col-lg">Fuel Type</th>
+                                    <th scope="col-lg">Front Size</th>
+                                    <th scope="col-lg">Rear Size</th>
+                                    <th scope="col-lg">TLP Required</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">
+                                      <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="pan-card" value="option1">
+                                        <label for="pan-card" class="custom-control-label"></label>
+                                      </div>
+                                    </th>
+                                    <td>1</td>
+                                    <td>2019-12-13 15:40:14</td>
+                                    <td>YAMAHA</td>
+                                    <td>071831912132001</td>
+                                    <td>KL07CS1608</td>
+                                    <td>Two Wheeler - SC <br/> (F:200x100, R200x100)</td>
+                                    <td>MEISEDIV5K0044049</td>
+                                    <td>E3Y3E0737490</td>
+                                    <td>Private</td>
+                                    <td></td>
+                                    <td>200*100</td>
+                                    <td>200*100</td>
+                                    <td>No</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row justify-content-center">
+                          <button class="btn btn-success shadow">Unblock For Jobsheet</button>
+                        </div>
+                      </div>
+                    </div><!-- Unblock JS -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Jobsheet Functions -->
+      <div class="tab-pane" id="quality-checking" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Quality Checking</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-body">
+                  <div class="row mb-3 show" id="quality-main">
+                    <div class="master-list mt-2 justify-content-end">
+                      <label>Quality Checking</label>
+                      <div class="master-table table-responsive">
+                        <table class="table table-striped table-hover table-bordered">
+                          <thead>
+                            <tr>
+                              <th scope="col-lg">Sl.No</th>
+                              <th scope="col-lg">JOBSHEET NUMBER</th>
+                              <th scope="col-lg">CREATION DATE</th>
+                              <th scope="col-lg">NO. OF VEHICLE</th>
+                              <th scope="col-lg">Details</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">01</th>
+                              <td>021233422</td>
+                              <td>24/03/2020</td>
+                              <td>10</td>
+                              <td class="text-center"><button class="btn btn-primary">Details</button></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">&nbsp;</th>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">&nbsp;</th>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">&nbsp;</th>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">&nbsp;</th>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-3" id="quality-detail">
+                    <div class="row w-100">
+                      <div class="master-list w-100 mt-4 mb-3 justify-content-end">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL.NO</th>
+                                <th scope="col-lg">ORDER NO</th>
+                                <th scope="col-lg">REG No</th>
+                                <th scope="col-lg">FRONT LID</th>
+                                <th scope="col-lg">FRONT LID SIZE</th>
+                                <th scope="col-lg">REAR LID</th>
+                                <th scope="col-lg">REAR LID SIZE</th>
+                                <th scope="col-lg">&nbsp;</th>
+                                <th scope="col-lg">&nbsp;</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>07185265795361</td>
+                                <td>KL07CS1608</td>
+                                <td>BA230566236797</td>
+                                <td>200x100</td>
+                                <td>BA230566236797</td>
+                                <td>200x100</td>
+                                <td class="text-center"><button class="btn btn-primary shadow">Pass</button></td>
+                                <td class="text-center"><button class="btn btn-danger shadow">Fail</button></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row w-100 justify-content-center">
+                      <button class="btn btn-primary">Back</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Quality Checking -->
+      <div class="tab-pane" id="tlp-print" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">TLP Print</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="tlp-print-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="tlp-print-print-tab" data-toggle="pill" href="#tlp-print-print" role="tab" aria-controls="tlp-print-print" aria-selected="false">TLP Printing</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="tlp-print-reprint-tab" data-toggle="pill" href="#tlp-print-reprint" role="tab" aria-controls="tlp-print-reprint" aria-selected="true">TLP Reprint</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <div class="tab-content" id="tlp-print-tabContent">
+                    <div class="tab-pane fade show active" id="tlp-print-print" role="tabpanel" aria-labelledby="tlp-print-print-tab">
+                      <div class="master-list mt-2 justify-content-end">
+                        <label>TLP Printing</label>
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">Sl.No</th>
+                                <th scope="col-lg">JOBSHEET NUMBER</th>
+                                <th scope="col-lg">CREATION DATE</th>
+                                <th scope="col-lg">NO. OF VEHICLE</th>
+                                <th scope="col-lg">Details</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row"></th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-center"><a href="#">View Details</a></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="master-list mt-2 mb-3 justify-content-end">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL.No</th>
+                                <th scope="col-lg">OEM</th>
+                                <th scope="col-lg">Dealer Name</th>
+                                <th scope="col-lg">DealerCode</th>
+                                <th scope="col-lg">Reg No</th>
+                                <th scope="col-lg">Front</th>
+                                <th scope="col-lg">Rear</th>
+                                <th scope="col-lg">Chassis No</th>
+                                <th scope="col-lg">Engine No.</th>
+                                <th scope="col-lg">RTO Name</th>
+                                <th scope="col-lg">Print</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-center"><button class="btn btn-success shadow">Print</button></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- TLP Printing -->
+                  </div>
+                </div>
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- TLP Print -->
+      <div class="tab-pane" id="file-import-export" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">File Import/Export</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="file-four-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="file-four-import-tvs-tab" data-toggle="pill" href="#file-four-import-tvs" role="tab" aria-controls="file-four-import-tvs" aria-selected="true">File Import TVS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="file-four-export-tvs-tab" data-toggle="pill" href="#file-four-export-tvs" role="tab" aria-controls="file-four-export-tvs" aria-selected="false">File Export TVS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="file-four-import-hero-tab" data-toggle="pill" href="#file-four-import-hero" role="tab" aria-controls="file-four-import-hero" aria-selected="false">File Import Hero</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="file-four-export-hero-tab" data-toggle="pill" href="#file-four-export-hero" role="tab" aria-controls="file-four-export-hero" aria-selected="false">File Eport Hero</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="file-four-tabContent">
+                    <div class="tab-pane fade show active" id="file-four-import-tvs" role="tabpanel" aria-labelledby="file-four-import-tvs-tab">
+                      <div class="row mb-3">
+                        <label class="w-100">TVS Excel Import</label>
+                      </div>
+                      <div class="row d-flex flex-sm-row flex-column">
+                        <button class="btn btn-success shadow mr-sm-3">Choose File </button>
+                        <span class="mr-sm-3 mb-3 pt-sm-0 pt-2">No file Chosen</span>
+                        <button class="btn btn-primary shadow">Import</button>
+                      </div>
+                    </div><!-- File Import TVS -->
+                    <div class="tab-pane fade" id="file-four-export-tvs" role="tabpanel" aria-labelledby="file-four-export-tvs-tab">
+                      <label>File Export</label>
+                      <div class="master-list mt-4 mb-5">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg"></th>
+                                <th scope="col-lg">Sl. No</th>
+                                <th scope="col-lg">INVOICE NUMBER</th>
+                                <th scope="col-lg">INVOICE DATE</th>
+                                <th scope="col-lg">TOTAL AMOUNT</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" class="text-center">
+                                  <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" id="title-export-tvs" name="customRadio">
+                                    <label for="title-export-tvs" class="custom-control-label"></label>
+                                  </div>
+                                </th>
+                                <td>01</td>
+                                <td>1234</td>
+                                <td>23/03/2020</td>
+                                <td>2329</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="row w-100">
+                        <button class="btn btn-success shadow">File Export</button>
+                      </div>
+                    </div><!-- File Export TVS -->
+                    <div class="tab-pane fade" id="file-four-import-hero" role="tabpanel" aria-labelledby="file-four-import-hero-tab">
+                      <div class="row mb-3">
+                        <label class="w-100">Hero Excel Import</label>
+                      </div>
+                      <div class="row d-flex flex-sm-row flex-column">
+                        <button class="btn btn-success shadow mr-sm-3">Choose File </button>
+                        <span class="mr-sm-3 mb-3 pt-sm-0 pt-2">No file Chosen</span>
+                        <button class="btn btn-primary shadow">Import</button>
+                      </div>
+                    </div><!-- File Import Hero -->
+                    <div class="tab-pane fade" id="file-four-export-hero" role="tabpanel" aria-labelledby="file-four-export-hero-tab">
+                      <label>File Export</label>
+                      <div class="master-list mt-4 mb-5">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg"></th>
+                                <th scope="col-lg">Sl. No</th>
+                                <th scope="col-lg">INVOICE NUMBER</th>
+                                <th scope="col-lg">INVOICE DATE</th>
+                                <th scope="col-lg">TOTAL AMOUNT</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" class="text-center">
+                                  <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" id="title-export-tvs" name="customRadio">
+                                    <label for="title-export-tvs" class="custom-control-label"></label>
+                                  </div>
+                                </th>
+                                <td>01</td>
+                                <td>1234</td>
+                                <td>23/03/2020</td>
+                                <td>2329</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="row w-100">
+                        <button class="btn btn-success shadow">File Export</button>
+                      </div>
+                    </div><!-- File Export Hero -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- File Import/Export -->
+      <div class="tab-pane" id="invoices" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Invoices</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="invoices-four-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="invoices-four-pending-tab" data-toggle="pill" href="#invoices-four-pending" role="tab" aria-controls="invoices-four-pending" aria-selected="true">Pending Invoice For Dealer</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="invoices-four-generate-tab" data-toggle="pill" href="#invoices-four-generate" role="tab" aria-controls="invoices-four-generate" aria-selected="false">Generate Invoice for TVS </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="invoices-four-reprint-tvs-tab" data-toggle="pill" href="#invoices-four-reprint-tvs" role="tab" aria-controls="invoices-four-reprint-tvs" aria-selected="false">Invoice Reprint TVS </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="invoices-four-reprint-dealer-tab" data-toggle="pill" href="#invoices-four-reprint-dealer" role="tab" aria-controls="invoices-four-reprint-dealer" aria-selected="false">Invoice Reprint for dealer</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="invoices-four-tabContent">
+                    <div class="tab-pane fade show active" id="invoices-four-pending" role="tabpanel" aria-labelledby="invoices-four-pending-tab">
+                      <label>File Export</label>
+                      <div class="master-list mt-4 mb-5">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg"></th>
+                                <th scope="col-lg">Sl. No</th>
+                                <th scope="col-lg">INVOICE NUMBER</th>
+                                <th scope="col-lg">INVOICE DATE</th>
+                                <th scope="col-lg">TOTAL AMOUNT</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" class="text-center">
+                                  <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" id="title-export-tvs" name="customRadio">
+                                    <label for="title-export-tvs" class="custom-control-label"></label>
+                                  </div>
+                                </th>
+                                <td>01</td>
+                                <td>1234</td>
+                                <td>23/03/2020</td>
+                                <td>2329</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="row w-100">
+                        <button class="btn btn-success shadow">File Export</button>
+                      </div>
+                    </div><!-- Pending Invoice For Dealer -->
+                    <div class="tab-pane fade" id="invoices-four-generate" role="tabpanel" aria-labelledby="invoices-four-generate-tab">
+                      <label>File Export</label>
+                      <div class="master-list mt-4 mb-5">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg"></th>
+                                <th scope="col-lg">Sl. No</th>
+                                <th scope="col-lg">INVOICE NUMBER</th>
+                                <th scope="col-lg">INVOICE DATE</th>
+                                <th scope="col-lg">TOTAL AMOUNT</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" class="text-center">
+                                  <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" id="title-export-tvs" name="customRadio">
+                                    <label for="title-export-tvs" class="custom-control-label"></label>
+                                  </div>
+                                </th>
+                                <td>01</td>
+                                <td>1234</td>
+                                <td>23/03/2020</td>
+                                <td>2329</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="row w-100">
+                        <button class="btn btn-success shadow">File Export</button>
+                      </div>
+                    </div><!-- Generate Invoice for TVS -->
+                    <div class="tab-pane fade" id="invoices-four-reprint-tvs" role="tabpanel" aria-labelledby="invoices-four-reprint-tvs-tab">
+                      <label>File Export</label>
+                      <div class="master-list mt-4 mb-5">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg"></th>
+                                <th scope="col-lg">Sl. No</th>
+                                <th scope="col-lg">INVOICE NUMBER</th>
+                                <th scope="col-lg">INVOICE DATE</th>
+                                <th scope="col-lg">TOTAL AMOUNT</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" class="text-center">
+                                  <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" id="title-export-tvs" name="customRadio">
+                                    <label for="title-export-tvs" class="custom-control-label"></label>
+                                  </div>
+                                </th>
+                                <td>01</td>
+                                <td>1234</td>
+                                <td>23/03/2020</td>
+                                <td>2329</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="row w-100">
+                        <button class="btn btn-success shadow">File Export</button>
+                      </div>
+                    </div><!-- Invoice Reprint TVS -->
+                    <div class="tab-pane fade" id="invoices-four-reprint-dealer" role="tabpanel" aria-labelledby="invoices-four-reprint-dealer-tab">
+                      <label>File Export</label>
+                      <div class="master-list mt-4 mb-5">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg"></th>
+                                <th scope="col-lg">Sl. No</th>
+                                <th scope="col-lg">INVOICE NUMBER</th>
+                                <th scope="col-lg">INVOICE DATE</th>
+                                <th scope="col-lg">TOTAL AMOUNT</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" class="text-center">
+                                  <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" id="title-export-tvs" name="customRadio">
+                                    <label for="title-export-tvs" class="custom-control-label"></label>
+                                  </div>
+                                </th>
+                                <td>01</td>
+                                <td>1234</td>
+                                <td>23/03/2020</td>
+                                <td>2329</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="row w-100">
+                        <button class="btn btn-success shadow">File Export</button>
+                      </div>
+                    </div><!-- Invoice rerint for dealer -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Invoices -->
+      <div class="tab-pane" id="delivery-function" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Delivery Function</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="delivery-four-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="delivery-four-despatch-tab" data-toggle="pill" href="#delivery-four-despatch" role="tab" aria-controls="delivery-four-despatch" aria-selected="true">Despatch</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="delivery-four-update-tab" data-toggle="pill" href="#delivery-four-update" role="tab" aria-controls="delivery-four-update" aria-selected="false">Update Delivery Date</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="delivery-four-edit-tab" data-toggle="pill" href="#delivery-four-edit" role="tab" aria-controls="delivery-four-edit" aria-selected="false">Edit Consignement</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="delivery-four-excel-tab" data-toggle="pill" href="#delivery-four-excel" role="tab" aria-controls="delivery-four-excel" aria-selected="false">Excel Generation of Delievery</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="delivery-four-tabContent">
+                    <div class="tab-pane fade" id="delivery-four-despatch" role="tabpanel" aria-labelledby="delivery-four-despatch-tab">
+                      <label>Despatch Details</label>
+                      <div class="master-list mt-4">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">Sl. No</th>
+                                <th scope="col-lg">Manufacturer</th>
+                                <th scope="col-lg">Dealer</th>
+                                <th scope="col-lg">Dealer Add</th>
+                                <th scope="col-lg">Dealer City</th>
+                                <th scope="col-lg">Despatch Through</th>
+                                <th scope="col-lg">Must be despatched</th>
+                                <th scope="col-lg">Ready for despatch</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">01</th>
+                                <td>BMW</td>
+                                <td>XYZ</td>
+                                <td>XYZ</td>
+                                <td>Kol</td>
+                                <td>Bluedart</td>
+                                <td>10</td>
+                                <td>8</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- Despatch -->
+                    <div class="tab-pane fade show active" id="delivery-four-update" role="tabpanel" aria-labelledby="delivery-four-despatch-from-tab">
+                      <div class="row w-100 mb-3 show" id="dispatch-main">
+                        <div class="master-list mt-4">
+                          <div class="master-table table-responsive">
+                            <table class="table table-striped table-hover table-bordered mb-0">
+                              <thead>
+                                <tr>
+                                  <th scope="col-lg">Sl.No</th>
+                                  <th scope="col-lg">MANUFACTURER</th>
+                                  <th scope="col-lg">DEALER</th>
+                                  <th scope="col-lg">DEALER ADDRESS</th>
+                                  <th scope="col-lg">DEALER CITY</th>
+                                  <th scope="col-lg">DESPATCH THROUGH</th>
+                                  <th scope="col-lg">MUST BE DESPATCHED</th>
+                                  <th scope="col-lg">READY FOR DESPATCH</th>
+                                  <th scope="col-lg">&nbsp;</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>YAMAHA</td>
+                                  <td>Liberity Moto Corp</td>
+                                  <td>P.R.Arcade,New Bus Stand, Kattapana, Idukki Kattapana</td>
+                                  <td>KATTAPANA</td>
+                                  <td>DELIVERY BOY</td>
+                                  <td>1</td>
+                                  <td>1</td>
+                                  <td><button class="btn btn-primary min-we-10">VIEW DETAILS</button></td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row w-100 mb-3" id="dispatch-detail">
+                        <h5>DEALLER NAME:-Liberty Moto Corp</h5>
+                        <div class="row w-100 bg-info p-2 mt-3">
+                          <label class="mb-0">Our showroom is open to take delivery of HSRP</label>
+                        </div>
+                        <div class="master-list w-100 mt-1 mb-4">
+                          <div class="master-table table-responsive">
+                            <table class="table table-striped table-hover table-bordered mb-0">
+                              <thead>
+                                <tr>
+                                  <th scope="col-lg">#</th>
+                                  <th scope="col-lg">ORDER NO.</th>
+                                  <th scope="col-lg">REG. NO.</th>
+                                  <th scope="col-lg">FRONT LID</th>
+                                  <th scope="col-lg">FRONT LID SIZE</th>
+                                  <th scope="col-lg">REAR LID</th>
+                                  <th scope="col-lg">REAT LID SIZE</th>
+                                  <th scope="col-lg">
+                                    <div class="custom-control custom-checkbox">
+                                      <label for="dipatch-all" class="custom-control-label">Select All</label>
+                                      <input class="custom-control-input" type="checkbox" id="dipatch-all" value="dipatch-all">
+                                    </div>
+                                  </th>
+                                </tr>
+                              </thead>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="row w-100 mb-4">
+                          <div class="col-sm-8 w-100 d-flex flex-sm-row flex-column">
+                            <h6 class="col-sm-6 mb-3 pt-1">DELEIVERY THROUGH:-</h6>
+                            <select class="col-sm-6 mb-3 p-0 form-control" id="select-deliv-through">
+                              <option>DELIVERY BOY</option>
+                              <option>1</option>
+                              <option>2</option>
+                            </select>
+                          </div>
+                          <div class="col-sm-8 w-100 d-flex flex-sm-row flex-column">
+                            <h6 class="col-sm-6 mb-3 pt-1">AWB/LR NO./Delivery Boy Name:- </h6>
+                            <input type="text" class="col-sm-6 mb-3 form-control" id="enter-deliv-name" placeholder="">
+                          </div>
+                          <div class="col-sm-8 w-100 d-flex flex-sm-row flex-column">
+                            <h6 class="col-sm-6 mb-3 pt-1">Weight:- </h6>
+                            <div class="row w-100 d-flex flex-row flex-nowrap">
+                              <input type="text" class="col-sm-12 col-11 mb-3 form-control" id="enter-deliv-weigth" placeholder="">
+                              <h6 class="col mb-3 pt-2">KG</h6>
+                            </div>
+                          </div>
+                          <div class="col-sm-8 w-100 d-flex flex-sm-row flex-column">
+                            <h6 class="col-sm-6 mb-3 pt-1">Delivery Charge:- </h6>
+                            <input type="text" class="col-sm-6 mb-3 form-control" id="enter-deliv-charge" placeholder="">
+                          </div>
+                        </div>
+                        <div class="row w-100 border-top pt-2 d-flex justify-content-center">
+                          <button class="btn btn-primary mr-3">SUBMIT</button>
+                          <button class="btn btn-success">BACK</button>
+                        </div>
+                      </div>
+                    </div><!-- Update Delivery Date -->
+                    <div class="tab-pane fade" id="delivery-four-edit" role="tabpanel" aria-labelledby="delivery-four-edit-tab">
+                      <label for="trans-date" class="ml-3">Recieve Consignement</label>
+                      <div class="p-2 pl-sm-3 pr-sm-3">
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+                            <input type="text" class="form-control datetimepicker-input" data-target="delivery-four-edit-from" id="delivery-four-edit-from">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">From</h5>
+                            </div>
+                          </div>
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+                            <input type="text" class="form-control datetimepicker-input" data-target="delivery-four-edit-to" id="delivery-four-edit-to">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">To</h5>
+                            </div>
+                          </div>
+                          <button class="btn btn-success shadow mb-auto mt-3 ml-2">Fetch Details</button>
+                        </div>
+                      </div>
+                      <div class="master-list mt-4">
+                        <div class="row ml-3 mr-3 justify-content-start d-flex flex-column">
+                          <span class="mt-2 mb-1">FROM DATE: 2020-01-01</span>
+                          <span class="mt-1 mb-3">TO DATE: 2020-01-08</span>
+                        </div>
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered mb-0">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">
+                                  <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" type="checkbox" id="edit-consig" value="edit-consig">
+                                    <label for="edit-consig" class="custom-control-label">&nbsp;</label>
+                                  </div>
+                                </th>
+                                <th scope="col-lg">OEM</th>
+                                <th scope="col-lg">DEALER</th>
+                                <th scope="col-lg">DISPATCH NO.</th>
+                                <th scope="col-lg">DISPATCH DATE</th>
+                                <th scope="col-lg">THROUGH</th>
+                                <th scope="col-lg">REMARKS</th>
+                                <th scope="col-lg">Delivery Status</th>
+                                <th scope="col-lg">Delivery Upadate Date/Time</th>
+                                <th scope="col-lg">NO OF VEHICLE</th>
+                                <th scope="col-lg">UPDATE</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- Edit Consignement -->
+                    <div class="tab-pane fade" id="delivery-four-excel" role="tabpanel" aria-labelledby="delivery-four-excel-tab">
+                      <label for="trans-date" class="ml-3">Excel Generation of Delivery Courier</label>
+                      <div class="p-2 pl-sm-3 pr-sm-3">
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#delivery-four-excel-from" id="delivery-four-excel-from">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">From</h5>
+                            </div>
+                          </div>
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#delivery-four-excel-to" id="delivery-four-excel-to">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">To</h5>
+                            </div>
+                          </div>
+                          <button class="btn btn-success shadow mb-auto mt-3 ml-2">Fetch Details</button>
+                        </div>
+                      </div>
+                      <div class="master-list mt-4 mb-5">
+                        <div class="row ml-3 mr-3 justify-content-between">
+                          <span class="mt-2 mb-3">FROM DATE: 2020-01-01-TO DATE: 2020-01-08</span>
+                        </div>
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered mb-0">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg"></th>
+                                <th scope="col-lg">Waybill</th>
+                                <th scope="col-lg">Reference No.</th>
+                                <th scope="col-lg">Consignee Name</th>
+                                <th scope="col-lg">City</th>
+                                <th scope="col-lg">State</th>
+                                <th scope="col-lg">Country</th>
+                                <th scope="col-lg">Address</th>
+                                <th scope="col-lg">Pincode</th>
+                                <th scope="col-lg">Phone</th>
+                                <th scope="col-lg">Mobile</th>
+                                <th scope="col-lg">Weight</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" class="text-center">
+                                  <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" id="delivery-edit" name="delivery-edit">
+                                    <label for="delivery-edit" class="custom-control-label"></label>
+                                  </div>
+                                </th>
+                                <td>AWB1222224</td>
+                                <td>21</td>
+                                <td>Fsga</td>
+                                <td>Kol</td>
+                                <td>WB</td>
+                                <td>India</td>
+                                <td>sfsaf</td>
+                                <td>700123</td>
+                                <td>213213</td>
+                                <td>213123</td>
+                                <td>23Kg</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="row w-100 justify-content-center">
+                        <button class="btn btn-success shadow">Generate Excel</button>
+                      </div>
+                    </div><!-- Excel Generation of Delievery -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Delivery Function -->
+      <div class="tab-pane" id="reprint" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Reprint</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="reprint-four-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="reprint-four-js-tab" data-toggle="pill" href="#reprint-four-js" role="tab" aria-controls="reprint-four-js" aria-selected="true">Job Sheet Reprint</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="reprint-four-tlp-tab" data-toggle="pill" href="#reprint-four-tlp" role="tab" aria-controls="reprint-four-tlp" aria-selected="false">TLP Reprint</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="reprint-four-challan-tab" data-toggle="pill" href="#reprint-four-challan" role="tab" aria-controls="reprint-four-challan" aria-selected="false">Challan Reprint</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="reprint-four-excel-tab" data-toggle="pill" href="#reprint-four-excel" role="tab" aria-controls="reprint-four-excel" aria-selected="false">Excel Generation</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="reprint-four-tabContent">
+                    <div class="tab-pane fade show active" id="reprint-four-js" role="tabpanel" aria-labelledby="reprint-four-js-tab">
+                      <label class="mb-5">Jobsheet Reprint</label>
+                      <div class="row w-100 mb-5">
+                        <div class="col-sm-4 mr-sm-3 pl-0">
+                          <input class="form-control" type="text" placeholder="Enter Jobsheet No." aria-label="Enter Jobsheet No.">
+                        </div>
+                        <div class="w-auto">
+                          <button class="btn btn-primary shadow">Search</button>
+                        </div>
+                      </div>
+                      <div class="master-list mt-2 mb-3">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">Sl. No</th>
+                                <th scope="col-lg">Jobsheet No</th>
+                                <th scope="col-lg">Date</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="row w-100 justify-content-center">
+                        <button class="btn btn-primary shadow">Reprint</button>
+                      </div>
+                    </div><!-- Job Sheet Reprint -->
+                    <div class="tab-pane fade" id="reprint-four-tlp" role="tabpanel" aria-labelledby="reprint-four-tlp-tab">
+                      <div class="row mb-3">
+                        <label class="w-100">Reprint TLP</label>
+                      </div>
+                      <div class="row form-group d-flex flex-column pl-0">
+                        <p for="item-type" class="col-form-label pl-0">Search By:</p>
+                        <select class="col-xl-4 col-sm-6 mb-3 form-control" id="select-vehicle-search">
+                          <option>Vehicle No/Order No</option>
+                          <option>West</option>
+                          <option>North</option>
+                        </select>
+                      </div>
+                      <div class="row form-group pl-0">
+                        <div class="col-xl-4 col-sm-6 pl-0 pr-0 mr-sm-3 d-flex flex-column">
+                          <span for="item-type" class="col-form-label pl-0">Vehicle No/Order No</span>
+                          <input class="form-control" type="text" placeholder="Enter Vehicle/Order No" aria-label="Enter Vehicle/Order No">
+                        </div>
+                        <div class="col-sm-auto col-12 mt-sm-auto mt-5 pl-0 pr-0">
+                          <button class="btn btn-success shadow w-100">Search</button>
+                        </div>
+                      </div>
+                    </div><!-- TLP Reprint -->
+                    <div class="tab-pane fade" id="reprint-four-challan" role="tabpanel" aria-labelledby="reprint-four-challan-tab">
+                      <label for="trans-date" class="ml-3">Challan Reprint</label>
+                      <div class="p-2 pl-sm-3 pr-sm-3">
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#reprint-four-challan-from" id="reprint-four-challan-from">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">From</h5>
+                            </div>
+                          </div>
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#reprint-four-challan-to" id="reprint-four-challan-to">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">To</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="master-list mt-0 mb-1">
+                        <div class="row form-group pl-sm-3 pl-2 pr-3">
+                          <select class="col-xl-3 col-sm-4 mr-sm-3 mb-3 form-control" id="select-subdealer">
+                            <option>Subdealer</option>
+                            <option>West</option>
+                            <option>North</option>
+                          </select>
+                          <div class="col-xl-1 col-sm-2 p-0 mb-3">
+                            <button class="btn btn-success shadow w-100">Search</button>
+                          </div>
+                        </div>
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered mb-0">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL.No</th>
+                                <th scope="col-lg">Dealer</th>
+                                <th scope="col-lg">Consignement No</th>
+                                <th scope="col-lg">Date</th>
+                                <th scope="col-lg">Recieved</th>
+                                <th scope="col-lg">QTY</th>
+                                <th scope="col-lg">Sent</th>
+                                <th scope="col-lg">Type</th>
+                                <th scope="col-lg">Remarks</th>
+                                <th scope="col-lg">Print</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td class="text-center"><button class="btn btn-success shadow">Print</button></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- Challan Reprint -->
+                    <div class="tab-pane fade" id="reprint-four-excel" role="tabpanel" aria-labelledby="reprint-four-excel-tab">
+                      <label for="trans-date" class="ml-3">Excel Generation of Delivery Courier</label>
+                      <div class="p-2 pl-sm-3 pr-sm-3">
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#reprint-four-excel-from" id="reprint-four-excel-from">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">From</h5>
+                            </div>
+                          </div>
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#reprint-four-excel-to" id="reprint-four-excel-to">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">To</h5>
+                            </div>
+                          </div>
+                          <button class="btn btn-success shadow mb-auto mt-3 ml-2">Fetch Details</button>
+                        </div>
+                      </div>
+                      <div class="master-list mt-0 mb-3">
+                        <div class="row ml-3 mr-3 justify-content-between">
+                          <span class="mt-2 mb-3">FROM DATE: 2020-01-01-TO DATE: 2020-01-08</span>
+                        </div>
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered mb-0">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL.No</th>
+                                <th scope="col-lg">File Name</th>
+                                <th scope="col-lg">Date</th>
+                                <th scope="col-lg">Consignement No</th>
+                                <th scope="col-lg">Print</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td class="text-center"><button class="btn btn-success shadow">Print</button></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="row w-100 justify-content-center">
+                        <button class="btn btn-success shadow">Generate Excel</button>
+                      </div>
+                    </div><!-- Excel Generation -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Reprint -->
+      <div class="tab-pane" id="report" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Report</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="report-six-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="report-six-stock-tab" data-toggle="pill" href="#report-six-stock" role="tab" aria-controls="report-six-stock" aria-selected="true">Stock Report</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="report-six-loose-tab" data-toggle="pill" href="#report-six-loose" role="tab" aria-controls="report-six-loose" aria-selected="false">Loose Tool Stock</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="report-six-order-tab" data-toggle="pill" href="#report-six-order" role="tab" aria-controls="report-six-order" aria-selected="false">Order Report</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="report-six-data-tab" data-toggle="pill" href="#report-six-data" role="tab" aria-controls="report-six-data" aria-selected="false">Data History</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="report-six-dealer-tab" data-toggle="pill" href="#report-six-dealer" role="tab" aria-controls="report-six-dealer" aria-selected="false">Dealer Status Report</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="report-six-dispatch-tab" data-toggle="pill" href="#report-six-dispatch" role="tab" aria-controls="report-six-dispatch" aria-selected="false">Dispatch Report</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="report-six-tabContent">
+                    <div class="tab-pane fade show active" id="report-six-stock" role="tabpanel" aria-labelledby="report-six-stock-tab">
+                      <div class="p-2 pl-sm-3 pr-sm-3">
+                        <label class="mb-3">Embossing Stock Report:</label>
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#report-six-stock-from" id="report-six-stock-from">
+                            <div class="ml-sm-3">
+                              <h5 for="item-type" class="col-form-label">From</h5>
+                            </div>
+                          </div>
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#report-six-stock-to" id="report-six-stock-to">
+                            <div class="ml-sm-3">
+                              <h5 for="item-type" class="col-form-label">To</h5>
+                            </div>
+                          </div>
+                          <button class="btn btn-success shadow mb-sm-auto mb-5 mt-3 ml-2">Submit</button>
+                        </div>
+                      </div>
+                      <div class="master-list mt-0">
+                        <div class="row ml-3 mr-3 justify-content-between">
+                          <span class="mt-2 mb-3">FROM DATE: 2020-01-01-TO DATE: 2020-01-08</span>
+                        </div>
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL No</th>
+                                <th scope="col-lg">Item Name</th>
+                                <th scope="col-lg"></th>
+                                <th scope="col-lg">Open Stock</th>
+                                <th scope="col-lg">Inward</th>
+                                <th scope="col-lg">Outward</th>
+                                <th scope="col-lg">Damage</th>
+                                <th scope="col-lg">Missing</th>
+                                <th scope="col-lg">Suspense</th>
+                                <th scope="col-lg">Closing Stock</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>LASER-W-285 X 45(L11)</td>
+                                <td>1410</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td></td>
+                                <td>0</td>
+                                <td>4</td>
+                                <td>1406</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>LASER-Y-285 X 45(L12)</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>4</td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- Stock Report -->
+                    <div class="tab-pane fade" id="report-six-loose" role="tabpanel" aria-labelledby="report-six-loose-tab">
+                      <div class="p-2 pl-sm-3 pr-sm-3">
+                        <label class="mb-3">Loose Tools Stock Details</label>
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#report-six-loose-from" id="report-six-loose-from">
+                            <div class="ml-sm-3">
+                              <h5 for="item-type" class="col-form-label">From</h5>
+                            </div>
+                          </div>
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#report-six-loose-to" id="report-six-loose-to">
+                            <div class="ml-sm-3">
+                              <h5 for="item-type" class="col-form-label">To</h5>
+                            </div>
+                          </div>
+                          <button class="btn btn-success shadow mb-sm-auto mb-5 mt-3 ml-2">Submit</button>
+                        </div>
+                      </div>
+                      <div class="master-list mt-0">
+                        <div class="row ml-3 mr-3 justify-content-between">
+                          <span class="mt-2 mb-3">FROM DATE: 2020-01-01-TO DATE: 2020-01-08</span>
+                        </div>
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SI.No</th>
+                                <th scope="col-lg">Item Name</th>
+                                <th scope="col-lg">Unit</th>
+                                <th scope="col-lg">Opening Stock</th>
+                                <th scope="col-lg">Inward</th>
+                                <th scope="col-lg">Outward</th>
+                                <th scope="col-lg">Reconcile</th>
+                                <th scope="col-lg">Closing Stock</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>SNAP LOCK - 3/4" (4.8X19.1 mm)(002)</td>
+                                <td>PCS</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- Loose Tool Stock -->
+                    <div class="tab-pane fade" id="report-six-order" role="tabpanel" aria-labelledby="report-six-order-tab">
+                      <div class="p-2 pl-sm-3 pr-sm-3">
+                        <label class="mb-3">DATE RANGE FOR ORDERS</label>
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#report-six-order-from" id="report-six-order-from">
+                            <div class="ml-sm-3">
+                              <h5 for="item-type" class="col-form-label">From</h5>
+                            </div>
+                          </div>
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#report-six-order-to" id="report-six-order-to">
+                            <div class="ml-sm-3">
+                              <h5 for="item-type" class="col-form-label">To</h5>
+                            </div>
+                          </div>
+                          <button class="btn btn-success shadow mb-sm-auto mb-5 mt-3 ml-2">Submit</button>
+                        </div>
+                      </div>
+                      <div class="master-list mt-0">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SN</th>
+                                <th scope="col-lg">Embossing Stn</th>
+                                <th scope="col-lg">No Of Orders</th>
+                                <th scope="col-lg">New Orders</th>
+                                <th scope="col-lg">Blocked For Jobsheet</th>
+                                <th scope="col-lg">Jbsheet Created</th>
+                                <th scope="col-lg">Issued for Embossing</th>
+                                <th scope="col-lg">Qc Done</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- Order Report -->
+                    <div class="tab-pane fade" id="report-six-data" role="tabpanel" aria-labelledby="report-six-data-tab">
+                      <div class="row form-group p-2 d-flex flex-sm-row flex-column">
+                        <span for="item-type" class="col-form-label mr-sm-3 pl-0">Registration Number</span>
+                        <input class="form-control col-xl-4 col-sm-4 mr-sm-3 mb-3" type="text" placeholder="Registration Number" aria-label="Registration Number">
+                        <div class="col-xl-1 col-sm-2 pl-0 pr-0">
+                          <button class="btn btn-success shadow w-100">Search</button>
+                        </div>
+                      </div>
+                      <div class="row pl-0 mt-3">
+                        <div class="col-xl-4 col-md-6"><p>OEM Name:</p></div>
+                        <div class="col-xl-4 col-md-6"><p>Dealer Name:</p></div>
+                        <div class="col-12"><p>Dealer Address:</p></div>
+                        <div class="col-xl-4 col-md-6"><p>Dealer Code By OEM:</p></div>
+                        <div class="col-xl-4 col-md-6"><p>Vehicle Class:</p></div>
+                        <div class="col-xl-4 col-md-6"><p>Vehicle Type:</p></div>
+                        <div class="col-xl-4 col-md-6"><p>Engine Number:</p></div>
+                        <div class="col-xl-4 col-md-6"><p>Chassis Number:</p></div>
+                        <div class="col-xl-4 col-md-6"><p>Order Number By Celex:</p></div>
+                        <div class="col-xl-4 col-md-6"><p>Order Number By OEM:</p></div>
+                        <div class="col-xl-8 col-md-6"><p>First Registration Date:</p></div>
+                        <div class="col-xl-4 col-md-6"><p>RTO Name:</p></div>
+                        <div class="col-xl-4 col-md-6"><p>Fuel Type:</p></div>
+                        <div class="col-xl-4 col-md-6"><p>Order Date:</p></div>
+                        <div class="col-xl-12 col-md-6"><p>Embossing Station Name:</p></div>
+                      </div>
+                    </div><!-- Data History -->
+                    <div class="tab-pane fade" id="report-six-dealer" role="tabpanel" aria-labelledby="report-six-dealer-tab">
+                      <div id="dealer-report-main" class="show">
+                        <div class="p-2 pl-sm-3 pr-sm-3">
+                          <label class="mb-3">Dealer Wise Status Report:</label>
+                        </div>
+                        <div class="master-list mt-0">
+                          <div class="p-2 pl-sm-3 pr-sm-3">
+                            <span class="mb-3">Manufacturer List:</span>
+                          </div>
+                          <div class="master-table table-responsive">
+                            <table class="table table-striped table-hover table-bordered">
+                              <thead>
+                                <tr>
+                                  <th scope="col-lg">SL</th>
+                                  <th scope="col-lg">OEM Namen</th>
+                                  <th scope="col-lg">View</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row" class="pt-3">1</th>
+                                  <td class="pt-3">YAMAHA</td>
+                                  <td class="text-center"><button class="btn btn-success" id="view">View</button></td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="dealer-report-detail" class="">
+                        <div class="p-2 pl-sm-3 pr-sm-3">
+                          <label class="mb-3">Order Report</label>
+                          <div class="row">
+                            <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+                              <input type="text" class="form-control datetimepicker-input" data-target="#report-six-dealer-from" id="report-six-dealer-from">
+                              <div class="ml-sm-3">
+                                <h5 for="item-type" class="col-form-label">From</h5>
+                              </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+                              <input type="text" class="form-control datetimepicker-input" data-target="#report-six-dealer-to" id="report-six-dealer-to">
+                              <div class="ml-sm-3">
+                                <h5 for="item-type" class="col-form-label">To</h5>
+                              </div>
+                            </div>
+                            <button class="btn btn-success shadow mb-sm-auto mb-5 mt-3 ml-2" id="submit">Submit</button>
+                          </div>
+                        </div>
+                        <div class="master-list mt-0">
+                          <div class="master-table table-responsive">
+                            <table class="table table-striped table-hover table-bordered">
+                              <thead>
+                                <tr>
+                                  <th scope="col-lg">#</th>
+                                  <th scope="col-lg">Dealer Name</th>
+                                  <th scope="col-lg">Address</th>
+                                  <th scope="col-lg">Total Order</th>
+                                  <th scope="col-lg">Jobsheet Created</th>
+                                  <th scope="col-lg">Ready for Dispatch</th>
+                                  <th scope="col-lg">Dispatched</th>
+                                  <th scope="col-lg">Recieved</th>
+                                  <th scope="col-lg">Afficed</th>
+                                  <th scope="col-lg">Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- Dealer Status Report -->
+                    <div class="tab-pane fade" id="report-six-dispatch" role="tabpanel" aria-labelledby="report-six-dispatch-tab">
+                      <div class="p-2 pl-sm-3">
+                        <label for="trans-date" class="pl-0">Deapatch Report</label>
+                        <div class="pl-0">
+                          <div class="row">
+                            <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+                              <input type="text" class="form-control datetimepicker-input" data-target="#report-six-dispatch-from" id="report-six-dispatch-from">
+                              <div class="ml-sm-3">
+                                <h5 for="item-type" class="col-form-label">From</h5>
+                              </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3 pl-0">
+                              <input type="text" class="form-control datetimepicker-input" data-target="#report-six-dispatch-to" id="report-six-dispatch-to">
+                              <div class="ml-sm-3">
+                                <h5 for="item-type" class="col-form-label">To</h5>
+                              </div>
+                            </div>
+                            <button class="btn btn-success shadow mb-sm-auto mb-5 mt-3 ml-2">Submit</button>
+                          </div>
+                          <div class="row mt-3 mb-3">
+                            <select class="col-xl-3 col-sm-4 mb-3 form-control" id="select-es">
+                              <option>Select ES</option>
+                              <option>West</option>
+                              <option>North</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="master-list mt-0">
+                        <div class="row p-2 pl-sm-3 mb-2">
+                          <span>Embossing Station: KL Kochi Yamaha(059)</span>
+                        </div>
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered mb-0">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">CONSIGNM</th>
+                                <th scope="col-lg">O</th>
+                                <th scope="col-lg">DEA</th>
+                                <th scope="col-lg">DEALER</th>
+                                <th scope="col-lg">DEALE</th>
+                                <th scope="col-lg">DA</th>
+                                <th scope="col-lg">RECEI</th>
+                                <th scope="col-lg">Q</th>
+                                <th scope="col-lg">DISPATCH</th>
+                                <th scope="col-lg">AWB/LR</th>
+                                <th scope="col-lg">Delivery</th>
+                                <th scope="col-lg">Delivery</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- Dispatch Report -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Report -->
+      <div class="tab-pane" id="support" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Support</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-body">
+                  <div class="pl-0 pt-5">
+                    <div class="row form-group justify-content-sm-start justify-content-center">
+                      <div class="col-xl-4 col-sm-6 row d-flex flex-sm-row flex-column ml-0 mb-3 mr-sm-3 mr-0 pl-0 pr-0">
+                        <span for="item-type" class="col-form-label mr-3 pl-0">Ticket Type</span>
+                        <select class="col form-control" id="select-ticket-type">
+                          <option>Select Ticket Type</option>
+                          <option>West</option>
+                          <option>North</option>
+                        </select>
+                      </div>
+                      <div class="col-xl-2 col-sm-3 pl-0 pr-0">
+                        <button class="btn btn-success shadow w-100">Search</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="master-list mt-4 mb-3 justify-content-end">
+                    <div class="row d-flex justify-content-end mr-2 mb-3">
+                      <form class="form-inline search-bar bg-light">
+                        <div class="input-group">
+                          <div class="input-group-append">
+                            <button class="btn btn-navbar" type="submit">
+                              <i class="fa fa-search"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <input class="form-control form-control border-0 bg-light w-100" type="search" placeholder="Search" aria-label="Search">
+                      </form>
+                    </div>
+                    <div class="master-table table-responsive">
+                      <table class="table table-striped table-hover table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col-lg">SL.No</th>
+                            <th scope="col-lg">Support Type</th>
+                            <th scope="col-lg">OEM</th>
+                            <th scope="col-lg">Dealer</th>
+                            <th scope="col-lg">Support Date</th>
+                            <th scope="col-lg">Last Reply Date</th>
+                            <th scope="col-lg">Close Date</th>
+                            <th scope="col-lg">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Support -->
+    </div>
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- AdminLTE App -->
+  <script type="text/javascript" src="asset/js/adminlte.js"></script>
+
+  <!-- JQuery Flot -->
+  <script src="http://static.pureexample.com/js/flot/excanvas.min.js"></script>
+  <script type="text/javascript" src="asset/chart.js/Chart.min.js"></script>
+
+  <!-- Custom Javascript -->
+  <script type="text/javascript" src="asset/js/common.js"></script>
+  <script type="text/javascript" src="asset/js/embossing-station.js"></script>
+
+</body>
+
+</html>

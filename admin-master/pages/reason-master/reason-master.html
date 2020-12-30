@@ -1,0 +1,86 @@
+<div class="tab-pane" id="reason-master" role="menu">
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper" style="min-height: 806px;">
+	  <!-- Content Header (Page header) -->
+	  <div class="content-header">
+		<div class="container-fluid">
+		  <div class="row mb-2">
+			<div class="col-sm-6">
+			  <h1 class="m-0 text-dark">Reason Master</h1>
+			</div><!-- /.col -->
+		  </div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+	  </div>
+	  <!-- /.content-header -->
+
+	  <!-- Main content -->
+	  <section class="content">
+		<div class="container-fluid">
+		<th:block th:if="${ReasonMasterHtml}">
+		  <div class="card shadow pt-5 pb-5 pl-4 pr-4">
+			<div class="add-master d-sm-flex flex-sm-column">
+			<form id="reasonDescMaster" th:object="${reasonDescMasterObj}">
+			<input type="hidden" class="form-control" th:field="*{id}" id="enter-reason-master-id" aria-describedby="enter zone name">                                    
+			  <div class="state form-group row justify-content-xl-start justify-content-center">
+				<div class="col-xl-5 col-md-6 row ml-0 mb-3 mr-md-1">
+				  <span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-9 max-we-11">Reason Name</span>
+				  <input type="text" class="col-xl-6 col-md-5 col-sm-8 form-control" th:field="*{reason}" id="enter-reason-name" placeholder="Enter Reason Name">
+				<span style="color:red;" th:id="enter-reason-name-note"></span>
+				</div>
+				<div class="col-xl-4 col-md-6 row ml-0 mb-3 mr-xl-3">
+				  <span for="item-type" class="col-form-label col-sm-2 pl-0 min-we-9 max-we-11">Contact Person</span>
+				  <input type="text" class="col-md-5 col-sm-8 form-control" th:field="*{contactPerson}" id="enter-reason-code" placeholder="Enter Reason Code">
+				<span style="color:red;" th:id="enter-reason-code-note"></span>
+				</div>
+				<div class="col-xl-2 ml-0 mb-3 mt-xl-0 mt-3 text-center">
+				  <button type="button" class="btn btn-success shadow mb-auto" onclick="ajaxPost('reasonDescMaster','http://localhost:8080/getAdminPage/saveReasonMaster','reason-master','reason-master','http://localhost:8080/getAdminPage/ReasonMaster');">Add to Master</button>
+				</div>
+			  </div>
+			  </form>
+			</div>
+			<div class="master-list mt-4">
+			  <label for="cities">Reasons Added To Master</label>
+			  
+			  <div class="float-right">
+			   <label for="name">Search: </label>
+				   <input type="text" id="searchParamReasonMaster" style="text-align:left">
+				   <button type="button" class="btn btn-success" onclick="pageButtonClick('0', 'searchParamReasonMaster','ReasonMaster','reasonMasterPageNo','reasonMastertbl','reasonMastertbl');">search</button>
+			   </div>
+			   <div id="reasonMastertbl">
+			  <div class="master-table table-responsive">
+				<table class="table table-striped table-hover table-bordered">
+				  <thead>
+					<tr>
+					  <!-- <th scope="col-lg-2">SI.No</th>-->
+					  <th scope="col-lg-4">Reason Name</th>
+					  <th scope="col-lg-4">REason Code</th>
+					  <th scope="col-lg-2">Edit</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<!--<tr>
+					  <td>Material Out of Stock</td>
+					  <td>R1</td>
+					  <td><i class="fa fa-edit" href="#"></i></td>
+					</tr>-->                      
+					<tr th:each="reasonDescMaster, stat : ${genericList}">
+					 <td th:text="${reasonDescMaster.reason}">PlateColor</td>
+					 <td th:text="${reasonDescMaster.contactPerson}">PlateColor</td>                                                                                                                            
+					 <td><i class="fa fa-edit" href="#" th:onclick="|divLoad('reason-master','reason-master','http://localhost:8080/getAdminPage/ReasonMaster?id=${reasonDescMaster.id}')|"></i></td>
+				  </tr>                                         
+				  </tbody>
+				</table>
+			  </div>
+			  
+			  </div>
+			 
+			</div>
+		  </div>
+		  </th:block>
+		</div><!-- /.container-fluid -->
+	  </section>
+	  <!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+</div> <!-- Reason Master -->
+<script src="admin-master/pages/reason-master/reason-master.js"></script>

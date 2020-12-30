@@ -1,0 +1,18 @@
+.card-footer a {
+  text-decoration: none;
+  color: var(--blue) !important;
+}
+
+.card-footer a label:hover {
+  text-decoration: underline;
+}
+
+.card-footer a label {
+  margin-top: 1.0em;
+}
+
+#dashboard .content .card .card-header label:hover,
+#dashboard .content .card .card-footer a label:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

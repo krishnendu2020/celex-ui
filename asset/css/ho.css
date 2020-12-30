@@ -1,0 +1,30 @@
+#out-main {
+  display: none;
+}
+
+#out-main.show {
+  display: inline;
+}
+
+#out-subcontent {
+  display: none;
+}
+
+#out-subcontent.show {
+  display: inline;
+}
+
+a.export-excel:hover {
+  text-decoration: underline;
+}
+
+#dashboard .master-table.table-responsive table {
+  min-width: 200px;
+}
+
+#stock-details .master-table.table-responsive table,
+#invoices .master-table.table-responsive table,
+#reports .master-table.table-responsive table,
+#support .master-table.table-responsive table {
+  min-width: 1300px;
+}

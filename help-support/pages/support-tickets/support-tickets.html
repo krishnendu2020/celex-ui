@@ -1,0 +1,197 @@
+<div class="tab-pane" id="support-tickets" role="menu">
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper" style="min-height: 806px;">
+	  <!-- Content Header (Page header) -->
+	  <div class="content-header">
+		<div class="container-fluid">
+		  <div class="row mb-2">
+			<div class="col-sm-6">
+			  <h1 class="m-0 text-dark">Support Tickets</h1>
+			</div><!-- /.col -->
+		  </div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+	  </div>
+	  <!-- /.content-header -->
+
+	  <!-- Main content -->
+	  <section class="content">
+		<div class="container-fluid">
+		  <div class="card card-tabs shadow">
+			<div class="card-body">
+			  <div class="pt-3">
+				<div id="ticket-main" class="show">
+				  <div class="row form-group pl-sm-5 pr-sm-5 p-2">
+					<span for="item-type" class="col-form-label mr-3 pl-0">Ticket Type</span>
+					<select class="col-xl-4 col-sm-4 mr-md-3 mb-3 form-control" id="select-ticket-type">
+					  <option>Select Ticket Type</option>
+					  <option>West</option>
+					  <option>North</option>
+					</select>
+					<div class="col-xl-2 col-md-3 col-sm-4">
+					  <button class="btn btn-success shadow w-100">Fetch Details</button>
+					</div>
+				  </div>
+				  <div class="master-list mt-4 justify-content-end">
+					<div class="row d-flex justify-content-end mr-2 mb-3">
+					  <form class="form-inline search-bar bg-light">
+						<div class="input-group">
+						  <div class="input-group-append">
+							<button class="btn btn-navbar" type="submit">
+							  <i class="fa fa-search"></i>
+							</button>
+						  </div>
+						</div>
+						<input class="form-control form-control border-0 bg-light w-100" type="search" placeholder="Search" aria-label="Search">
+					  </form>
+					</div>
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered">
+						<thead>
+						  <tr>
+							<th scope="col-lg">Sl.No</th>
+							<th scope="col-lg">Support Type</th>
+							<th scope="col-lg">OEM</th>
+							<th scope="col-lg">Dealer</th>
+							<th scope="col-lg">Support Date</th>
+							<th scope="col-lg">Last Reply Date</th>
+							<th scope="col-lg">Closing Date</th>
+							<th scope="col-lg">Status</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td class="text-center"><a href="#" id="to-sub">open</a></td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<th scope="row">&nbsp;</th>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						</tbody>
+					  </table>
+					</div>
+				  </div>
+				</div>
+				<div id="ticket-detail" class="pl-sm-5 pr-sm-5 p-2">
+				  <div class="row mb-3"><h5>Support:</h5></div>
+				  <div class="row form-group mb-sm-3 mb-5">
+					<label for="item-type" class="col-form-label mr-3 pl-0">Registration No: KL18Y2842 </label>
+					<select class="col-xl-4 col-sm-4 mr-md-5 mb-3 form-control" id="select-ticket-type">
+					  <option>Transfer To</option>
+					  <option>West</option>
+					  <option>North</option>
+					</select>
+					<div class="col-sm-2">
+					  <button class="btn btn-success shadow w-100" id="to-main">Close</button>
+					</div>
+				  </div>
+				  <div class="row mb-3">
+					<label for="subject">Subject: VAHAN UPDATE ERROR TICKET</label>
+				  </div>
+				  <div class="row mb-3">
+					<label for="Description">Description: Invalid Vehicle Registration No</label>
+				  </div>
+				  <div class="card border-dark subdescription elevation-0">
+					<div class="card-header border-bottom-0">
+					  <h5>Enter Reply</h5>
+					</div>
+					<div class="card-body">
+					  <div class="row mb-3">
+						<div class="col-sm-4 mb-3">
+						  <div class="row form-group">
+							<span for="item-type" class="col-form-label pl-0 min-we-3">Name</span>
+							<input type="text" class="col form-control mr-sm-2" id="enter-name" placeholder="Enter Name">
+						  </div>
+						</div>
+						<div class="col-sm-4 mb-3">
+						  <div class="row form-group">
+							<span for="item-type" class="col-form-label pl-0 min-we-3">Email</span>
+							<input type="email" class="col form-control mr-sm-2" id="enter-email" placeholder="Enter Email ID">
+						  </div>
+						</div>
+						<div class="col-sm-4 mb-3">
+						  <div class="row form-group">
+							<span for="item-type" class="col-form-label pl-0 min-we-3">Phone</span>
+							<input type="phone" class="col form-control mr-sm-2" id="enter-phone" placeholder="Enter Phone">
+						  </div>
+						</div>
+						<div class="col-12 mt-3 mb-3">
+						  <div class="form-group">
+							<h5>Enter Reply</h5>
+							<textarea class="form-control" rows="3" placeholder="Enter ..." ></textarea>
+						  </div>
+						</div>
+						<div class="col-12">
+						  <div class="row d-flex flex-sm-row flex-column form-group justify-content-center pl-5 pr-5">
+							  <div class="d-flex flex-column mb-3">
+								<div class="row d-flex flex-row flex-nowrap mr-2 mb-sm-0 mb-2">
+								  <i class="fa fa-upload fa-2x mt-auto mr-3" href="#"></i>
+								  <button class="btn btn-success elevation-2 mb-auto">Upload</button>
+								</div>
+								<span class="mt-2 mr-5 mb-0">Upload Image/file</span>
+							  </div>
+							  <div class="custom-control custom-checkbox mr-sm-3">
+								<input class="custom-control-input" type="checkbox" id="hide-dealer" value="option1">
+								<label for="hide-dealer" class="custom-control-label">Hide From Dealer</label>
+							  </div>
+							  <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column mt-sm-0 mt-3">
+								<button class="btn btn-primary shadow mr-sm-3 mb-auto">Import File</button>
+								<button class="btn btn-success shadow mb-auto mt-sm-0 mt-3">Back</button>
+							  </div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div><!-- /.container-fluid -->
+	  </section>
+	  <!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+  </div> <!-- Support Tickets -->

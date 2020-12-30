@@ -1,0 +1,12 @@
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.title {
+  border-bottom: 2px solid var(--gray-dark);
+}
+
+table tbody td i {
+  cursor: pointer;
+}

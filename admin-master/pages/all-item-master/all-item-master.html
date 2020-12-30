@@ -1,0 +1,186 @@
+<div class="tab-pane" id="all-item-master" role="menu">
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper" style="min-height: 806px;">
+	  <!-- Content Header (Page header) -->
+	  <div class="content-header">
+		<div class="container-fluid">
+		  <div class="row mb-2">
+			<div class="col-sm-6">
+			  <h1 class="m-0 text-dark">All Item Master</h1>
+			</div><!-- /.col -->
+		  </div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+	  </div>
+	  <!-- /.content-header -->
+
+	  <!-- Main content -->
+	  <section class="content">
+		<div class="container-fluid">
+		  <div class="card card-tabs shadow">
+			<div class="card-header p-0 pt-1 border-bottom-0 tab">
+			  <ul class="nav nav-tabs" id="all-items-two-tab" role="tablist">
+				<li class="nav-item">
+				  <a class="nav-link active" id="all-items-two-item-type-tab" data-toggle="pill" href="#all-items-two-item-type" role="tab" aria-controls="all-items-two-item-type" aria-selected="true">Item Type</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="all-items-two-all-items-tab" data-toggle="pill" href="#all-items-two-all-items" role="tab" aria-controls="all-items-two-all-items" aria-selected="false">Items</a>
+				</li>
+			  </ul>
+			</div>
+			<div class="card-body pt-4 pb-5 pl-4 pr-4">
+			  <!-- Tab Content -->
+			  <div class="tab-content" id="all-items-two-tabContent">
+				<div class="tab-pane fade show active" id="all-items-two-item-type" role="tabpanel" aria-labelledby="all-items-two-item-type-tab">
+				  <!-- <th:block th:if="${itemMasterHtml}"> -->
+				  <form  id="itemType" th:object="${itemTypeObj}">
+				   <input type="hidden" class="form-control" th:field="*{id}" id="enter-item-type-id" aria-describedby="enter zone name">                 
+				
+				  <div class="add-master d-flex flex-column">
+					<label for="state" class="mb-4">Item Details:</label>
+					<div class="state form-group row">
+					  <label for="item-type" class="col-xl-1 col-md-2 col-sm-3 col-form-label">Item Type:</label>
+					  <div class="col-md-4 col-sm-6">
+					   <input type="text" class="form-control" th:field="*{itemTypeName}" onkeyup="textCase('enter-item-type');" id="enter-item-type" aria-describedby="enter zone name">                 
+						<span style="color:red;"  id="enter-item-type-note"></span>
+						</div>
+					</div>
+					<button type="button" class="col-xl-2 col-sm-3 mt-4 mb-3 ml-auto mr-auto btn btn-success shadow btn-add" onclick="ajaxPost('itemType','http://localhost:8080/getAdminPage/saveItemType','all-items-two-tabContent','all-items-two-tabContent','http://localhost:8080/getAdminPage/ItemType');">Add to Master</button>
+				  </div>
+				  </form>
+				  <div class="master-list mt-4">
+					<label for="cities">Item Added To Master</label>
+					
+						<div class="float-right">
+						   <label for="name">Search: </label>
+						   <input type="text" id="searchParamItem" style="text-align:left">
+						   <button type="button" class="btn btn-success" onclick="pageButtonClick('0', 'searchParamItem','item','itemMasterPageNo','itemtbl','itemtbl');">search</button>
+					   </div>						
+					<div id="itemtbl">
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered">
+						<thead>
+						  <tr>
+							<th scope="col-lg-2">SI.No</th>
+							<th scope="col-lg-4">Item Type</th>
+							<th scope="col-lg-2">Edit</th>
+						  </tr>
+						</thead>
+						<tbody>
+						<tr th:each="itemType : ${genericList}">
+						  <th th:text="${itemType.id}"></th>
+						  <td th:text="${itemType.itemTypeName}">West Bengal</td>              
+						  <td><i class="fa fa-edit" href="#"></i></td>
+						</tr>
+					  </tbody>
+					  </table>
+					</div>
+					<!-- <input type="hidden" th:value="${genericList.number}" id="itemMasterPageNo" /> -->
+					<!-- <div class="pagination-div"> -->
+					<!-- <span th:if="${genericList.hasPrevious()}"> -->
+						<!-- <a th:value="${genericList.number-1}"  onclick="pageButtonClick(this, 'searchParamItem', 'item','itemMasterPageNo','itemtbl','itemtbl');">Previous</a> -->
+					<!-- </span> -->
+					<!-- <th:block th:each="i: ${#numbers.sequence(0, genericList.totalPages - 1)}"> -->
+						<!-- <span th:if="${genericList.number == i}" class="selected">[[${i}+1]]</span> -->
+						<!-- <span th:unless="${genericList.number == i}"> -->
+							 <!-- <a th:value="${genericList.number}"  onclick="pageButtonClick(this, 'searchParamItem', 'item','itemMasterPageNo','itemtbl','itemtbl');">[[${i}+1]]</a> -->
+						<!-- </span> -->
+					<!-- </th:block> -->
+					<!-- <span th:if="${genericList.hasNext()}"> -->
+						<!-- <a th:value="${genericList.number+1}" onclick="pageButtonClick(this, 'searchParamItem', 'item','itemMasterPageNo','itemtbl','itemtbl');">Next</a> -->
+					<!-- </span> -->
+					<!-- </div> -->
+					</div>
+					
+				  </div>
+				  <!-- </th:block> -->
+				</div><!-- /.Tab Pan -->
+				<div class="tab-pane fade" id="all-items-two-all-items" role="tabpanel" aria-labelledby="all-items-two-all-items-tab">
+				  <div id="all-item-master-second-page">
+				  <!-- <th:block th:if="${itemMasterSecondHtml}"> -->
+				  <form  id="itemMaster" th:object="${itemMasterObj}">
+				  <input type="hidden" class="form-control" th:field="*{id}" id="enter-item-master-id" aria-describedby="enter zone name">                 
+				
+				  <div class="add-master d-flex flex-column">
+					<label for="state" class="mb-3">Item Details:</label>
+					<div class="state form-group row">
+					  <label for="all-item" class="col-md-2 col-form-label max-we-9">Item Name:</label>
+					  <div class="col-md-4 mr-md-5 mb-3">
+						<input type="text" class="form-control" th:field="*{itemName}" onkeyup="textCase('enter-item-master-name');" id="enter-item-master-name" placeholder="Enter Item Name">
+						<span style="color:red;"  id="enter-item-master-name-note"></span>
+					  </div>
+					  <label for="all-item" class="col-md-2 col-form-label max-we-9">Item Type:</label>
+					  <div class="col-md-3 mb-3">
+						<select class="mr-xl-5 p-0 form-control" th:field="*{itemTypeCode}" id="select-item-master-type">
+						 <option th:value="0">Select Item Type</option>
+							 <option th:each="itemType : ${itemTypeList}"
+									 th:value="${itemType.id}"
+									 th:text="${itemType.itemTypeName}">
+							 </option>
+						</select>
+						<span style="color:red;"  id="select-item-master-type-note"></span>
+					  </div>
+					</div>
+					<button type="button" class="col-md-3 col-sm-5 mt-2 mb-3 ml-auto mr-auto btn btn-success shadow btn-add" onclick="ajaxPost('itemMaster','http://localhost:8080/getAdminPage/saveItemMaster','all-item-master-second-page','all-item-master-second-page','http://localhost:8080/getAdminPage/ItemMaster');">Add to Master</button>
+				  </div>
+				  </form>
+				  <div class="master-list mt-4">
+					<label for="cities">Item Added To Master</label>
+					
+					<div class="float-right">
+						   <label for="name">Search: </label>
+						   <input type="text" id="searchParamItemMaster" style="text-align:left">
+						   <button type="button" class="btn btn-success" onclick="pageButtonClick('0', 'searchParamItemMaster','itemMaster','ItemMasterSecondPageNo','itemMastertbl','itemMastertbl');">search</button>
+					   </div>
+					<div id="itemMastertbl">
+					<div class="master-table table-responsive">
+					  <table class="table table-striped table-hover table-bordered">
+						<thead>
+						  <tr>
+							<th scope="col-lg-2">SI.No</th>
+							<th scope="col-lg-4">Item Name</th>
+							<th scope="col-lg-4">Item Type</th>
+							<th scope="col-lg-2">Edit</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr th:each="itemMaster : ${genericList}">
+						  <th th:text="${itemMaster.id}"></th>
+						  <td th:text="${itemMaster.itemName}">West Bengal</td>  
+						  <td th:text="${itemMaster.itemTypeCode.itemTypeName}">West Bengal</td>              
+						  <td><i class="fa fa-edit" href="#"></i></td>
+						</tr>                            
+						</tbody>
+					  </table>
+					</div>
+					<!-- <input type="hidden" th:value="${genericList.number}" id="ItemMasterSecondPageNo" /> -->
+					  <!-- <div class="pagination-div"> -->
+							<!-- <span th:if="${genericList.hasPrevious()}"> -->
+								<!-- <a th:value="${genericList.number-1}"  onclick="pageButtonClick(this, 'searchParamItemMaster', 'itemMaster','ItemMasterSecondPageNo','itemMastertbl','itemMastertbl');">Previous</a> -->
+							<!-- </span> -->
+							<!-- <th:block th:each="i: ${#numbers.sequence(0, genericList.totalPages - 1)}"> -->
+								<!-- <span th:if="${genericList.number == i}" class="selected">[[${i}+1]]</span> -->
+								<!-- <span th:unless="${genericList.number == i}"> -->
+									 <!-- <a th:value="${genericList.number}"  onclick="pageButtonClick(this, 'searchParamItemMaster', 'itemMaster','ItemMasterSecondPageNo','itemMastertbl','itemMastertbl');">[[${i}+1]]</a> -->
+								<!-- </span> -->
+							<!-- </th:block> -->
+							<!-- <span th:if="${genericList.hasNext()}"> -->
+								<!-- <a th:value="${genericList.number+1}" onclick="pageButtonClick(this, 'searchParamItemMaster', 'itemMaster','ItemMasterSecondPageNo','itemMastertbl','itemMastertbl');">Next</a> -->
+							<!-- </span> -->
+						<!-- </div> -->
+					</div>
+				   
+				  </div>
+				  <!-- </th:block> -->
+				  </div>
+				</div><!-- /.Tab Pan -->
+			  </div><!-- /.Tab Content -->
+			</div>
+			<!-- /.card -->
+		  </div>
+		</div><!-- /.container-fluid -->
+	  </section>
+	  <!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+</div> <!-- All Item Master -->
+<script src="admin-master/pages/all-item-master/all-item-master.js"></script>

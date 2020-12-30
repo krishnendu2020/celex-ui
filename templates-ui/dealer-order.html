@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+
+<html class="" style="height: auto;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Celex</title>
+
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="././asset/img/celex_icon.png" />
+
+  <!-- Bootstrap CSS library -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- JQuery and Popper -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="asset/plugin/overlayScrollbars/css/OverlayScrollbars.min.css">
+
+  <!-- Material Iconic CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="././asset/css/admin/adminlte.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="././asset/css/dealer-order.css">
+  <link rel="stylesheet" href="././asset/css/common.css">
+  <link rel="stylesheet" href="././asset/css/util.css">
+
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" style="height: auto;">
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item d-lg-none">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fa fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block ml-lg-3">
+          <a href="#" class="nav-link lh-1-0 p-0 mb-2">Welcome! EVM Passenger Cars India Private Ltd</a>
+          <a href="#" class="nav-link fs-13 lh-1-0 p-0">Logged In: 14/03/2020 9:45pm</a>
+        </li>
+      </ul>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <div class="col text-center">
+            <i class="fa fa-sign-out fa-lg"></i>
+            <a class="nav-link p-0 lh-1-0" data-widget="control-sidebar" data-slide="true" href="#" role="button">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar elevation-4 sidebar-light-danger">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-link navbar-white d-flex justify-content-center">
+        <img src="././asset/img/celex_logo_no_text.png" alt="Celex Logo" class="brand-image img-md img-push elevation-0 ml-0" style="opacity: .8">
+        <span class="brand-text font-weight-bold">CELEX</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar os-host os-theme-light os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-transition">
+        <div class="os-resize-observer-host observed">
+          <div class="os-resize-observer" style="left: 0px; right: auto;"></div>
+        </div>
+        <div class="os-size-auto-observer observed" style="height: calc(100% + 1px); float: left;">
+          <div class="os-resize-observer"></div>
+        </div>
+        <div class="os-content-glue" style="margin: 0px -8px; width: 249px; height: 862px;"></div>
+        <div class="os-padding">
+          <div class="os-viewport os-viewport-native-scrollbars-invisible" style="overflow-y: scroll;">
+            <div class="os-content" style="padding: 0px 8px; height: 100%; width: 100%;">
+              <!-- Sidebar user (optional) -->
+              <div class="user-panel mt-4 pb-3 mb-3 d-flex">
+                <div class="image text-center">
+                  <img src="././asset/img/user.png" class="img-circle elevation-3" alt="User Image">
+                </div>
+                <div class="info">
+                  <a href="#" class="d-block">User Name</a>
+                </div>
+              </div>
+
+              <!-- Sidebar Menu -->
+              <nav class="mt-3 mb-5">
+                <ul class="nav nav-pills nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu" data-accordion="false">
+                  <li class="nav-item"><a href="#dashboard" class="nav-link active"> <p>Dashboard</p> </a></li>
+                  <li class="nav-item"><a href="#order-hsrp" class="nav-link"> <p>Apply for HSRP</p> </a></li>
+                  <li class="nav-item"><a href="#view-order" class="nav-link"> <p>Verify & place Order</p> </a></li>
+                  <li class="nav-item"><a href="#order-recieved" class="nav-link"> <p>Order Recieved</p> </a></li>
+                  <li class="nav-item"><a href="#update-profile" class="nav-link"> <p>Update Profile</p> </a></li>
+		  <li class="nav-item"><a href="#reports" class="nav-link"> <p>Reports</p> </a></li>
+                  <li class="nav-item"><a href="#wallet" class="nav-link"> <p>Wallet</p> </a></li>
+                  <li class="nav-item"><a href="#help" class="nav-link"> <p>Help</p> </a></li>
+                </ul>
+              </nav>
+              <!-- /.sidebar-menu -->
+            </div>
+          </div>
+        </div>
+        <div class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable os-scrollbar-auto-hidden">
+          <div class="os-scrollbar-track">
+            <div class="os-scrollbar-handle" style="width: 100%; transform: translate(0px, 0px);"></div>
+          </div>
+        </div>
+        <div class="os-scrollbar os-scrollbar-vertical os-scrollbar-auto-hidden">
+          <div class="os-scrollbar-track">
+            <div class="os-scrollbar-handle" style="height: 72.8885%; transform: translate(0px, 0px);"></div>
+          </div>
+        </div>
+        <div class="os-scrollbar-corner"></div>
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <div class="tab-content nav-pans">
+      <div class="tab-pane active" id="dashboard" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Dashboard</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="row d-flex justify-content-between">
+                <div class="col-md-6 col-sm-6 col-12 d-flex align-items-stretch">
+                  <div class="card bg-white w-100">
+                    <div class="card-header text-primary border-bottom-0">
+                      <label>Dealer Details:</label>
+                    </div>
+                    <div class="card-body pt-1">
+                      <div class="row ml-0"><label class="mb-0">EVM Passenger Cars India Private Ltd</label></div>
+                      <div class="row ml-0"><label class="mb-0">3/276 A,Manjummal Kavala Bus Stop(NH 17), Edappally-Varapuzha Road, Cheranelloor P.O,Kochi 682034</label></div>
+                      <div class="row ml-0"><label class="mb-0">Kochi</label></div>
+                      <div class="row ml-0"><label class="mb-0">Contact Person: Prasanth V S</label></div>
+                      <div class="row ml-0"><label class="mb-0">Phone: 0484 3302222</label></div>
+                      <div class="row ml-0"><label class="mb-0">Mobile: 9995809764</label></div>
+                      <div class="row ml-0"><a href="#"><label class="mb-0">Email: salesmanager.pbvr@vw-evmcars.co.in</label></a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12 d-flex align-items-stretch">
+                  <div class="card bg-white text-center">
+                    <div class="card-header text-primary border-bottom-0">
+                      &nbsp;
+                    </div>
+                    <div class="card-body pt-1 align-item-stretch">
+                      <label class="mb-0 card-text">Available Balance: Rs.201495</label>
+                      <label class="mb-0 card-text">Credit Balance: Rs.0</label>
+                      <label class="mb-0 card-text">Total Balance: Rs.201495</label>
+                      <div class="mb-3 mt-3">
+                        <img src="././asset/img/mark-one.png" width=70 alt="Mark Image">
+                      </div>
+                      <label class="mb-0 card-text">Add Money To Wallet</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12 d-flex align-items-stretch">
+                  <div class="card bg-white w-100">
+                    <div class="card-header text-primary border-bottom-0">
+                      <label>For any kind of queries please contact with the following numbers:</label>
+                    </div>
+                    <div class="card-body pt-1 align-item-stretch">
+                      <div class="row ml-0"><label class="mb-0">Embossing stn: +91 7592995588 (KL Kochi)</label></div>
+                      <div class="row ml-0"><label class="mb-0">Helpdesk: 9874799507 / 9874799418</label></div>
+                      <div class="row ml-0"><label class="mb-0">Land Line No: 033 4003 3222</label></div>
+                      <div class="row ml-0"><a href="#"><label class="mb-0">Email ID: helpdesk@celex.co.in / support@celex.co.in</label></a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12 d-flex align-items-stretch">
+                  <div class="card text-center bg-white w-100">
+                    <div class="card-header border-bottom-0">
+                      <h5>Total Orders</h5>
+                    </div>
+                    <div class="card-body pt-1 align-items-stretch">
+                      <div class="row min-hv-14 justify-content-center align-content-center">
+                        <a href="#" class="text-black"><h1>80</h1></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12 d-flex align-items-stretch">
+                  <div class="card text-center bg-white w-100">
+                    <div class="card-header border-bottom-0">
+                      <h5>Orders Recieved</h5>
+                    </div>
+                    <div class="card-body pt-1 align-items-stretch">
+                      <div class="row min-hv-14 justify-content-center align-content-center">
+                        <a href="#" class="text-black"><h1>75</h1></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12 d-flex align-items-stretch">
+                  <div class="card text-center bg-white w-100">
+                    <div class="card-header border-bottom-0">
+                      <h5>Orders Dispatched</h5>
+                    </div>
+                    <div class="card-body pt-1 align-items-stretch">
+                      <div class="row min-hv-14 justify-content-center align-content-center">
+                        <a href="#" class="text-black"><h1>60</h1></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12 d-flex align-items-stretch">
+                  <div class="card text-center bg-white w-100">
+                    <div class="card-header border-bottom-0">
+                      <h5>Ready For Dispatch</h5>
+                    </div>
+                    <div class="card-body pt-1 align-items-stretch">
+                      <div class="row min-hv-14 justify-content-center align-content-center">
+                        <a href="#" class="text-black"><h1>55</h1></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12 d-flex align-items-stretch">
+                  <div class="card text-center bg-white w-100">
+                    <div class="card-header border-bottom-0">
+                      <h5>Emobossing</h5>
+                    </div>
+                    <div class="card-body pt-1 align-items-stretch">
+                      <div class="row min-hv-14 justify-content-center align-content-center">
+                        <a href="#" class="text-black"><h1>123</h1></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12 d-flex align-items-stretch">
+                  <div class="card text-center bg-white w-100">
+                    <div class="card-header border-bottom-0">
+                      <h5>Emobossing Started</h5>
+                    </div>
+                    <div class="card-body pt-1 align-items-stretch">
+                      <div class="row min-hv-14 justify-content-center align-content-center">
+                        <a href="#" class="text-black"><h1>143</h1></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12 d-flex align-items-stretch">
+                  <div class="card text-center bg-white w-100">
+                    <div class="card-header border-bottom-0">
+                      <h5>Job Sheet Created</h5>
+                    </div>
+                    <div class="card-body pt-1 align-items-stretch">
+                      <div class="row min-hv-14 justify-content-center align-content-center">
+                        <a href="#" class="text-black"><h1>53</h1></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12 d-flex align-items-stretch">
+                  <div class="card text-center bg-white w-100">
+                    <div class="card-header border-bottom-0">
+                      <h5>Recent Order</h5>
+                    </div>
+                    <div class="card-body pt-1 align-items-stretch">
+                      <div class="row min-hv-14 justify-content-center align-content-center">
+                        <a href="#" class="text-black"><h1>33</h1></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Dashboard -->
+      <div class="tab-pane" id="order-hsrp" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Apply for HSRP</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="order-hsrp-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="order-hsrp-reg-tab" data-toggle="pill" href="#order-hsrp-reg" role="tab" aria-controls="order-hsrp-reg" aria-selected="true">Order Registration</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="order-hsrp-import-tab" data-toggle="pill" href="#order-hsrp-import" role="tab" aria-controls="order-hsrp-import" aria-selected="false">Import Order</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="order-hsrp-tabContent">
+                    <div class="tab-pane fade show active" id="order-hsrp-reg" role="tabpanel" aria-labelledby="order-hsrp-reg-tab">
+                      <div class="p-2 pl-sm-5 pr-sm-5">
+                        <div class="form-group">
+                          <label for="old-vehicle" class="text-primary">OLD Vehicle/New Vehicle</label>
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="old-vehicle" value="option1">
+                            <label for="old-vehicle" class="custom-control-label">OLD Vehicle</label>
+                          </div>
+                        </div>
+                        <div class="row form-group">
+                          <div class="col-xl-3 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <h5 for="item-type" class="col-form-label">**REGISTRATION NUMBER</h5>
+                            <input type="text" class="form-control" id="enter-reg-num" placeholder="Enter Registration Number">
+                          </div>
+                          <div class="col-xl-3 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <h5 for="item-type" class="col-form-label">**ENGINE NUMBER</h5>
+                            <input type="text" class="form-control" id="enter-eng-num" placeholder="Enter Engine Number">
+                          </div>
+                          <div class="col-xl-5 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <h5 for="item-type" class="col-form-label">**CHASSIS / FRAME/ VIN NUMBER</h5>
+                            <input type="text" class="form-control" id="enter-chassis-num" placeholder="Enter Chassis/VIN Nubmer">
+                          </div>
+                          <div class="col-xl-3 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <h5 for="item-type" class="col-form-label">**MODEL TYPE</h5>
+                            <select class="p-0 form-control" id="select-vehivle-cat">
+                              <option>Select Vehicle Category</option>
+                              <option>1</option>
+                              <option>2</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-3 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <h5 for="item-type" class="col-form-label">**VEHICLE TYPE</h5>
+                            <select class="p-0 form-control" id="select-vevhicle-type">
+                              <option>Select Vehicle Type</option>
+                              <option>1</option>
+                              <option>2</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <h5 for="item-type" class="col-form-label">**FUEL TYPE</h5>
+                            <select class="p-0 form-control" id="select-fuel-type">
+                              <option>Select Fuel Type</option>
+                              <option>1</option>
+                              <option>2</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-3 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <h5 for="item-type" class="col-form-label">RTO NAME (if TLP exists)</h5>
+                            <input type="text" class="form-control" id="enter-rto-name" placeholder="Enter RTO Name">
+                          </div>
+                        <!--  
+			<div class="col-xl-3 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <h5 for="item-type" class="col-form-label">**TLP</h5>
+                            <div class="custom-control custom-checkbox">
+                              <input class="custom-control-input" type="checkbox" id="tlp" value="option1">
+                              <label for="tlp" class="custom-control-label">TLP Required</label>
+                            </div>
+                          </div>
+			-->
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3">
+                            <h5 for="item-type" class="col-form-label">**DATE OF FIRST REGISTRATION</h5>
+                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" id="reservationdate">
+                          </div>
+                        </div>
+                        <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column btns justify-content-center mt-sm-1 mb-sm-3">
+                          <button class="btn btn-primary shadow mb-auto min-we-10 max-we-sm-13 mr-sm-5 mt-3">Review</button>
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mt-3">Submit</button>
+                        </div>
+                      </div>
+                    </div><!-- /.Tab Pan -->
+                    <div class="tab-pane fadee" id="order-hsrp-import" role="tabpanel" aria-labelledby="order-hsrp-import-tab">
+                      <div class="p-2 pl-sm-5 pr-sm-5">
+                        <div class="row d-flex justify-content-between">
+                          <div class="row col-sm-8 form-group mb-4">
+                            <div class="d-flex flex-column">
+                              <div class="row d-sm-flex flex-sm-row flex-sm-nowrap mr-2 mb-3">
+                                <i class="fa fa-upload fa-2x mt-auto mr-3 d-sm-inline d-none" href="#"></i>
+                                <button class="btn btn-primary shadow">Choose File</button>
+                              </div>
+                              <span>**File types</span>
+                            </div>
+                            <span class="mt-2">No File Choosen</span>
+                          </div>
+                          <div class="d-flex flex-column mb-4">
+                            <label>Download Sample File</label>
+                            <a href="#">CSV/XSLS</a>
+                          </div>
+                        </div>
+                        <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column mt-sm-1 mb-sm-3">
+                          <button class="btn btn-primary shadow mb-auto min-we-10 max-we-sm-13 mr-sm-5 mt-3">Import File</button>
+                          <button class="btn btn-success shadow mb-auto min-we-8 max-we-sm-10 mt-3">Back</button>
+                        </div>
+                      </div>
+                      <div class="master-list mt-4">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">Reg</th>
+                                <th scope="col-lg">Engine</th>
+                                <th scope="col-lg">Chassis</th>
+                                <th scope="col-lg">TLP</th>
+                                <th scope="col-lg">Vehicle</th>
+                                <th scope="col-lg">Manuf.Nam</th>
+                                <th scope="col-lg">Model</th>
+                                <th scope="col-lg">Owner</th>
+                                <th scope="col-lg">Dealer</th>
+                                <th scope="col-lg">Receipt</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- /.Tab Pan -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Order Registration -->
+      <div class="tab-pane" id="view-order" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2 justify-content-between">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Review Orders</h1>
+                </div><!-- /.col -->
+                <div class="col-auto mt-sm-0 mt-3 mr-3">
+                  <h6 class="m-0 text-dark" style="text-decoration: underline;">Wallet Balance: Rs. 20000</h6>
+                  <h6 class="m-0 text-dark" style="text-decoration: underline;">Current Balance: Rs. 19500</h6>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="edit-order-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="edit-order-new-tab" data-toggle="pill" href="#edit-order-new" role="tab" aria-controls="edit-order-new" aria-selected="true">New Vehicle Orders</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="edit-order-old-tab" data-toggle="pill" href="#edit-order-old" role="tab" aria-controls="edit-order-old" aria-selected="false">Old Vehicle Orders</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="edit-order-tabContent">
+                    <div class="tab-pane fade show active" id="edit-order-new" role="tabpanel" aria-labelledby="edit-order-new-tab">
+                      <div class="p-2">
+                        <div class="master-list mt-4">
+                          <div class="master-table table-responsive">
+                            <table class="table table-striped table-hover table-bordered">
+                              <thead>
+                                <tr>
+                                  <th scope="col-lg">
+                                    <div class="custom-control custom-checkbox">
+                                      <input class="custom-control-input" type="checkbox" id="dealer-check-all" value="option1">
+                                      <label for="dealer-check-all" class="custom-control-label">&nbsp;</label>
+                                    </div>
+                                  </th>
+                                  <th>Sl.No</th>
+                                  <th>Registration No</th>
+                                  <th>Engine No</th>
+                                  <th>Chassis No</th>
+                                  <th>Vehicle Type</th>
+                                  <th>Model</th>
+                                  <th>Vehicle Package Type</th>
+                                  <th>Fuel Type</th>
+                                  <th>Amount</th>
+                                  <th>Edit</th>
+                                  <th>Delete</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">
+                                    <div class="custom-control custom-checkbox">
+                                      <input class="custom-control-input" type="checkbox" id="dealer-check-1" value="option2">
+                                      <label for="dealer-check-1" class="custom-control-label">&nbsp;</label>
+                                    </div>
+                                  </th>
+                                  <td>01</td>
+                                  <td>1234</td>
+                                  <td>1234</td>
+                                  <td>1234</td>
+                                  <td>Commercial</td>
+                                  <td>Dezire</td>
+                                  <td><span>M/C, TwoWheeler F:285C45,R:285X45,No TLP</span></td>
+                                  <td>Petrol</td>
+                                  <td>Rs.500</td>
+                                  <td class="text-center"><button class="btn btn-success shadow">Edit</button></td>
+                                  <td class="text-center"><button class="btn btn-danger shadow">Delete</button></td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">&nbsp;</th>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+			
+			<div class="custom-control custom-checkbox" style="text-align: center;">
+                                      <input class="custom-control-input" type="checkbox" id="dealer-check-1" value="option2">
+                                      <label for="dealer-check-1" class="custom-control-label">Once order is placed, order cannot be modified or cancelled</label>
+                       </div>
+
+			
+                        <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column btns justify-content-center mt-sm-1 mb-sm-3">
+			  <!-- <button class="btn btn-primary shadow pl-sm-5 pr-sm-5 mb-auto mr-sm-5 mt-3">Verify & Place</button> -->
+                           <button class="btn bg-success shadow pl-sm-5 pr-sm-5 mb-auto mt-3">Verify & Place</button> 
+                        </div>
+                      </div>
+                    </div><!-- /.Tab Pan -->
+                    <div class="tab-pane fade" id="edit-order-old" role="tabpanel" aria-labelledby="edit-order-old-tab">
+                      <label for="">Old Vehicle Orders</label>
+                    </div><!-- /.Tab Pan -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Review Orders -->
+      <div class="tab-pane" id="reports" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">reports</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="reports-six-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="reports-six-trans-tab" data-toggle="pill" href="#reports-six-trans" role="tab" aria-controls="reports-six-trans" aria-selected="true">Transaction Report</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="reports-six-hsrp-lid-tab" data-toggle="pill" href="#reports-six-hsrp-lid" role="tab" aria-controls="reports-six-hsrp-lid" aria-selected="false">HSRP LID Report</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="reports-six-hsrp-status-tab" data-toggle="pill" href="#reports-six-hsrp-status" role="tab" aria-controls="reports-six-hsrp-status" aria-selected="false">HSRP Status Report</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="reports-six-print-tab" data-toggle="pill" href="#reports-six-print" role="tab" aria-controls="reports-six-print" aria-selected="false">Print Invoice</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="reports-six-shipment-tab" data-toggle="pill" href="#reports-six-shipment" role="tab" aria-controls="reports-six-shipment" aria-selected="false">Shipment Report</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="reports-six-apd-tab" data-toggle="pill" href="#reports-six-apd" role="tab" aria-controls="reports-six-apd" aria-selected="false">APD Report</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="reports-six-tabContent">
+                    <div class="tab-pane fade show active" id="reports-six-trans" role="tabpanel" aria-labelledby="reports-six-trans-tab">
+                      <label for="trans-date" class="ml-3">Transaction By Date:</label>
+                      <div class="p-2 pl-sm-3 pr-sm-3">
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#trans-from" id="trans-from">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">From</h5>
+                            </div>
+                          </div>
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#trans-to" id="trans-to">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">To</h5>
+                            </div>
+                          </div>
+                          <button class="btn btn-success shadow mb-auto mt-3 ml-2">Fetch Report</button>
+                        </div>
+                      </div>
+                      <div class="master-list mt-4">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered mb-0">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL No.</th>
+                                <th scope="col-lg">Payment Through</th>
+                                <th scope="col-lg">Opening Balance</th>
+                                <th scope="col-lg">Total Debit</th>
+                                <th scope="col-lg">Total Credit</th>
+                                <th scope="col-lg">Closing Balance</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">01</th>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>Commercial</td>
+                                <td>Dezire</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- Transaction Report -->
+                    <div class="tab-pane fade" id="reports-six-hsrp-lid" role="tabpanel" aria-labelledby="reports-six-hsrp-lid-tab">
+                      <label for="trans-date" class="ml-3">HSRP LID Report:</label>
+                      <div class="p-2 pl-sm-3 pr-sm-3">
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#hsrp-lid-from" id="hsrp-lid-from">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">From</h5>
+                            </div>
+                          </div>
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#hsrp-lid-to" id="hsrp-lid-to">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">To</h5>
+                            </div>
+                          </div>
+                          <button class="btn btn-success shadow mb-auto mt-3 ml-2">Fetch Report</button>
+                        </div>
+                      </div>
+                      <div class="master-list mt-4">
+                        <div class="row ml-3 mr-3 justify-content-between">
+                          <span class="mt-2 mb-3">FROM :- 2020-03-03 TO :- 2020-03-06</span>
+                          <div class="mb-3">
+                            <button class="btn btn-success elevation-2">Export Excel</button>
+                          </div>
+                        </div>
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered mb-0">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL No.</th>
+                                <th scope="col-lg">Payment Through</th>
+                                <th scope="col-lg">Opening Balance</th>
+                                <th scope="col-lg">Total Debit</th>
+                                <th scope="col-lg">Total Credit</th>
+                                <th scope="col-lg">Closing Balance</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">01</th>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>Commercial</td>
+                                <td>Dezire</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- HSRP LID Report -->
+                    <div class="tab-pane fade" id="reports-six-hsrp-status" role="tabpanel" aria-labelledby="reports-six-hsrp-status-tab">
+                      <label for="trans-date" class="ml-3">HSRP STATUS BY DATE:</label>
+                      <div class="p-2 pl-sm-3 pr-sm-3">
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#hsrp-status-from" id="hsrp-status-from">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">From</h5>
+                            </div>
+                          </div>
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#hsrp-status-to" id="hsrp-status-to">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">To</h5>
+                            </div>
+                          </div>
+                          <button class="btn btn-success shadow mb-auto mt-3 ml-2">Fetch Report</button>
+                        </div>
+                      </div>
+                      <div class="master-list mt-4">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered mb-0">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL</th>
+                                <th scope="col-lg">REG NO</th>
+                                <th scope="col-lg">ORDER DATE</th>
+                                <th scope="col-lg">DESPATCH DATE</th>
+                                <th scope="col-lg">CON No</th>
+                                <th scope="col-lg">DIS THROUGH</th>
+                                <th scope="col-lg">AWB/LR No.</th>
+                                <th scope="col-lg">DELIVERY STAT</th>
+                                <th scope="col-lg">DELIV DATETIME</th>
+                                <th scope="col-lg">STAT</th>
+                                <th scope="col-lg">AFFIXED DATE</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">01</th>
+                                <td>1234</td>
+                                <td>02/02/2020</td>
+                                <td>05/02/2020</td>
+                                <td>1234</td>
+                                <td>DTDC</td>
+                                <td>Rajesh</td>
+                                <td>out for del</td>
+                                <td>05/02/2020</td>
+                                <td class="text-center"><i class="fa fa-edit fa-lg" href="#"></i></td>
+                                <td>07/02/2020</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="row ml-3 mr-3 mt-5 justify-content-center">
+                          <div class="mb-3">
+                            <button class="btn btn-success shadow">Export Excel</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- HSRP Status Report -->
+                    <div class="tab-pane fade" id="reports-six-print" role="tabpanel" aria-labelledby="reports-six-print-tab">
+                      <label for="trans-date" class="ml-3">Transaction By Date:</label>
+                      <div class="p-2 pl-sm-3 pr-sm-3">
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#print-invoice-from" id="print-invoice-from">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">From</h5>
+                            </div>
+                          </div>
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#print-invoice-to" id="print-invoice-to">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">To</h5>
+                            </div>
+                          </div>
+                          <button class="btn btn-success shadow mb-auto mt-3 ml-2">Fetch Report</button>
+                        </div>
+                      </div>
+                      <div class="master-list mt-4">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered mb-0">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL No.</th>
+                                <th scope="col-lg">Payment Through</th>
+                                <th scope="col-lg">Opening Balance</th>
+                                <th scope="col-lg">Total Debit</th>
+                                <th scope="col-lg">Total Credit</th>
+                                <th scope="col-lg">Closing Balance</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">01</th>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>Commercial</td>
+                                <td>Dezire</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- Print Invoice -->
+                    <div class="tab-pane fade" id="reports-six-shipment" role="tabpanel" aria-labelledby="reports-six-shipment-tab">
+                      <label for="trans-date" class="ml-3">Transaction By Date:</label>
+                      <div class="p-2 pl-sm-3 pr-sm-3">
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#shipment-from" id="shipment-from">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">From</h5>
+                            </div>
+                          </div>
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#shipment-to" id="shipment-to">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">To</h5>
+                            </div>
+                          </div>
+                          <button class="btn btn-success shadow mb-auto mt-3 ml-2">Fetch Report</button>
+                        </div>
+                      </div>
+                      <div class="master-list mt-4">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered mb-0">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL No.</th>
+                                <th scope="col-lg">Payment Through</th>
+                                <th scope="col-lg">Opening Balance</th>
+                                <th scope="col-lg">Total Debit</th>
+                                <th scope="col-lg">Total Credit</th>
+                                <th scope="col-lg">Closing Balance</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">01</th>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>Commercial</td>
+                                <td>Dezire</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- Shipment Report -->
+                    <div class="tab-pane fade" id="reports-six-apd" role="tabpanel" aria-labelledby="reports-six-apd-tab">
+                      <label for="trans-date" class="ml-3">Transaction By Date:</label>
+                      <div class="p-2 pl-sm-3 pr-sm-3">
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#apd-from" id="apd-from">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">From</h5>
+                            </div>
+                          </div>
+                          <div class="col-md-2 col-sm-4 mt-3 mr-md-5 mr-sm-3">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#apd-to" id="apd-to">
+                            <div class="ml-sm-3 mb-3">
+                              <h5 for="item-type" class="col-form-label">To</h5>
+                            </div>
+                          </div>
+                          <button class="btn btn-success shadow mb-auto mt-3 ml-2">Fetch Report</button>
+                        </div>
+                      </div>
+                      <div class="master-list mt-4">
+                        <div class="master-table table-responsive">
+                          <table class="table table-striped table-hover table-bordered mb-0">
+                            <thead>
+                              <tr>
+                                <th scope="col-lg">SL No.</th>
+                                <th scope="col-lg">Payment Through</th>
+                                <th scope="col-lg">Opening Balance</th>
+                                <th scope="col-lg">Total Debit</th>
+                                <th scope="col-lg">Total Credit</th>
+                                <th scope="col-lg">Closing Balance</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">01</th>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>Commercial</td>
+                                <td>Dezire</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!-- APD Report -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Reports -->
+      <div class="tab-pane" id="order-recieved" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Order Recieved</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-body">
+                  <div class="p-2 pl-sm-5 pr-sm-5 pt-5">
+                    <div class="row form-group justify-content-md-start justify-content-center">
+                      <div class="d-md-flex flex-md-row flex-column">
+                       <!-- 
+			<div class="row d-flex flex-row flex-nowrap mr-2 mb-md-0 mb-2">
+                          <i class="fa fa-upload fa-2x mt-auto mr-3" href="#"></i>
+                          <button class="btn btn-primary shadow elevation-2">Upload File</button>
+                        </div>
+                        <span class="mt-2 mr-5 mb-md-0 mb-5">No File Choosen</span>
+                        <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column mt-md-0 mt-3">
+                          <button class="btn btn-primary shadow mr-sm-3 mb-sm-0 mb-3">Import File</button>
+                          <button class="btn btn-success shadow">Back</button>
+                        </div>
+			-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="master-list mt-4">
+                    <div class="master-table table-responsive">
+                      <table class="table table-striped table-hover table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col-lg" class="text-center">
+                              <div class="custom-control custom-checkbox">
+                                <input class="custom-control-input" type="checkbox" id="order-check-all" value="option5">
+                                <label for="order-check-all" class="custom-control-label">&nbsp;</label>
+                              </div>
+                            </th>
+                            <th scope="col-lg">SL.No.</th>
+                            <th scope="col-lg">Consignment No.</th>
+                            <th scope="col-lg">Date</th>
+                            <th scope="col-lg">Delivery Mode</th>
+                            <th scope="col-lg">Order Details</th>
+                            <th scope="col-lg">Receipt</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row" class="text-center">
+                              <div class="custom-control custom-checkbox">
+                                <input class="custom-control-input" type="checkbox" id="order-check-1" value="option6">
+                                <label for="order-check-1" class="custom-control-label">&nbsp;</label>
+                              </div>
+                            </th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td><button class="btn btn-block btn-secondary">Recieved</button></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Order Recieved -->
+      <div class="tab-pane" id="update-profile" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Update Profile</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="update-profile-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="update-profile-update-tab" data-toggle="pill" href="#update-profile-update" role="tab" aria-controls="update-profile-update" aria-selected="true">Update Profile</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="update-profile-pass-tab" data-toggle="pill" href="#update-profile-pass" role="tab" aria-controls="update-profile-pass" aria-selected="false">Password Reset</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="update-profile-tabContent">
+                    <div class="tab-pane fade show active" id="update-profile-update" role="tabpanel" aria-labelledby="update-profile-update-tab">
+                      <div class="p-2 pl-sm-5 pr-sm-5">
+                        <div class="row form-group">
+                          <div class="col-xl-3 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <h5 for="item-type" class="col-form-label">Name</h5>
+                            <input type="text" class="form-control" id="enter-dealer-name" placeholder="Enter Dealer Name">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <h5 for="item-type" class="col-form-label">Address 1:</h5>
+                            <input type="text" class="form-control" id="enter-addr-first" placeholder="Enter Address 1">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <h5 for="item-type" class="col-form-label">Address 2:</h5>
+                            <input type="text" class="form-control" id="enter-addr-second" placeholder="Enter Address 2">
+                          </div>
+                          <div class="col-xl-3 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <h5 for="item-type" class="col-form-label">City</h5>
+                            <select class="p-0 form-control" id="select-profile-city">
+                              <option>Select City</option>
+                              <option>1</option>
+                              <option>2</option>
+                            </select>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <div class="col-xl-10 p-0">
+                              <h5 for="item-type" class="col-form-label">State</h5>
+                              <select class="p-0 form-control" id="select-profile-state">
+                                <option>Select State</option>
+                                <option>1</option>
+                                <option>2</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <div class="col-xl-10 p-0">
+                              <h5 for="item-type" class="col-form-label">* Pin Code</h5>
+                              <input type="text" class="form-control" id="enter-pin-code" placeholder="Enter Pin Code">
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <h5 for="item-type" class="col-form-label">Contact Person</h5>
+                            <input type="text" class="form-control" id="enter-contact-code" placeholder="Enter Contact Person">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <div class="col-xl-10 p-0">
+                              <h5 for="item-type" class="col-form-label">Phone Number</h5>
+                              <input type="phone" class="form-control" id="enter-phone-num" placeholder="Enter Phone Number">
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <div class="col-xl-10 p-0">
+                              <h5 for="item-type" class="col-form-label">Mobile Number</h5>
+                              <input type="phone" class="form-control" id="enter-mobile-num" placeholder="Enter Mobile Number">
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <h5 for="item-type" class="col-form-label">GSTIN</h5>
+                            <input type="text" class="form-control" id="enter-gstin" placeholder="Enter GSTIN">
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <div class="col-xl-10 p-0">
+                              <h5 for="item-type" class="col-form-label">PAN</h5>
+                              <input type="text" class="form-control" id="enter-pan" placeholder="Enter PAN">
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <div class="col-xl-10 p-0">
+                              <h5 for="item-type" class="col-form-label">Email Id</h5>
+                              <input type="text" class="form-control" id="enter-email-id" placeholder="Enter Email ID">
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-md-6 ml-0 mb-3 mr-xl-3">
+                            <h5 for="item-type" class="col-form-label">Google Pin Location</h5>
+                            <input type="text" class="form-control" id="enter-google-pin" placeholder="Enter Pin Location">
+                          </div>
+                        </div>
+                        <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column btns justify-content-center mt-sm-1 mb-sm-3">
+                          <button class="btn btn-primary shadow mb-auto min-we-10 max-we-sm-13 mr-sm-5 mt-3">Review</button>
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mt-3">Submit</button>
+                        </div>
+                      </div>
+                    </div><!-- /.Tab Pan -->
+                    <div class="tab-pane fade" id="update-profile-pass" role="tabpanel" aria-labelledby="update-profile-pass-tab">
+                      <div class="p-2 pl-sm-5 pr-sm-5">
+                        <div class="row form-group">
+                          <div class="col-12 ml-0 mb-3">
+                            <div class="col-xl-4 col-md-6 col-sm-10 p-0">
+                              <h5 for="item-type" class="col-form-label">Enter Old Password</h5>
+                              <input type="phone" class="form-control" id="enter-old-pass" placeholder="Enter Old Password">
+                            </div>
+                          </div>
+                          <div class="col-12 ml-0 mb-3">
+                            <div class="col-xl-4 col-md-6 col-sm-10 p-0">
+                              <h5 for="item-type" class="col-form-label">Enter New Password</h5>
+                              <input type="phone" class="form-control" id="enter-new-pass" placeholder="Enter New Password">
+                            </div>
+                          </div>
+                          <div class="col-12 ml-0 mb-3">
+                            <div class="col-xl-4 col-md-6 col-sm-10 p-0">
+                              <h5 for="item-type" class="col-form-label">Confirm Password</h5>
+                              <input type="text" class="form-control" id="enter-confirm-pass" placeholder="Enter Confirm Password">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column btns justify-content-center mt-sm-1 mb-sm-3">
+                          <button class="btn btn-primary shadow mb-auto min-we-10 max-we-sm-13 mr-sm-5 mt-3">Reset</button>
+                        </div>
+                      </div>
+                    </div><!-- /.Tab Pan -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Update Profile -->
+      <div class="tab-pane" id="wallet" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Wallet</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-header p-0 pt-1 border-bottom-0 tab">
+                  <ul class="nav nav-tabs" id="wallet-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="wallet-bank-tab" data-toggle="pill" href="#wallet-bank" role="tab" aria-controls="wallet-bank" aria-selected="true">Offline Payment</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="wallet-online-tab" data-toggle="pill" href="#wallet-online" role="tab" aria-controls="wallet-online" aria-selected="false">Wallet Payment</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body pt-4 pb-5 pl-4 pr-4">
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="wallet-tabContent">
+                    <div class="tab-pane fade show active" id="wallet-bank" role="tabpanel" aria-labelledby="wallet-bank-tab">
+                      <div class="row p-2 pl-sm-5 pr-sm-5 show" id="wallet-main">
+                        <div class="form-group d-flex flex-column">
+                          <h5 class="mb-4">Our Payment Details:</h5>
+                          <p class="mb-4">Please pay to below account and inform us by sending us the payment details</p>
+                          <p class="mb-1">Name : CELEX TECHNOLOGIES PRIVATE LIMITED</p>
+                          <p class="mb-1">A/C NO : 127205001482</p>
+                          <p class="mb-1">BANK NAME : ICICI BANK LTD</p>
+                          <p class="mb-1">STATUS : CURRENT ACCOUNT</p>
+                          <p class="mb-1">ADDRESS : 86A TOPSIA ROAD , TOSIA BRANCH KOLKATA -700046</p>
+                          <p class="mb-1">RTGS/NEFT CODE : ICIC0001272</p>
+                        </div>
+                        <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column btns justify-content-center mt-sm-1 mb-sm-3">
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13 mt-3">Submit Payment Details</button>
+                        </div>
+                      </div>
+                      <div class="row p-2 pl-sm-5 pr-sm-5" id="wallet-submit">
+                        <div class="row form-group">
+                          <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+                            <h5 for="item-type" class="col-form-label">Select Topic :</h5>
+                            <select class="p-0 form-control" id="select-topic">
+                              <option>Select Topic</option>
+                              <option>Fund Transfer</option>
+                              <option>Transfer</option>
+                            </select>
+                          </div>
+                          <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+                            <h5 for="item-type" class="col-form-label">Manufacturer :</h5>
+                            <select class="p-0 form-control" id="select-manufacturer" disabled>
+                              <!-- <option>Select Manufacturer</option> -->
+                              <option>VOLKSWAGEN</option>
+                              <option>FORD</option>
+                            </select>
+                          </div>
+                          <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+                            <h5 for="item-type" class="col-form-label">Dealer Name :</h5>
+                            <input type="text" class="form-control" id="enter-dealer-name-1" placeholder="Enter Dealer Name" disabled>
+                          </div>
+                          <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+                            <h5 for="item-type" class="col-form-label">Phone :</h5>
+                            <input type="phone" class="form-control" id="enter-phone-number" placeholder="Enter Phone Number" disabled>
+                          </div>
+                          <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+                            <h5 for="item-type" class="col-form-label">Email :</h5>
+                            <input type="email" class="form-control" id="enter-email" placeholder="Enter Email" disabled>
+                          </div>
+                          <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+                            <h5 for="item-type" class="col-form-label">Name :</h5>
+                            <h5 for="item-text" class="form-control" id="enter-name" placeholder="Enter Name" disabled>
+                          </div>
+                          <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+                            <h5 for="item-type" class="col-form-label">Dealer Code :</h5>
+                            <input type="text" class="form-control" id="enter-dealer-code" placeholder="Enter Dealer Code" disabled>
+                          </div>
+                          <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+                            <h5 for="item-type" class="col-form-label">Dealer Address :</h5>
+                            <input type="text" class="form-control" id="enter-dealer-address" placeholder="Enter Dealer Address" disabled>
+                          </div>
+                          <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+                            <h5 for="item-type" class="col-form-label">State :</h5>
+                            <select class="p-0 form-control" id="select-profile-state" disabled>
+                              <option>Select State</option>
+                              <option>KERALA</option>
+                              <option>SANTA</option>
+                            </select>
+                          </div>
+                          <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+                            <h5 for="item-type" class="col-form-label">Amount Transferred :</h5>
+                            <input type="text" class="form-control" id="enter-amount" placeholder="Enter Amount Transferred">
+                          </div>
+                          <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+                            <h5 for="item-type" class="col-form-label">Transaction Code :</h5>
+                            <input type="text" class="form-control" id="enter-trans-code" placeholder="Enter Transaction Code">
+                          </div>
+                          <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+                            <h5 for="item-type" class="col-form-label">Transfer Date :</h5>
+                            <input type="text" class="form-control" id="enter-trans-date" placeholder="Enter Transfer Date">
+                          </div>
+                          <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+                            <h5 for="item-type" class="col-form-label">Transfer Mode :</h5>
+                            <select class="p-0 form-control" id="select-trans-mode">
+                              <option>Select Transfer Mode</option>
+                              <option>Cash</option>
+                              <option>-</option>
+                            </select>
+                          </div>
+                          <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+                            <h5 for="item-type" class="col-form-label">Bank name :</h5>
+                            <input type="text" class="form-control" id="enter-bank-name" placeholder="Enter Bank Name">
+                          </div>
+                          <div class="col-sm-6 ml-0 mb-3 pl-4 pr-4">
+                            <h5 for="item-type" class="col-form-label">Bank Account No. :</h5>
+                            <input type="text" class="form-control" id="enter-bank-account" placeholder="Enter Bank Accont No.">
+                          </div>
+                        </div>
+                        <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column justify-content-left mt-sm-1 pl-4 pr-4">
+                          <button class="btn btn-success shadow mb-auto min-we-10 max-we-sm-13">Submit</button>
+                        </div>
+                      </div>
+                    </div><!-- /.Tab Pan -->
+                    <div class="tab-pane fade" id="wallet-online" role="tabpanel" aria-labelledby="wallet-online-tab">
+                      <div class="p-2 pl-sm-5 pr-sm-5">
+                        <h5 class="mb-4">Via payment gateway:</h5>
+                        <div class="row form-group">
+                          <div class="col-xl-3 col-sm-6 ml-0 mb-3 mr-sm-5">
+                            <h5 for="item-type" class="col-form-label">Add Payment</h5>
+                            <input type="phone" class="form-control" id="enter-add-payment" placeholder="Enter Amount">
+                          </div>
+                          <div class="col-xl-3 col-sm-6 ml-0 mb-3 mr-sm-5">
+                            <h5 for="item-type" class="col-form-label">Payment Remarks</h5>
+                            <input type="phone" class="form-control" id="enter-pay-remarks" placeholder="Enter Remarks">
+                          </div>
+                          <div class="col-xl-3 ml-0 mb-3 mt-auto d-flex justify-content-center">
+                            <button class="btn btn-primary shadow mb-auto min-we-10 max-we-sm-13 mr-sm-5 mt-3">Pay Now</button>
+                          </div>
+                          <!-- <div class="row d-flex flex-sm-nowrap flex-sm-row flex-column btns justify-content-center mt-sm-1 mb-sm-3">
+                          </div> -->
+                        </div>
+                      </div>
+                    </div><!-- /.Tab Pan -->
+                  </div><!-- /.Tab Content -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Wallet -->
+      <div class="tab-pane" id="help" role="menu">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 806px;">
+          <!-- Content Header (Page header) -->
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="m-0 text-dark">Help</h1>
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.content-header -->
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="card card-tabs shadow">
+                <div class="card-body">
+                  <div class="p-2 pl-sm-5 pr-sm-5 pt-5">
+                    <div class="row form-group justify-content-sm-start justify-content-center">
+                      <div class="col-xl-5 col-sm-8 row ml-0 mb-3 mr-sm-1 mr-0">
+                        <span for="item-type" class="col-form-label mr-3 pl-0">Ticket Type</span>
+                        <select class="col-sm-8 form-control" id="select-ticket-type">
+                          <option>Select Ticket Type</option>
+                          <option>1</option>
+                          <option>2</option>
+                        </select>
+                      </div>
+                      <div class="col-xl-2 col-sm-3">
+                        <button class="btn btn-success shadow w-100">Search</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="master-list mt-4 justify-content-end">
+                    <div class="row d-flex justify-content-end mr-2 mb-3">
+                      <form class="form-inline search-bar bg-light">
+                        <div class="input-group">
+                          <div class="input-group-append">
+                            <button class="btn btn-navbar" type="submit">
+                              <i class="fa fa-search"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <input class="form-control form-control border-0 bg-light w-100" type="search" placeholder="Search" aria-label="Search">
+                      </form>
+                    </div>
+                    <div class="master-table table-responsive">
+                      <table class="table table-striped table-hover table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col-lg">SL.No</th>
+                            <th scope="col-lg">Support Type</th>
+                            <th scope="col-lg">OEM</th>
+                            <th scope="col-lg">Dealer</th>
+                            <th scope="col-lg">Support Date</th>
+                            <th scope="col-lg">Last Reply Date</th>
+                            <th scope="col-lg">Close Date</th>
+                            <th scope="col-lg">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+      </div> <!-- Help -->
+    </div>
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- AdminLTE App -->
+  <script type="text/javascript" src="asset/js/adminlte.js"></script>
+
+  <!-- Custom Javascript -->
+  <script type="text/javascript" src="asset/js/common.js"></script>
+  <script type="text/javascript" src="asset/js/dealer-order.js"></script>
+
+</body>
+
+</html>
